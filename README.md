@@ -2,7 +2,7 @@
 
 A local, instrumented mobile menu for the CEFET-MG HCI project. The application, experimental instructions, academic deliverables, and public help use Brazilian Portuguese. This repository contains synthetic calibration evidence for the deterministic policy R. The model adapters use real provider APIs.
 
-The portable E2 Git bundle contains the complete local history. To inspect it in a fresh directory, run `git clone deliverables/E2_Repositorio_Git.bundle ux-agent`. The course submission requires a hosted Git URL with evaluator access. This workspace has no configured remote.
+The hosted repository for evaluators is <https://github.com/alvarengazv/ihc-trabalho-final>. Clone it with `git clone https://github.com/alvarengazv/ihc-trabalho-final.git`. The portable E2 Git bundle (`deliverables/E2_Repositorio_Git.bundle`) is kept out of the hosted repository; where it is available, `git clone deliverables/E2_Repositorio_Git.bundle ux-agent` restores the same local history.
 
 ## Run locally
 
@@ -12,7 +12,7 @@ Use Python 3.10 or newer. The menu, runner, verifier and unit tests use the Pyth
 python -m app.server --port 8765
 ```
 
-Open [the local menu](http://127.0.0.1:8765/). Use a 360 × 800 CSS pixel viewport for the instrumented phone. The experimenter can inspect a magnified view, the permitted observation, actions and the event stream. C1 starts with an empty order. C2 starts with the sister's order already loaded. The review itself is opened by the first action of the reference method. The training menu has five items and separate instructions.
+Open [the local menu](http://127.0.0.1:8765/). The researcher console loads the Inter and JetBrains Mono typefaces from Google Fonts and falls back to the system fonts offline. The simulated phone keeps its own fonts, because its sign geometry mirrors `app/geometry.py`. Use a 360 × 800 CSS pixel viewport for the instrumented phone. The experimenter can inspect a magnified view, the permitted observation, actions and the event stream. C1 starts with an empty order. C2 starts with the sister's order already loaded. The review itself is opened by the first action of the reference method. The training menu has five items and separate instructions.
 
 ```powershell
 python -m unittest discover -s tests -v

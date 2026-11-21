@@ -4,9 +4,75 @@ const sceneNames = {S0:"Início", S1:"Cardápio", S2:"Detalhes", S3:"Revisão", 
 let current, timer, busy=false, events=[];
 const reserved = new URLSearchParams(location.search).get("reservado")==="1";
 const phone=$("phone"), surface=$("surface"), footer=$("footer"), lens=$("lens"), inner=$("lens-inner");
+const modeNames={manual:"Interface manual", R:"Executor de referência R", lens:"Mecanismos P"};
+const modeHints={
+  manual:"A pessoa toca diretamente nos signos da tela simulada. Cada toque vira um evento no registro.",
+  R:"O método especialista é executado por regras, passo a passo, sem modelo de linguagem.",
+  lens:"O operador escolhe os gestos; a lente, a memória, os deslizes e o acionador de ajuda seguem a configuração P."
+};
+const errorNames={E1:"Seleção",E2:"Associação",E3:"Opção ou quantidade",E4:"Deslize motor",E5:"Discrepância na revisão",E6:"Violação de regra"};
+const tileSpec=[
+  ["S","Sucesso",true],["A","Ações executadas",true],["N_ref","Ações de referência"],["R_A","Razão de ações",true],
+  ["U","Aberturas de ajuda"],["D","Navegação por alvo"],["V","Revisitas"],["O","Signos ausentes"]
+];
+let visited=new Set();
 function stop(){ clearInterval(timer); timer=null; $("play").textContent="Reproduzir"; }
+const number=v=>v==null?"—":typeof v==="number"?v.toLocaleString("pt-BR",{maximumFractionDigits:2}):String(v);
+function eventKind(t){
+  if(t==="acao_executada")return "act";
+  if(t.startsWith("item_")||t==="opcao_selecionada")return "order";
+  if(t==="tela_alterada")return "scene";
+  if(t.startsWith("ajuda_"))return "help";
+  if(["deslize_injetado","acao_rejeitada","desistencia","limite_atingido"].includes(t))return "alert";
+  if(["pedido_confirmado","tarefa_encerrada"].includes(t))return "end";
+  if(["observacao","elemento_visto","vista_deslocada","zoom_alterado"].includes(t))return "see";
+  return "";
+}
+function eventDetail(e){
+  const d=e.dados||{};
+  switch(e.tipo){
+    case "acao_executada": return [d.gesto||d.acao, d.alvo!=null && !d.gesto ? "→ "+d.alvo : "", d.origem && d.origem!=="pessoa" ? "· "+d.origem : ""].filter(Boolean).join(" ");
+    case "tela_alterada": return d.categoria ? "Categoria "+d.categoria : (sceneNames[d.anterior]||d.anterior)+" → "+(sceneNames[d.nova]||d.nova);
+    case "item_adicionado": case "item_alterado": case "item_removido":
+      return "linha "+(d.linha+1)+" · "+(d.novo?.nome||d.anterior?.nome||"item "+d.item)+(d.quantidade!=null?" · "+d.quantidade+" un.":"");
+    case "opcao_selecionada": return d.opcao;
+    case "ajuda_aberta": case "ajuda_fechada": return [d.topico,d.camada].filter(Boolean).join(" · ");
+    case "deslize_injetado": return d.proposta+" → TOCAR("+d.alvo+")";
+    case "zoom_alterado": return number(d.anterior)+"× → "+number(d.novo)+"×";
+    case "tarefa_encerrada": return d.resultado+(d.categorias?.length?" · "+d.categorias.join(", "):"");
+    case "pedido_confirmado": return (d.pedido?.length??0)+" linhas no pedido";
+    case "limite_atingido": return d.numero_acoes+" ações";
+    default: return "";
+  }
+}
+function renderMetrics(m){
+  const ok=m.resultado==="sucesso";
+  $("outcome").textContent=(m.resultado||"").replaceAll("_"," ");
+  $("outcome").className="badge "+(ok?"done":"fail");
+  $("tiles").replaceChildren(...tileSpec.map(([k,label,key])=>{
+    const t=document.createElement("div");t.className="tile"+(key?" key":"");
+    t.innerHTML='<div class="k"></div><div class="v"></div><div class="d"></div>';
+    t.children[0].textContent=k;t.children[1].textContent=number(m[k]);t.children[2].textContent=label;
+    return t;
+  }));
+  $("errors").replaceChildren(...Object.entries(m.erros||{}).map(([k,n])=>{
+    const r=document.createElement("div");r.className="err"+(n?" hit":"");r.title=errorNames[k]||k;
+    const b=document.createElement("b");b.textContent=k;const s=document.createElement("span");s.textContent=errorNames[k]||"";
+    const c=document.createElement("span");c.className="n";c.textContent=n;r.append(b,s,c);return r;
+  }));
+  $("metrics").textContent=JSON.stringify(m,null,2);
+}
+function renderScenes(scene){
+  visited.add(scene);
+  $("scenes").replaceChildren(...Object.entries(sceneNames).map(([k,name])=>{
+    const li=document.createElement("li");li.className=k===scene?"on":visited.has(k)?"seen":"";
+    if(k===scene)li.setAttribute("aria-current","step");
+    const b=document.createElement("b");b.textContent=k;li.append(b,name);return li;
+  }));
+}
 function selectMode() {
   const mode=$("mode").value;
+  $("mode-hint").textContent=modeHints[mode];
   $("zoom-label").hidden=mode!=="R";
   $("seed-label").hidden=mode==="manual";
   for(const option of $("task").options){
@@ -78,13 +144,18 @@ function render(data, initial){
     if(different) phone.focus({preventScroll:true});
     else escapeFocus(focusId)?.focus({preventScroll:true});
   }
+  if(initial)visited=new Set();
+  renderScenes(data.scene);
+  $("mode-pill").textContent=modeNames[data.mode]+" · "+data.task+" · Versão "+data.version;
   $("version-info").textContent="Versão "+data.version+" · "+sceneNames[data.scene];
   $("task-info").textContent=data.task;
   $("instruction").textContent=data.instruction;
   $("quit").hidden=!manual || data.done;
+  $("keys").hidden=data.mode==="R" || data.done;
   $("controls").hidden=manual;$("r-controls").hidden=data.mode!=="R";$("p-controls").hidden=data.mode!=="lens";
   $("lens-panel").hidden=manual;$("outline").hidden=manual;
   $("status").textContent="Passo "+data.step+(data.done?" · Encerrado":"");
+  $("status").className="badge"+(data.done?" done":"");
   $("mechanism-note").textContent=data.mode==="R"?"Método de referência executado por regras.":"Gestos escolhidos pelo operador. A lente, a memória, os deslizes e o acionador de ajuda usam a configuração P.";
   for(const id of ["step","play","apply"]) $(id).disabled=data.done;
   if(!manual){
@@ -96,17 +167,30 @@ function render(data, initial){
     const old=$("gesture").value;
     $("gesture").replaceChildren(...(data.public?.acoes ?? []).map(a=>new Option(a,a)));
     if([ ...$("gesture").options ].some(o=>o.value===old)) $("gesture").value=old;
+    const px=Math.round, facts=[["Origem da região","x "+px(x)+" · y "+px(y)],["Recorte",px(largura)+" × "+px(altura)+" px"],
+      ["Gestos disponíveis",String(data.public?.acoes?.length ?? 0)],["Memória",(data.public?.memoria?.length ?? 0)+" trechos"]];
+    $("lens-facts").replaceChildren(...facts.map(([k,v])=>{
+      const d=document.createElement("div"),dt=document.createElement("dt"),dd=document.createElement("dd");
+      dt.textContent=k;dd.textContent=v;d.append(dt,dd);return d;
+    }));
     drawLens();
   }
+  renderEvents();
+  $("results").hidden=!data.metrics;
+  if(data.metrics)renderMetrics(data.metrics);
+  if(data.done)stop();
+}
+function renderEvents(){
   $("trace").textContent=JSON.stringify(events.slice(-50),null,2);
   $("count").textContent=events.length+" eventos";
-  $("recent").replaceChildren(...events.slice(-5).reverse().map(e=>{
-    const li=document.createElement("li");const small=document.createElement("small");
-    small.textContent=String(e.passo).padStart(2,"0")+" · ";li.append(small,document.createTextNode(e.tipo));return li;
+  const perception=new Set(["observacao","elemento_visto"]), shown=$("show-perception").checked?events:events.filter(e=>!perception.has(e.tipo));
+  $("recent").replaceChildren(...shown.slice(-7).reverse().map(e=>{
+    const li=document.createElement("li");
+    const no=document.createElement("span");no.className="step-no";no.textContent=String(e.passo).padStart(2,"0");
+    const tag=document.createElement("span");tag.className="ev "+eventKind(e.tipo);tag.textContent=e.tipo;
+    const det=document.createElement("span");det.className="ev-detail";det.textContent=eventDetail(e);det.title=det.textContent;
+    li.append(no,tag,det);return li;
   }));
-  $("results").hidden=!data.metrics;
-  if(data.metrics)$("metrics").textContent=JSON.stringify(data.metrics,null,2);
-  if(data.done)stop();
 }
 async function start(){
   if(busy)return;
@@ -161,5 +245,6 @@ document.addEventListener("keydown",e=>{
     if(current.mode==="lens") act(action==="help"?"TOCAR(Ajuda)":"VOLTAR");
   }
 });
+$("show-perception").onchange=renderEvents;
 new ResizeObserver(drawLens).observe(lens);
 start();

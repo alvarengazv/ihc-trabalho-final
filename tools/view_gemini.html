@@ -3,30 +3,47 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ações do Gemini · UX-Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-:root{font:16px/1.5 "Segoe UI",sans-serif;color:#19372f;background:#eef2ee}
+:root{--ui:"Inter","Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;--mono:"JetBrains Mono",Consolas,ui-monospace,monospace;
+  --bg:#eef2ef;--surface:#fff;--surface-2:#f5f8f6;--ink:#14302a;--muted:#55716a;--faint:#8aa199;--line:#d6e0db;--line-strong:#b7c7c0;
+  --green:#0f573e;--green-700:#0b4431;--green-50:#e7f1ec;--focus:#c2560c;--radius:14px;--radius-sm:9px;
+  --shadow:0 1px 2px rgb(16 37 30 / .05),0 4px 16px rgb(16 37 30 / .06);
+  font:16px/1.5 var(--ui);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
 *{box-sizing:border-box}
-body{margin:0}main{max-width:1040px;margin:auto;padding:24px 18px}
-h1,h2{line-height:1.2}h1{font-size:clamp(2rem,5vw,3.25rem);margin:0 0 22px;letter-spacing:-.035em}
-h2{font-size:1.2rem;margin:0 0 12px}p{margin:0 0 10px}
-header,.panel{background:#fff;border:1px solid #becdc4;border-radius:10px;padding:16px}
+body{margin:0}
+.mast{background:linear-gradient(180deg,#143a2e,#10291f);color:#fff}
+.mast div,main{max-width:1120px;margin:auto;padding-inline:clamp(12px,3vw,32px)}
+.mast div{display:flex;align-items:center;gap:12px;min-height:60px}
+.logo{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 210deg,#9fd1b4,#3f9a72,#0f573e,#9fd1b4);box-shadow:inset 0 0 0 5px #143a2e,0 0 0 1px #2f6a55}
+.mast b{font-weight:800;font-size:1.18rem;letter-spacing:-.03em}
+.mast span:last-child{font-size:.86rem;color:#b9d2c7;border-left:1px solid #3d6a5a;padding-left:12px}
+main{padding-block:28px 40px}
+h1,h2{line-height:1.2;margin:0}h1{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;margin:0 0 20px;letter-spacing:-.035em}
+h2{font-size:1rem;font-weight:700;margin:0 0 12px}p{margin:0 0 10px}
+header,.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
 header{display:flex;flex-wrap:wrap;align-items:end;gap:12px}
-label{display:grid;gap:4px;font-weight:600;min-width:0}
-select,button{font:inherit;min-height:42px;max-width:100%;padding:6px 10px;border:1px solid #648075;border-radius:5px;background:white;color:inherit}
-button{cursor:pointer}button:disabled{opacity:.5;cursor:default}
-:focus-visible{outline:3px solid #a64913;outline-offset:2px}
-.following{display:flex;align-items:center;align-self:center;gap:6px}
-.following input{accent-color:#19634a;width:18px;height:18px}
-#status{margin:12px 0;min-height:24px}
-.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.panel{min-width:0;margin-bottom:14px}
-#answer{font-size:1.15rem;font-weight:700;color:#154e36;overflow-wrap:anywhere;white-space:pre-wrap}
-ol{margin:0;padding-left:34px}li{margin-block:4px;overflow-wrap:anywhere}
-.gesture{margin-left:6px;font-size:.85rem;color:#3c6155}
-details{margin-top:14px}summary{cursor:pointer;font-weight:600}
-pre{padding:10px;background:#edf3ef;white-space:pre-wrap;overflow-wrap:anywhere;max-height:430px;overflow:auto}
+label{display:grid;gap:6px;font-size:.8rem;font-weight:600;color:var(--muted);min-width:0}
+select,button{font:inherit;font-size:.94rem;min-height:44px;max-width:100%;padding:8px 12px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);background:var(--surface);color:var(--ink)}
+select{font-family:var(--mono);font-size:.86rem}
+button{cursor:pointer;font-weight:600;background:var(--green);border-color:var(--green);color:#fff}
+button:hover:not(:disabled){background:var(--green-700)}button:disabled{opacity:.5;cursor:default}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.following{display:flex;align-items:center;align-self:center;gap:8px;font-weight:500;color:var(--ink)}
+.following input{accent-color:var(--green);width:18px;height:18px}
+#status{margin:14px 0;min-height:24px;font-weight:600;color:var(--muted)}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.panel{min-width:0;margin-bottom:16px}
+#answer{font:600 1rem/1.5 var(--mono);color:var(--green);background:var(--green-50);border:1px solid #c7e0d3;border-radius:var(--radius-sm);padding:10px 12px;overflow-wrap:anywhere;white-space:pre-wrap}
+#execution,#timing{font-size:.9rem;color:var(--muted)}
+ol{margin:0;padding-left:30px}li{margin-block:5px;overflow-wrap:anywhere}
+.gesture{margin-left:8px;font:600 .74rem var(--mono);color:var(--green);background:var(--green-50);border:1px solid #c7e0d3;border-radius:6px;padding:1px 6px}
+details{margin-top:12px;border-top:1px solid var(--line);padding-top:6px}summary{cursor:pointer;font-weight:600;font-size:.9rem;color:var(--green);padding:6px 0}
+pre{padding:12px;background:#f3f6f4;border:1px solid var(--line);border-radius:var(--radius-sm);white-space:pre-wrap;overflow-wrap:anywhere;max-height:430px;overflow:auto;font:.78rem/1.55 var(--mono)}
 @media(max-width:640px){.columns{grid-template-columns:1fr}header{align-items:start}}
 </style>
+<div class="mast"><div><span class="logo" aria-hidden="true"></span><b>UX-Agent</b><span>Registro do piloto Gemini</span></div></div>
 <main>
 <h1>Ações do Gemini</h1>
 <header>
@@ -90,7 +107,7 @@ async function refresh() {
     }
     const [number, attempt] = data.passo.split("-").map(Number);
     $("status").textContent = "Passo " + number + " · tentativa " + attempt +
-      (data.desfecho ? " · " + data.desfecho.replaceAll("_", " ") : " · sem encerramento registrado");
+      (data.desfecho ? " · " + ({falha_tecnica:"falha técnica", desistencia:"desistência", limite_atingido:"limite atingido"}[data.desfecho] || data.desfecho.replaceAll("_", " ")) : " · sem encerramento registrado");
     const observation = record.observacao;
     $("view").replaceChildren(...observation.vista.map(sign => {
       const row = document.createElement("li");

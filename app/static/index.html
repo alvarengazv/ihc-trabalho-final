@@ -2,53 +2,85 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UX-Agent · Observatório de interação</title><link rel="stylesheet" href="/style.css">
+<title>UX-Agent · Observatório de interação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/style.css">
 <script defer src="/console.js"></script>
 </head>
 <body>
-<header class="mast"><div class="mast-inner"><div class="wordmark">UX-Agent</div><span>Laboratório de interação</span></div></header>
+<header class="mast">
+<div class="mast-inner">
+<div class="brand"><span class="logo" aria-hidden="true"></span><span class="wordmark">UX-Agent</span><span class="mast-sub">Laboratório de interação · CEFET-MG</span></div>
+<span class="mode-pill" id="mode-pill" aria-live="polite"></span>
+</div>
+</header>
 <main>
+<div class="intro">
 <h1>Observatório de interação</h1>
-<form id="settings">
+<p class="lead">Uma mesma interface de restaurante atende à pessoa e fornece os signos que o agente pode observar. Configure a sessão, execute a tarefa e acompanhe o registro de eventos e a verificação externa.</p>
+</div>
+<form id="settings" class="card">
+<div class="fields">
 <label>Modo<select id="mode"><option value="manual">Interface manual</option><option value="R">Executor de referência R</option><option value="lens">Inspeção manual dos mecanismos P</option></select></label>
 <label>Tarefa<select id="task"><option value="C1">C1 · Almoço no escritório</option><option value="C2">C2 · Pedido da irmã</option><option value="Treino">Treino · Lanchonete</option></select></label>
-<label>Interface<select id="version"><option>A</option><option>B</option></select></label>
-<label id="seed-label">Semente<input id="seed" type="number" step="1" value="42" required></label>
-<label id="zoom-label" hidden>Ampliação de R<select id="zoom"><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option><option value="4">4×</option><option value="6">6×</option></select></label>
-<button type="submit">Iniciar sessão</button>
+<label class="narrow">Interface<select id="version"><option>A</option><option>B</option></select></label>
+<label id="seed-label" class="narrow">Semente<input id="seed" type="number" step="1" value="42" required></label>
+<label id="zoom-label" class="narrow" hidden>Ampliação de R<select id="zoom"><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option><option value="4">4×</option><option value="6">6×</option></select></label>
+<button type="submit" class="start">Iniciar sessão</button>
+</div>
+<p class="mode-hint" id="mode-hint"></p>
 </form>
 <div id="error" role="alert"></div>
 <section class="columns">
-<div class="handset">
-<div class="panel-head"><h2>Interface do restaurante</h2><span id="version-info"></span></div>
+<div class="handset card">
+<div class="panel-head"><h2>Interface do restaurante</h2><span class="badge" id="version-info"></span></div>
+<ol class="scenes" id="scenes" aria-label="Cenas da conversa (MoLIC)"></ol>
+<div class="device">
 <div id="phone" tabindex="0" aria-label="Tela do restaurante"><div id="surface"></div><div id="footer"></div><div id="outline" hidden></div></div>
 </div>
+<p class="device-note">Tela simulada de 360 × 800 px CSS</p>
+</div>
 <aside>
-<section class="instrument">
-<div class="panel-head"><h2>Instrução da tarefa</h2><span id="task-info"></span></div>
-<p id="instruction"></p>
-<button type="button" id="quit" class="secondary">Desistir da tarefa</button>
+<section class="instrument card">
+<div class="panel-head"><h2>Instrução da tarefa</h2><span class="badge strong" id="task-info"></span></div>
+<blockquote id="instruction"></blockquote>
+<div class="row-between">
+<p class="keys" id="keys"><kbd>F1</kbd> abre a ajuda <span aria-hidden="true">·</span> <kbd>Esc</kbd> volta</p>
+<button type="button" id="quit" class="secondary danger">Desistir da tarefa</button>
+</div>
 </section>
-<section class="instrument" id="controls" hidden>
-<div class="panel-head"><h2>Execução</h2><span aria-live="polite" id="status"></span></div>
-<div id="r-controls"><button type="button" id="step">Avançar um passo</button> <button type="button" id="play" class="secondary">Reproduzir</button></div>
-<div id="p-controls"><label>Gesto disponível<select id="gesture"></select></label> <button id="apply" type="button">Executar gesto</button></div>
-<p id="mechanism-note"></p>
+<section class="instrument card" id="controls" hidden>
+<div class="panel-head"><h2>Execução</h2><span class="badge" aria-live="polite" id="status"></span></div>
+<div id="r-controls" class="actions"><button type="button" id="step">Avançar um passo</button><button type="button" id="play" class="secondary">Reproduzir</button></div>
+<div id="p-controls" class="actions"><label>Gesto disponível<select id="gesture"></select></label><button id="apply" type="button">Executar gesto</button></div>
+<p class="note" id="mechanism-note"></p>
 </section>
-<section class="instrument" id="lens-panel" hidden>
-<div class="panel-head"><h2>Lente de ampliação</h2><span id="factor"></span></div>
+<section class="instrument card" id="lens-panel" hidden>
+<div class="panel-head"><h2>Lente de ampliação</h2><span class="badge strong" id="factor"></span></div>
+<div class="lens-layout">
 <div id="lens" aria-label="Recorte do campo visual"><div id="lens-inner"></div></div>
+<div class="lens-side"><dl class="facts" id="lens-facts"></dl><p class="note">O contorno laranja na tela do restaurante marca a região ampliada pela lente; o restante aparece esmaecido.</p></div>
+</div>
 <details><summary>Observação filtrada</summary><pre id="projection"></pre></details>
 </section>
-<section class="instrument">
-<div class="panel-head"><h2>Registro de eventos</h2><span id="count"></span></div>
+<section class="instrument card">
+<div class="panel-head"><h2>Registro de eventos</h2><span class="badge" id="count"></span></div>
 <ol id="recent"></ol>
+<label class="toggle"><input type="checkbox" id="show-perception"> Incluir observações e elementos vistos na lista</label>
 <details><summary>Eventos em JSON</summary><pre id="trace"></pre></details>
 </section>
-<section class="instrument" id="results" hidden><h2>Verificação externa</h2><pre id="metrics"></pre></section>
+<section class="instrument card" id="results" hidden>
+<div class="panel-head"><h2>Verificação externa</h2><span class="badge" id="outcome"></span></div>
+<div class="tiles" id="tiles"></div>
+<h3 class="subhead">Categorias de erro</h3>
+<div class="errors" id="errors"></div>
+<details><summary>Medidas completas em JSON</summary><pre id="metrics"></pre></details>
+</section>
 </aside>
 </section>
 </main>
+<footer class="foot"><div>UX-Agent · Interação Humano-Computador · CEFET-MG</div><div>Grupo Amorim, Alvarenga e Cruz</div></footer>
 <dialog id="receipt-help" aria-labelledby="receipt-title">
 <h2 id="receipt-title">Ajuda do comprovante</h2>
 <div id="receipt-layers" aria-label="Camadas de ajuda"></div>
