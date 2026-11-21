@@ -61,7 +61,7 @@ $mecanismos | Select-String 'M4 •' -Context 0,17
 $mecanismos | Select-String 'M7 •' -Context 0,19
 ```
 
-Volte à primeira aba. Pressione **F1**, mostre o título **Ajuda** e o registro `ajuda_aberta`. Pressione **Esc** e mostre o retorno ao cardápio.
+Volte à primeira aba. Pressione **F1**, mostre o título **Ajuda** e o registro `ajuda_aberta`. Pressione **Esc** e mostre o retorno à revisão do pedido.
 
 **Narração.** “A sequência de teste usa a semente sete para tornar visível um deslize. M4 troca o deslocamento por um toque no início do gesto; o registro preserva a proposta, o ponto e a transição observada. Na sequência de impasse, cinco ações sem progresso habilitam M7. Neste exemplo, o sorteio aciona a ajuda. Na aplicação, também podemos solicitá-la diretamente. O acesso fica registrado antes da próxima observação. As três camadas apresentam o mesmo conteúdo para ambos os receptores. A assinatura operacional ‘Socorro!’ conta uma abertura de ajuda. Ela descreve um evento observável.”
 

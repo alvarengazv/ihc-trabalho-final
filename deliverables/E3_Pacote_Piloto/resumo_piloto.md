@@ -35,9 +35,9 @@ A HTA prevê cinco toques em C1/A, seis em C1/B e três em C2/A e B. A inclui ta
 
 ## Proveniência
 
-- [C1-A-R-42-659ece35d501.json](logs/C1-A-R-42-659ece35d501.json)
-- [C1-B-R-42-ba2d70506949.json](logs/C1-B-R-42-ba2d70506949.json)
-- [C2-A-R-42-e53c277b4424.json](logs/C2-A-R-42-e53c277b4424.json)
-- [C2-B-R-42-c62e9616b71a.json](logs/C2-B-R-42-c62e9616b71a.json)
+- [C1-A-R-42-860b2fa789cb.json](logs/C1-A-R-42-860b2fa789cb.json)
+- [C1-B-R-42-0d3c0d41b2d6.json](logs/C1-B-R-42-0d3c0d41b2d6.json)
+- [C2-A-R-42-03b182dc7c40.json](logs/C2-A-R-42-03b182dc7c40.json)
+- [C2-B-R-42-186e07533f8a.json](logs/C2-B-R-42-186e07533f8a.json)
 
 Todas as sessões deste pacote usaram R. O ambiente não dispunha de credenciais dos provedores. Nenhuma requisição foi enviada a um LLM. Não há observações de desempenho de P, P2, P6, C ou G.

@@ -71,14 +71,14 @@ def draw_tree(key, model):
     for i, value in enumerate(header): label(p,7,top-12-13*i,value,10,True,"#ffffff")
     top -= 16+13*len(header)
     for value in top_plan:
-        label(p, 6, top, value, 8.2)
+        label(p, 6, top, value.replace("≫", ">>"), 8.2)
         top -= 10
     for (role, data), amount in zip(layout,lengths):
         if role == "group":
             box(p,3,top-16,W-6,15,LIGHT)
             label(p,8,top-12,"A  "+data,8.6,True)
         elif role == "plan":
-            for j,v in enumerate(lines(data,W-25,7.7)): label(p,14,top-6-9*j,v,7.7)
+            for j,v in enumerate(lines(data,W-25,7.7)): label(p,14,top-6-9*j,v.replace("≫", ">>"),7.7)
         else:
             kind,op,value = data
             p.setLineWidth(.5)
@@ -91,35 +91,63 @@ def draw_tree(key, model):
     p.save()
 
 def draw_dialogue():
-    nodes = [
-        ("S0 • Início", "u: consultar cardápio → S1; consultar pedido → S3. Com histórico, u: repetir pedido → somar as linhas → S3."),
-        ("S1 • Escolher refeição", "u: explorar categoria (B) → S1; abrir item → S2; consultar pedido → S3; consultar início → S0. d: apresentar alimentos e preços."),
-        ("S2 • Compor item", "u: escolher opção, ajustar quantidade → S2. d: apresentar opção e preço. Se faltar opção: d: solicitar escolha (alerta); u: escolher opção (recuperação)."),
-        ("P • Atualizar comanda", "u: adicionar item → P → S1; salvar alteração → P → S3. d: apresentar composição atualizada. u: voltar → origem de inclusão ou edição."),
-        ("S3 • Conferir pedido", "u: ajustar quantidade, remover linha, desfazer remoção → S3; alterar item → S2; retomar cardápio → S1; consultar início → S0. d: apresentar linhas e total."),
-        ("P • Registrar pedido", "u: confirmar pedido [há linha] → P → S4. d: apresentar registro. Tentativa sem guarda → captura de erro; conservar a cena e oferecer operações válidas."),
-        ("S4 • Consultar confirmação", "d: apresentar pedido registrado. O resultado da tarefa é apurado externamente. A leitura humana pode consultar a ajuda da confirmação."),
-        ("S5 • Consultar ajuda", "Qualquer origem S0–S4: u: abrir ajuda → S5. u: escolher camada → S5; fechar ajuda → origem. d: apresentar explicação ou retomar diálogo."),
+    # An edge-labelled MoLIC graph: repeated scene symbols refer to the same
+    # vertex; each directed arc carries the user's utterance and deputy's reply.
+    arcs = [
+        ("S0", "S1", "u: consultar cardápio", "d: apresentar categorias e alimentos"),
+        ("S0/S1", "S3", "u: consultar pedido", "d: apresentar linhas e total; guardar origem"),
+        ("S0", "S3", "u: repetir pedido [há histórico]", "P: somar linhas à comanda; d: apresentar revisão"),
+        ("S1/S3", "S0", "u: consultar início", "d: apresentar início e histórico, se disponível"),
+        ("S1", "S1", "u: escolher categoria [versão B]", "d: apresentar alimentos da categoria solicitada"),
+        ("S1", "S1", "u: paginar resumo [B, >4 linhas e página disponível]", "d: apresentar até quatro linhas e posição da página"),
+        ("S1", "S2", "u: abrir item", "d: apresentar composição, quantidade e preço"),
+        ("S2", "S2", "u: ajustar quantidade ou escolher opção", "d: apresentar valor da escolha"),
+        ("S2", "S1", "u: adicionar item [composição válida]", "P: somar linha; d: apresentar comanda atualizada"),
+        ("S2", "S3", "u: salvar alteração [editando e composição válida]", "P: atualizar linha; d: apresentar revisão atualizada"),
+        ("S2", "S1/S3", "u: voltar dos detalhes", "d: retomar catálogo (inclusão) ou revisão (edição)"),
+        ("S3", "S2", "u: alterar item", "d: apresentar composição atual da linha escolhida"),
+        ("S3", "S3", "u: ajustar unidades, remover ou desfazer remoção", "P: atualizar linhas; d: apresentar quantidade e total"),
+        ("S3", "S0/S1", "u: voltar da revisão", "d: restaurar origem de abertura; após repetir, S0"),
+        ("S3", "S4", "u: confirmar pedido [há ao menos uma linha]", "P: registrar pedido; d: apresentar composição confirmada"),
+        ("S0–S4", "S5", "u: consultar ajuda [ubíqua]", "d: apresentar dica da origem; suspender cena"),
+        ("S5", "S5", "u: escolher camada", "d: apresentar explicação solicitada"),
+        ("S5", "origem", "u: fechar ajuda", "d: restaurar cena suspensa e conservar comanda"),
+        ("S2", "AL/S2", "d: solicitar opção [obrigatória e ausente]", "u: escolher opção; d: habilitar inclusão ou alteração"),
+        ("cena", "CE/cena", "u: propor ação fora da guarda", "P: rejeitar proposta; d: manter signos e ações válidas"),
     ]
-    height = 8+sum(22+11*len(lines(body,W-22)) for _,body in nodes)
-    p = canvas("MoLIC",height)
-    top = height-3
-    for title,body in nodes:
-        rows=lines(body,W-22)
-        h = 19+11*len(rows)
-        box(p,2,top-h,W-4,h,LIGHT if not title.startswith("P •") else "#e8eaf0")
-        label(p,9,top-11,title,8.7,True)
-        for i,line in enumerate(rows): label(p,10,top-23-11*i,line)
-        top -= h+3
+    groups = {0:"Origem e exploração", 6:"Escolha e composição", 11:"Revisão e confirmação",
+              16:"Subdiálogo de ajuda", 19:"Prevenção e recuperação"}
+    widths = [lines(a[2], W-55, 7.5) + lines(a[3], W-55, 7.5) for a in arcs]
+    height = 17 + 14*len(groups) + sum(5 + 9*len(row) for row in widths)
+    p = canvas("MoLIC", height)
+    label(p, 3, height-10, "Papel: pessoa que prepara a comanda", 9.5, True)
+    top = height-15
+    for i, ((origin, target, request, response), row) in enumerate(zip(arcs, widths)):
+        if i in groups:
+            box(p, 2, top-13, W-4, 13, DARK)
+            label(p, 7, top-9, groups[i], 8, True, "#ffffff")
+            top -= 14
+        h = 5 + 9*len(row)
+        box(p, 2, top-h+1, 45, h-2, LIGHT)
+        label(p, 5, top-8, origin, 7, True)
+        p.setLineWidth(.6)
+        p.line(7, top-10, 7, top-h+6)
+        p.line(7, top-h+6, 11, top-h+6)
+        p.line(9, top-h+8, 11, top-h+6)
+        p.line(9, top-h+4, 11, top-h+6)
+        label(p, 14, top-h+8, target, 7, True)
+        for j, line in enumerate(row):
+            label(p, 52, top-8-9*j, line, 7.5)
+        top -= h
     p.save()
 
 def draw_wireframes():
     screens = [
         ("S0 • Início", ["Mesa de Minas   |   Ajuda","Ver cardápio", "Ver pedido","Último pedido¹","Repetir pedido¹"]),
         ("S1 A • Cardápio",["Cardápio   |   Ajuda","Início   •   Ver pedido","Entradas","Salada verde (V, SL)","Nome, detalhes e preço","Lista contínua ↓"]),
-        ("S1 B • Cardápio",["Cardápio   |   Ajuda","Categorias","Entradas   •   Massas","Nome, detalhes e preço","Resumo no rodapé","Total   •   Ver pedido"]),
+        ("S1 B • Cardápio",["Cardápio   |   Ajuda","Categorias","Entradas   •   Massas","Nome, detalhes e preço","Resumo • até 4 linhas por página","Total   •   Ver pedido"]),
         ("S2 • Item",["Detalhes   |   Ajuda","Voltar","Nome e preço","Opção, se exigida","Quantidade   −   +","Adicionar / Salvar"]),
-        ("S3 • Revisão",["Revisão   |   Ajuda","Cardápio   •   Início","Item, opção e unidades","−   +   Alterar   Remover","Total","Confirmar pedido"]),
+        ("S3 • Revisão",["Revisão   |   Ajuda","Voltar   •   Início","Item, opção e unidades","−   +   Alterar   Remover","Total","Confirmar pedido"]),
         ("S4 • Confirmação",["Pedido confirmado","Ajuda","Composição registrada","Total"]),
         ("S5 • Ajuda",["Ajuda   |   Fechar ajuda","Assunto da origem","Dica local","Sobre esta tela","Guia de uso","Texto da camada"]),
     ]

@@ -2,6 +2,8 @@
 
 A local, instrumented mobile menu for the CEFET-MG HCI project. The application, experimental instructions, academic deliverables, and public help use Brazilian Portuguese. This repository contains synthetic calibration evidence for the deterministic policy R. The model adapters use real provider APIs.
 
+The portable E2 Git bundle contains the complete local history. To inspect it in a fresh directory, run `git clone deliverables/E2_Repositorio_Git.bundle ux-agent`. The course submission requires a hosted Git URL with evaluator access. This workspace has no configured remote.
+
 ## Run locally
 
 Use Python 3.10 or newer. The menu, runner, verifier and unit tests use the Python standard library. From the project root:
@@ -63,7 +65,7 @@ The CLI rejects V1 and V2 before creating the application or contacting a provid
 | `tests/` | Synthetic unit fixtures, deterministic reference runs, and boundary checks. |
 | `deliverables/` | IEEE papers, E1, E3, E5, citation checklist and independent audit. |
 
-Only the visible projection and allowed actions enter the model prompt, with the functional instruction, task wording and one training example. The audit log also contains the complete application state for the researcher. This state is outside the provider request. G deliberately uses the entire rendered current scene as a generic baseline. No profile receives data from other scenes. After each accepted action the interface emits its domain events. Outside the policy, the verifier compares the order with the analyst's criteria.
+The model prompt consists of the visible projection, permitted actions, eligible FIFO fragments, the functional instruction, literal task wording and one training example. FIFO fragments can come from previously visited scenes if they entered the visible region earlier and remain in the buffer. G deliberately uses the entire rendered current scene as a generic baseline. The audit log also preserves the complete application state for the researcher. After each accepted action the interface emits its domain events. The verifier compares the order with the analyst's criteria independently of the policy.
 
 ## Profiles
 

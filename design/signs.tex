@@ -1,4 +1,5 @@
 Cada entrada dá origem, conteúdo (restrição ou valor inicial), expressão, tipo semiótico, projeção e evento. D indica domínio, T transformado, A aplicação, C convencional. E significa estático, Dn dinâmico, M metalinguístico. Na projeção, \emph{trecho} é texto geométrica e tipograficamente legível; abaixo do limiar restam tipo e posição. Uma ação só é oferecida nas condições do executor. Os nomes de evento abaixo pertencem ao pesquisador.
+\par\noindent\begin{minipage}{\columnwidth}
 \begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Restaurante.nome}{D, denominação ou lanchonete de treino, cabeçalho E / trecho / \UXev{elemento_visto}.}
 \UXrow{Tela.assunto}{A, assunto corrente S0--S5, título E / trecho do título / \UXev{tela_alterada}.}
@@ -6,35 +7,47 @@ Cada entrada dá origem, conteúdo (restrição ou valor inicial), expressão, t
 \UXrow{Pedido.repetição}{A, acrescenta as linhas históricas às atuais, Repetir pedido E / alvo visível / \UXev{item_adicionado}.}
 \UXrow{Navegação.destino}{C, início, cardápio ou revisão, controles de navegação E / alvo visível / \UXev{tela_alterada}.}
 \UXrow{Categoria.nome}{D, cinco categorias na ordem herdada, seção A ou aba B E / trecho / \UXev{elemento_visto}.}
+\end{uxtable}\end{minipage}\par
+\par\noindent\begin{minipage}{\columnwidth}
+\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Categoria.ativa}{A, categoria mostrada em B (inicial: entradas), realce Dn / pistas visíveis e itens expostos / \UXev{tela_alterada}.}
 \UXrow{Item.nome}{D, alimento do catálogo, cabeçalho do cartão E / trecho sem completar vizinhos / \UXev{elemento_visto}.}
 \UXrow{Item.descrição}{D, ingredientes ou preparo, texto do cartão E / trecho / \UXev{elemento_visto}.}
 \UXrow{Item.etiquetas}{T, zero ou mais V, SL, SA, marcas junto ao item M / somente seu trecho / \UXev{elemento_visto}.}
 \UXrow{Item.preço}{D, centavos inteiros positivos, moeda em reais e dois preços para massas E / trecho monetário / \UXev{elemento_visto}.}
 \UXrow{Item.detalhes}{A, abrir a composição do alimento tocado, cartão E / alvo visível sem ID interno / \UXev{tela_alterada}.}
-\UXrow{Pedido.resumo}{T, composição e total em B, rodapé Dn / apenas interseção efetiva / \UXev{elemento_visto}.}
-\end{uxtable}
+\end{uxtable}\end{minipage}\par
+\par\noindent\begin{minipage}{\columnwidth}
 \begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
+\UXrow{Resumo.página}{A, em B cada página reúne até quatro linhas; com mais de quatro, Anterior/Próxima existem quando há página naquela direção. Dn / alvos e linhas expostos / \UXev{acao_executada}.}
+\UXrow{Pedido.resumo}{T, composição e total em B, rodapé Dn / apenas interseção efetiva / \UXev{elemento_visto}.}
 \UXrow{Item.opção}{D, tamanho ou acompanhamento obrigatório, opções inicialmente sem escolha Dn / textos expostos / \UXev{opcao_selecionada}.}
 \UXrow{Opção.exigência}{A, condição de inclusão, orientação explícita M / trecho do aviso, sem marca lógica de desabilitação / \UXev{elemento_visto}.}
 \UXrow{Item.quantidade}{D, inteiro a partir de 1, número e controles $+/-$ Dn / número ou sinal visível / \UXev{acao_executada}.}
 \UXrow{Item.inclusão}{A, efetivar composição de uma nova linha, Adicionar Dn / alvo visível admissível / \UXev{item_adicionado}.}
+\end{uxtable}\end{minipage}\par
+\par\noindent\begin{minipage}{\columnwidth}
+\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Linha.edição}{A, abrir detalhes da linha e aplicar mudança, Alterar e Salvar alteração Dn / alvo do recorte / \UXev{item_alterado}.}
 \UXrow{Linha.composição}{T, nome, opção, unidades e subtotal, linha Dn / fragmentos expostos / \UXev{elemento_visto}.}
 \UXrow{Linha.unidades}{T, inteiro positivo da linha existente, $+/-$ Dn / controle visível / \UXev{item_alterado}.}
 \UXrow{Linha.remoção}{A, excluir a linha escolhida, Remover Dn / alvo visível / \UXev{item_removido}.}
 \UXrow{Linha.reposição}{A, recuperar última remoção disponível, Desfazer remoção Dn / alvo visível / \UXev{item_adicionado}.}
 \UXrow{Pedido.total}{T, soma de subtotais, moeda Dn / trecho / \UXev{elemento_visto}.}
+\end{uxtable}\end{minipage}\par
+\par\noindent\begin{minipage}{\columnwidth}
+\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Pedido.vazio}{A, ausência de linhas, mensagem Dn / trecho / \UXev{elemento_visto}.}
 \UXrow{Pedido.registro}{A, efetivar comanda não vazia, Confirmar pedido, depois mensagem e linhas Dn / alvo e resposta no recorte / \UXev{pedido_confirmado}.}
-\end{uxtable}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Ajuda.acesso}{A, solicitar explicação da cena, Ajuda E / alvo visível ou acesso explícito previsto / \UXev{ajuda_aberta}.}
 \UXrow{Ajuda.tópico}{A, assunto da origem e camada escolhida, título e texto M / trecho após abertura / \UXev{observacao}.}
 \UXrow{Ajuda.camada}{A, dica, contexto ou guia, três escolhas Dn / opções da ajuda aberta / \UXev{ajuda_aberta}.}
 \UXrow{Ajuda.retorno}{C, retomar a origem, Fechar ajuda E / alvo / \UXev{ajuda_fechada}.}
+\end{uxtable}\end{minipage}\par
+\par\noindent\begin{minipage}{\columnwidth}
+\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
 \UXrow{Navegação.retorno}{C, abandonar edição pendente, Voltar E / gesto ou alvo corrente / \UXev{tela_alterada}.}
 \UXrow{Vista.escala e posição}{C, janela $360/z$ por $800/z$ e posição, gesto de ampliar, reduzir ou deslocar Dn / recorte e gestos permitidos / \UXev{zoom_alterado}, \UXev{vista_deslocada}.}
 \UXrow{Protocolo.instrução}{A, enunciado estável da tarefa, texto do protocolo M / texto literal / \UXev{tarefa_iniciada}.}
 \UXrow{Protocolo.saída}{C, interromper por iniciativa própria, desistir Dn / gesto de protocolo / \UXev{desistencia}.}
-\end{uxtable}
+\end{uxtable}\end{minipage}\par

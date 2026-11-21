@@ -27,8 +27,8 @@
   },
   "events": [
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/1",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/1",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -38,7 +38,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 0,
-      "carimbo_tempo": "2026-11-21T18:46:02.503361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.761471+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0.0,
@@ -75,8 +75,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/2",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/2",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -86,7 +86,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 0,
-      "carimbo_tempo": "2026-11-21T18:46:02.503361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.761471+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0.0,
@@ -173,8 +173,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/3",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/3",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -184,7 +184,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -512,8 +512,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/4",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/4",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -523,7 +523,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -541,6 +541,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -549,8 +550,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/5",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/5",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -560,7 +561,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -578,6 +579,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -586,8 +588,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/6",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/6",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -597,7 +599,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -615,6 +617,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -623,8 +626,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/7",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/7",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -634,7 +637,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -652,6 +655,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -660,8 +664,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/8",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/8",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -671,7 +675,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -689,6 +693,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -697,8 +702,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/9",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/9",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -708,7 +713,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -726,6 +731,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -734,8 +740,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/10",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/10",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -745,7 +751,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -763,6 +769,7 @@
         "campo": "nome",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -771,8 +778,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/11",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/11",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -782,7 +789,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -800,6 +807,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -808,8 +816,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/12",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/12",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -819,7 +827,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -837,6 +845,7 @@
         "campo": "etiqueta",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -845,8 +854,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/13",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/13",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -856,7 +865,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -874,6 +883,7 @@
         "campo": "preco",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -882,8 +892,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/14",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/14",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -893,7 +903,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -911,6 +921,7 @@
         "campo": "nome",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -919,8 +930,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/15",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/15",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -930,7 +941,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -948,6 +959,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -956,8 +968,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/16",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/16",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -967,7 +979,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -985,6 +997,7 @@
         "campo": "preco",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -993,8 +1006,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/17",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/17",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1004,7 +1017,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1022,6 +1035,7 @@
         "campo": "nome",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1030,8 +1044,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/18",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/18",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1041,7 +1055,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1059,6 +1073,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1067,8 +1082,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/19",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/19",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1078,7 +1093,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1096,6 +1111,7 @@
         "campo": "etiqueta",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1104,8 +1120,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/20",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/20",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1115,7 +1131,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1133,6 +1149,7 @@
         "campo": "preco",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1141,8 +1158,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/21",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/21",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1152,7 +1169,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1170,6 +1187,7 @@
         "campo": "nome",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1178,8 +1196,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/22",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/22",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1189,7 +1207,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1207,6 +1225,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1215,8 +1234,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/23",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/23",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1226,7 +1245,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S1",
       "regiao_visivel": {
         "x": 0,
@@ -1244,6 +1263,7 @@
         "campo": "etiqueta",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 0.962963,
         "novo": true,
         "entrada": true,
@@ -1252,8 +1272,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/24",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/24",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1263,7 +1283,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1283,8 +1303,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/25",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/25",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1294,7 +1314,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 1,
-      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.763470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1312,8 +1332,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/26",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/26",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1323,7 +1343,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.764471+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1770,8 +1790,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/27",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/27",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1781,7 +1801,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1799,6 +1819,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1807,8 +1828,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/28",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/28",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1818,7 +1839,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1836,6 +1857,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1844,8 +1866,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/29",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/29",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1855,7 +1877,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1873,6 +1895,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1881,8 +1904,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/30",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/30",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1892,7 +1915,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1910,6 +1933,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1918,8 +1942,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/31",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/31",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1929,7 +1953,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1947,6 +1971,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1955,8 +1980,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/32",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/32",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -1966,7 +1991,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -1984,6 +2009,7 @@
         "campo": "linha",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -1992,8 +2018,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/33",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/33",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2003,7 +2029,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2021,6 +2047,7 @@
         "campo": "quantidade",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2029,8 +2056,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/34",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/34",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2040,7 +2067,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2058,6 +2085,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2066,8 +2094,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/35",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/35",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2077,7 +2105,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2095,6 +2123,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2103,8 +2132,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/36",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/36",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2114,7 +2143,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2132,6 +2161,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2140,8 +2170,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/37",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/37",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2151,7 +2181,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2169,6 +2199,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2177,8 +2208,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/38",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/38",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2188,7 +2219,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2206,6 +2237,7 @@
         "campo": "linha",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2214,8 +2246,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/39",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/39",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2225,7 +2257,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2243,6 +2275,7 @@
         "campo": "quantidade",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2251,8 +2284,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/40",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/40",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2262,7 +2295,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2280,6 +2313,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2288,8 +2322,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/41",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/41",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2299,7 +2333,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2317,6 +2351,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2325,8 +2360,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/42",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/42",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2336,7 +2371,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2354,6 +2389,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2362,8 +2398,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/43",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/43",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2373,7 +2409,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2391,6 +2427,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2399,8 +2436,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/44",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/44",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2410,7 +2447,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2428,6 +2465,7 @@
         "campo": "linha",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2436,8 +2474,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/45",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/45",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2447,7 +2485,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2465,6 +2503,7 @@
         "campo": "quantidade",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2473,8 +2512,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/46",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/46",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2484,7 +2523,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2502,6 +2541,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2510,8 +2550,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/47",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/47",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2521,7 +2561,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2539,6 +2579,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2547,8 +2588,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/48",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/48",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2558,7 +2599,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2576,6 +2617,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2584,8 +2626,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/49",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/49",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2595,7 +2637,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2613,6 +2655,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2621,8 +2664,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/50",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/50",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2632,7 +2675,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2650,6 +2693,7 @@
         "campo": "linha",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2658,8 +2702,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/51",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/51",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2669,7 +2713,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2687,6 +2731,7 @@
         "campo": "quantidade",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2695,8 +2740,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/52",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/52",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2706,7 +2751,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2724,6 +2769,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2732,8 +2778,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/53",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/53",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2743,7 +2789,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2761,6 +2807,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2769,8 +2816,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/54",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/54",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2780,7 +2827,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2798,6 +2845,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2806,8 +2854,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/55",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/55",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2817,7 +2865,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2835,6 +2883,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2843,8 +2892,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/56",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/56",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2854,7 +2903,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2872,6 +2921,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2880,8 +2930,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/57",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/57",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2891,7 +2941,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2909,6 +2959,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": true,
         "entrada": true,
@@ -2917,8 +2968,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/58",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/58",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2928,7 +2979,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -2948,8 +2999,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/59",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/59",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -2959,7 +3010,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 2,
-      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.765470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -3053,8 +3104,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/60",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/60",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3064,7 +3115,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -3513,8 +3564,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/61",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/61",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3524,7 +3575,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -3542,6 +3593,7 @@
         "campo": "quantidade",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": true,
         "fracao_visivel": 1.0,
         "novo": false,
         "entrada": false,
@@ -3550,8 +3602,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/62",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/62",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3561,7 +3613,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S3",
       "regiao_visivel": {
         "x": 0,
@@ -3579,6 +3631,7 @@
         "campo": "outro",
         "legivel": true,
         "fragmentado": false,
+        "criterio_visivel": false,
         "fracao_visivel": 1.0,
         "novo": false,
         "entrada": false,
@@ -3587,8 +3640,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/63",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/63",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3598,7 +3651,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S4",
       "regiao_visivel": {
         "x": 0,
@@ -3618,8 +3671,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/64",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/64",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3629,7 +3682,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S4",
       "regiao_visivel": {
         "x": 0,
@@ -3705,8 +3758,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/65",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/65",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3716,7 +3769,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S4",
       "regiao_visivel": {
         "x": 0,
@@ -3734,8 +3787,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/66",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/66",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3745,7 +3798,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S4",
       "regiao_visivel": {
         "x": 0.0,
@@ -3814,8 +3867,8 @@
       }
     },
     {
-      "id_evento": "C2-A-R-42-e53c277b4424/67",
-      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_evento": "C2-A-R-42-03b182dc7c40/67",
+      "id_sessao": "C2-A-R-42-03b182dc7c40",
       "id_configuracao": "R",
       "id_tarefa": "C2",
       "versao_interface": "A",
@@ -3825,7 +3878,7 @@
       "versao_llm": null,
       "semente": 42,
       "passo": 3,
-      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "carimbo_tempo": "2026-11-21T18:53:24.766470+00:00",
       "tela": "S4",
       "regiao_visivel": {
         "x": 0.0,

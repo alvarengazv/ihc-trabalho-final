@@ -68,12 +68,22 @@
       ],
       [
         "4 Conferir e registrar",
-        "4.1 ≫ 4.2 ≫ 4.3; 4.2 facultativa em B se já conferiu",
+        "4.1 ≫ 4.2 ≫ 4.3",
         [
           [
             "I",
             "4.1",
             "Abrir a revisão"
+          ],
+          [
+            "I",
+            "4.2",
+            "Deslocar a vista pela revisão, se necessário"
+          ],
+          [
+            "S",
+            "4.2",
+            "Expor nome e quantidade da linha no recorte"
           ],
           [
             "U",
@@ -183,6 +193,16 @@
             "Chegar aos pratos: deslocar (A) [] escolher categoria (B)"
           ],
           [
+            "I",
+            "1.2",
+            "Deslocar a vista pelos pratos"
+          ],
+          [
+            "S",
+            "1.2",
+            "Expor etiquetas e preços no recorte"
+          ],
+          [
             "U",
             "1.2",
             "Ler etiquetas e preços expostos"
@@ -224,6 +244,16 @@
             "Chegar às bebidas: deslocar (A) [] escolher categoria (B)"
           ],
           [
+            "I",
+            "2.2",
+            "Deslocar a vista pelas bebidas"
+          ],
+          [
+            "S",
+            "2.2",
+            "Expor as etiquetas no recorte"
+          ],
+          [
             "U",
             "2.2",
             "Ler as etiquetas"
@@ -260,6 +290,16 @@
             "Chegar às sobremesas"
           ],
           [
+            "I",
+            "3.2",
+            "Deslocar a vista pelas sobremesas"
+          ],
+          [
+            "S",
+            "3.2",
+            "Expor os preços no recorte"
+          ],
+          [
             "U",
             "3.2",
             "Ler os preços"
@@ -284,6 +324,16 @@
             "I",
             "4.1",
             "Abrir revisão [] procurar resumo em B"
+          ],
+          [
+            "I",
+            "4.2",
+            "Deslocar até o total, se necessário"
+          ],
+          [
+            "S",
+            "4.2",
+            "Expor a parte legível do total"
           ],
           [
             "U",

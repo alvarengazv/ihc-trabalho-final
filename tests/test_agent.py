@@ -86,11 +86,13 @@ class ChannelTests(unittest.TestCase):
         public_sign = [sign("help-text", "Instrução", 0, 30)]
         with self.assertRaises(ValueError):
             self.chan.observe(public_sign, "S5")
+        self.chan.observe([sign("identity", "Prato já visto", 0, 20)], "S1")
         self.chan.scene_changed(help_open=True)
         self.chan.observe(public_sign, "S5")
         self.chan.scene_changed(False)
         outside = self.chan.observe([], "S1")
         self.assertNotIn("Instrução", make_prompt("C1", outside, self.chan))
+        self.assertIn("Prato já visto", make_prompt("C1", outside, self.chan))
 
     def test_scan_and_zoom_gate(self):
         self.chan.observe([], "S1", height=2000)
@@ -146,6 +148,18 @@ class ChannelTests(unittest.TestCase):
 
 
 class RunTests(unittest.TestCase):
+    def test_magnified_reference_sees_numeric_quantity_before_edit(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path, score = Trial("C2", "B", sample("R", 42, reference_zoom=7), folder).run()
+            events = json.loads(path.read_text(encoding="utf8"))["events"]
+            edit = next(e["passo"] for e in events if e["tipo"] == "item_alterado")
+            quantities_seen = {e["dados"]["item_id"] for e in events if e["passo"] <= edit
+                               and e["tipo"] == "elemento_visto"
+                               and e["dados"]["campo"] == "quantidade"
+                               and e["dados"]["criterio_visivel"]}
+            self.assertEqual({6, 18, 20, 24}, quantities_seen)
+            self.assertEqual((1, 1, 0), (score["S"], score["R_A"], score["O"]))
+
     def test_reference_results_in_both_interfaces(self):
         with tempfile.TemporaryDirectory() as folder:
             for task, counts in (("C1", (8, 7)), ("C2", (3, 3))):
