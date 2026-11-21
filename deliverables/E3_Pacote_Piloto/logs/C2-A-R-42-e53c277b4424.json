@@ -1,0 +1,3884 @@
+{
+  "meta": {
+    "reference_actions": 3,
+    "parametros": {
+      "width": 360,
+      "height": 800,
+      "k": null,
+      "p": 0,
+      "n": 5,
+      "q": 0.5,
+      "L": 150,
+      "f": true,
+      "mechanisms": [
+        "M1",
+        "M3",
+        "M5"
+      ],
+      "z": 1.0,
+      "z_leg": 1,
+      "s": "livre",
+      "profile": "R",
+      "version": "1.0.0",
+      "seed": 42
+    },
+    "n": 5,
+    "executor": "R"
+  },
+  "events": [
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/1",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 0,
+      "carimbo_tempo": "2026-11-21T18:46:02.503361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "sessao_iniciada",
+      "dados": {
+        "parametros": {
+          "width": 360,
+          "height": 800,
+          "k": null,
+          "p": 0,
+          "n": 5,
+          "q": 0.5,
+          "L": 150,
+          "f": true,
+          "mechanisms": [
+            "M1",
+            "M3",
+            "M5"
+          ],
+          "z": 1.0,
+          "z_leg": 1,
+          "s": "livre",
+          "profile": "R",
+          "version": "1.0.0",
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/2",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 0,
+      "carimbo_tempo": "2026-11-21T18:46:02.503361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "tarefa_iniciada",
+      "dados": {
+        "estado_inicial": {
+          "tela": "S1",
+          "pedido": [
+            {
+              "item_id": 6,
+              "nome": "Frango grelhado",
+              "opcao": "Arroz branco",
+              "quantidade": 1,
+              "preco_centavos": 3290
+            },
+            {
+              "item_id": 18,
+              "nome": "Suco de laranja",
+              "opcao": null,
+              "quantidade": 2,
+              "preco_centavos": 990
+            },
+            {
+              "item_id": 20,
+              "nome": "Água sem gás",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 490
+            },
+            {
+              "item_id": 24,
+              "nome": "Pudim de leite",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 1290
+            }
+          ],
+          "confirmado": false,
+          "categoria": 0,
+          "item_ativo": null,
+          "opcao": null,
+          "quantidade": 1,
+          "total_centavos": 7050,
+          "origem_ajuda": null,
+          "camada": "dica"
+        },
+        "pedido": [
+          {
+            "item_id": 6,
+            "nome": "Frango grelhado",
+            "opcao": "Arroz branco",
+            "quantidade": 1,
+            "preco_centavos": 3290
+          },
+          {
+            "item_id": 18,
+            "nome": "Suco de laranja",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 990
+          },
+          {
+            "item_id": 20,
+            "nome": "Água sem gás",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 490
+          },
+          {
+            "item_id": 24,
+            "nome": "Pudim de leite",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 1290
+          }
+        ]
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/3",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "observacao",
+      "dados": {
+        "observacao": {
+          "vista": [
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                12,
+                224,
+                44
+              ],
+              "texto": "Mesa de Minas"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                256,
+                12,
+                88,
+                44
+              ],
+              "texto": "Ajuda",
+              "gesto": "TOCAR(2)"
+            },
+            {
+              "tipo": "título",
+              "caixa": [
+                16,
+                76,
+                328,
+                44
+              ],
+              "texto": "Cardápio"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                132,
+                108,
+                44
+              ],
+              "texto": "Início",
+              "gesto": "TOCAR(4)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                208,
+                132,
+                136,
+                44
+              ],
+              "texto": "Ver pedido (5)",
+              "gesto": "TOCAR(5)"
+            },
+            {
+              "tipo": "título",
+              "caixa": [
+                16,
+                192,
+                328,
+                42
+              ],
+              "texto": "Entradas"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                240,
+                328,
+                40
+              ],
+              "texto": "Bruschetta de tomate",
+              "gesto": "TOCAR(7)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                280,
+                328,
+                44
+              ],
+              "texto": "Pão, tomate, manjericão",
+              "gesto": "TOCAR(8)"
+            },
+            {
+              "tipo": "marcador",
+              "caixa": [
+                16,
+                324,
+                328,
+                27
+              ],
+              "texto": "(V)",
+              "gesto": "TOCAR(9)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                351,
+                328,
+                34
+              ],
+              "texto": "R$ 18,90",
+              "gesto": "TOCAR(10)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                399,
+                328,
+                40
+              ],
+              "texto": "Pastéis de carne (6 un.)",
+              "gesto": "TOCAR(11)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                439,
+                328,
+                44
+              ],
+              "texto": "Carne moída temperada",
+              "gesto": "TOCAR(12)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                483,
+                328,
+                34
+              ],
+              "texto": "R$ 22,90",
+              "gesto": "TOCAR(13)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                531,
+                328,
+                40
+              ],
+              "texto": "Salada verde",
+              "gesto": "TOCAR(14)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                571,
+                328,
+                44
+              ],
+              "texto": "Alface, rúcula, tomate",
+              "gesto": "TOCAR(15)"
+            },
+            {
+              "tipo": "marcador",
+              "caixa": [
+                16,
+                615,
+                328,
+                27
+              ],
+              "texto": "(V, SL)",
+              "gesto": "TOCAR(16)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                642,
+                328,
+                34
+              ],
+              "texto": "R$ 16,90",
+              "gesto": "TOCAR(17)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                690,
+                328,
+                40
+              ],
+              "texto": "Caldo de feijão",
+              "gesto": "TOCAR(18)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                730,
+                328,
+                44
+              ],
+              "texto": "Feijão, bacon, cheiro-verde",
+              "gesto": "TOCAR(19)"
+            },
+            {
+              "tipo": "marcador",
+              "caixa": [
+                16,
+                774,
+                328,
+                26
+              ],
+              "texto": "(SL)",
+              "gesto": "TOCAR(20)"
+            }
+          ],
+          "memoria": [],
+          "acoes": [
+            "TOCAR(2)",
+            "TOCAR(4)",
+            "TOCAR(5)",
+            "TOCAR(7)",
+            "TOCAR(8)",
+            "TOCAR(9)",
+            "TOCAR(10)",
+            "TOCAR(11)",
+            "TOCAR(12)",
+            "TOCAR(13)",
+            "TOCAR(14)",
+            "TOCAR(15)",
+            "TOCAR(16)",
+            "TOCAR(17)",
+            "TOCAR(18)",
+            "TOCAR(19)",
+            "TOCAR(20)",
+            "TOCAR(Ajuda)",
+            "DESISTIR",
+            "AMPLIAR",
+            "DESLOCAR(próximo)",
+            "DESLOCAR(dx%,dy%)",
+            "DESLOCAR(baixo)"
+          ]
+        },
+        "elementos": [
+          "brand",
+          "help",
+          "heading",
+          "home",
+          "review",
+          "section:Entradas",
+          "name:0",
+          "desc:0",
+          "tags:0",
+          "price:0",
+          "name:1",
+          "desc:1",
+          "price:1",
+          "name:2",
+          "desc:2",
+          "tags:2",
+          "price:2",
+          "name:3",
+          "desc:3",
+          "tags:3"
+        ],
+        "memoria": [],
+        "estado_interface": {
+          "tela": "S1",
+          "pedido": [
+            {
+              "item_id": 6,
+              "nome": "Frango grelhado",
+              "opcao": "Arroz branco",
+              "quantidade": 1,
+              "preco_centavos": 3290
+            },
+            {
+              "item_id": 18,
+              "nome": "Suco de laranja",
+              "opcao": null,
+              "quantidade": 2,
+              "preco_centavos": 990
+            },
+            {
+              "item_id": 20,
+              "nome": "Água sem gás",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 490
+            },
+            {
+              "item_id": 24,
+              "nome": "Pudim de leite",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 1290
+            }
+          ],
+          "confirmado": false,
+          "categoria": 0,
+          "item_ativo": null,
+          "opcao": null,
+          "quantidade": 1,
+          "total_centavos": 7050,
+          "origem_ajuda": null,
+          "camada": "dica"
+        },
+        "rolagem": 0
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/4",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "brand",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Mesa de Minas"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/5",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "help",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Ajuda"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/6",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "heading",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Cardápio"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/7",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "home",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Início"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/8",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "review",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Ver pedido (5)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/9",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "section:Entradas",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Entradas"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/10",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "name:0",
+        "item_id": 0,
+        "campo": "nome",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Bruschetta de tomate"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/11",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "desc:0",
+        "item_id": 0,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Pão, tomate, manjericão"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/12",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "tags:0",
+        "item_id": 0,
+        "campo": "etiqueta",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "(V)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/13",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "price:0",
+        "item_id": 0,
+        "campo": "preco",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "R$ 18,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/14",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "name:1",
+        "item_id": 1,
+        "campo": "nome",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Pastéis de carne (6 un.)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/15",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "desc:1",
+        "item_id": 1,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Carne moída temperada"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/16",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "price:1",
+        "item_id": 1,
+        "campo": "preco",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "R$ 22,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/17",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "name:2",
+        "item_id": 2,
+        "campo": "nome",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Salada verde"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/18",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "desc:2",
+        "item_id": 2,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Alface, rúcula, tomate"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/19",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "tags:2",
+        "item_id": 2,
+        "campo": "etiqueta",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "(V, SL)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/20",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "price:2",
+        "item_id": 2,
+        "campo": "preco",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "R$ 16,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/21",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "name:3",
+        "item_id": 3,
+        "campo": "nome",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Caldo de feijão"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/22",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "desc:3",
+        "item_id": 3,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Feijão, bacon, cheiro-verde"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/23",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "tags:3",
+        "item_id": 3,
+        "campo": "etiqueta",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 0.962963,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "(SL)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/24",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "acao_executada",
+      "dados": {
+        "acao": "TOCAR",
+        "alvo": "review",
+        "origem": "R",
+        "gesto": "TOCAR(5)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/25",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 1,
+      "carimbo_tempo": "2026-11-21T18:46:02.505361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "tela_alterada",
+      "dados": {
+        "anterior": "S1",
+        "nova": "S3"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/26",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "observacao",
+      "dados": {
+        "observacao": {
+          "vista": [
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                12,
+                224,
+                44
+              ],
+              "texto": "Mesa de Minas"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                256,
+                12,
+                88,
+                44
+              ],
+              "texto": "Ajuda",
+              "gesto": "TOCAR(2)"
+            },
+            {
+              "tipo": "título",
+              "caixa": [
+                16,
+                76,
+                328,
+                44
+              ],
+              "texto": "Revisão do pedido"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                128,
+                154,
+                44
+              ],
+              "texto": "Voltar",
+              "gesto": "TOCAR(4)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                184,
+                128,
+                160,
+                44
+              ],
+              "texto": "Início",
+              "gesto": "TOCAR(5)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                188,
+                328,
+                38
+              ],
+              "texto": "Frango grelhado"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                226,
+                328,
+                32
+              ],
+              "texto": "Arroz branco · 1 un. · R$ 32,90"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                262,
+                44,
+                44
+              ],
+              "texto": "−"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                262,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(9)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                262,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(10)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                262,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(11)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                315,
+                328,
+                38
+              ],
+              "texto": "Suco de laranja"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                353,
+                328,
+                32
+              ],
+              "texto": "2 un. · R$ 19,80"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                389,
+                44,
+                44
+              ],
+              "texto": "−",
+              "gesto": "TOCAR(14)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                389,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(15)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                389,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(16)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                389,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(17)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                442,
+                328,
+                38
+              ],
+              "texto": "Água sem gás"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                480,
+                328,
+                32
+              ],
+              "texto": "1 un. · R$ 4,90"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                516,
+                44,
+                44
+              ],
+              "texto": "−"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                516,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(21)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                516,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(22)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                516,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(23)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                569,
+                328,
+                38
+              ],
+              "texto": "Pudim de leite"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                607,
+                328,
+                32
+              ],
+              "texto": "1 un. · R$ 12,90"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                643,
+                44,
+                44
+              ],
+              "texto": "−"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                643,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(27)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                643,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(28)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                643,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(29)"
+            },
+            {
+              "tipo": "mensagem",
+              "caixa": [
+                16,
+                696,
+                328,
+                42
+              ],
+              "texto": "Total: R$ 70,50"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                744,
+                328,
+                44
+              ],
+              "texto": "Confirmar pedido",
+              "gesto": "TOCAR(31)"
+            }
+          ],
+          "memoria": [],
+          "acoes": [
+            "TOCAR(2)",
+            "TOCAR(4)",
+            "TOCAR(5)",
+            "TOCAR(9)",
+            "TOCAR(10)",
+            "TOCAR(11)",
+            "TOCAR(14)",
+            "TOCAR(15)",
+            "TOCAR(16)",
+            "TOCAR(17)",
+            "TOCAR(21)",
+            "TOCAR(22)",
+            "TOCAR(23)",
+            "TOCAR(27)",
+            "TOCAR(28)",
+            "TOCAR(29)",
+            "TOCAR(31)",
+            "TOCAR(Ajuda)",
+            "VOLTAR",
+            "DESISTIR",
+            "AMPLIAR"
+          ]
+        },
+        "elementos": [
+          "brand",
+          "help",
+          "heading",
+          "back",
+          "home",
+          "line:0",
+          "line-qty:0",
+          "dec:0",
+          "inc:0",
+          "edit:0",
+          "remove:0",
+          "line:1",
+          "line-qty:1",
+          "dec:1",
+          "inc:1",
+          "edit:1",
+          "remove:1",
+          "line:2",
+          "line-qty:2",
+          "dec:2",
+          "inc:2",
+          "edit:2",
+          "remove:2",
+          "line:3",
+          "line-qty:3",
+          "dec:3",
+          "inc:3",
+          "edit:3",
+          "remove:3",
+          "total",
+          "confirm"
+        ],
+        "memoria": [],
+        "estado_interface": {
+          "tela": "S3",
+          "pedido": [
+            {
+              "item_id": 6,
+              "nome": "Frango grelhado",
+              "opcao": "Arroz branco",
+              "quantidade": 1,
+              "preco_centavos": 3290
+            },
+            {
+              "item_id": 18,
+              "nome": "Suco de laranja",
+              "opcao": null,
+              "quantidade": 2,
+              "preco_centavos": 990
+            },
+            {
+              "item_id": 20,
+              "nome": "Água sem gás",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 490
+            },
+            {
+              "item_id": 24,
+              "nome": "Pudim de leite",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 1290
+            }
+          ],
+          "confirmado": false,
+          "categoria": 0,
+          "item_ativo": null,
+          "opcao": null,
+          "quantidade": 1,
+          "total_centavos": 7050,
+          "origem_ajuda": null,
+          "camada": "dica"
+        },
+        "rolagem": 0
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/27",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "brand",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Mesa de Minas"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/28",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "help",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Ajuda"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/29",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "heading",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Revisão do pedido"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/30",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "back",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Voltar"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/31",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "home",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Início"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/32",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line:0",
+        "item_id": 6,
+        "campo": "linha",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Frango grelhado"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/33",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line-qty:0",
+        "item_id": 6,
+        "campo": "quantidade",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Arroz branco · 1 un. · R$ 32,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/34",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "dec:0",
+        "item_id": 6,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "−"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/35",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "inc:0",
+        "item_id": 6,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "+"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/36",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "edit:0",
+        "item_id": 6,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Alterar"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/37",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "remove:0",
+        "item_id": 6,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Remover"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/38",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line:1",
+        "item_id": 18,
+        "campo": "linha",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Suco de laranja"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/39",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line-qty:1",
+        "item_id": 18,
+        "campo": "quantidade",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "2 un. · R$ 19,80"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/40",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "dec:1",
+        "item_id": 18,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "−"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/41",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "inc:1",
+        "item_id": 18,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "+"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/42",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "edit:1",
+        "item_id": 18,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Alterar"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/43",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "remove:1",
+        "item_id": 18,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Remover"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/44",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line:2",
+        "item_id": 20,
+        "campo": "linha",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Água sem gás"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/45",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line-qty:2",
+        "item_id": 20,
+        "campo": "quantidade",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "1 un. · R$ 4,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/46",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "dec:2",
+        "item_id": 20,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "−"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/47",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "inc:2",
+        "item_id": 20,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "+"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/48",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "edit:2",
+        "item_id": 20,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Alterar"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/49",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "remove:2",
+        "item_id": 20,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Remover"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/50",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line:3",
+        "item_id": 24,
+        "campo": "linha",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Pudim de leite"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/51",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line-qty:3",
+        "item_id": 24,
+        "campo": "quantidade",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "1 un. · R$ 12,90"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/52",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "dec:3",
+        "item_id": 24,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "−"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/53",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "inc:3",
+        "item_id": 24,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "+"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/54",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "edit:3",
+        "item_id": 24,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Alterar"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/55",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "remove:3",
+        "item_id": 24,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Remover"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/56",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "total",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Total: R$ 70,50"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/57",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "confirm",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": true,
+        "entrada": true,
+        "reentrada": false,
+        "texto": "Confirmar pedido"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/58",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "acao_executada",
+      "dados": {
+        "acao": "TOCAR",
+        "alvo": "inc:3",
+        "origem": "R",
+        "gesto": "TOCAR(27)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/59",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 2,
+      "carimbo_tempo": "2026-11-21T18:46:02.506361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "item_alterado",
+      "dados": {
+        "linha": 3,
+        "item": 24,
+        "opcao": null,
+        "quantidade": 2,
+        "anterior": {
+          "item_id": 24,
+          "nome": "Pudim de leite",
+          "opcao": null,
+          "quantidade": 1,
+          "preco_centavos": 1290
+        },
+        "novo": {
+          "item_id": 24,
+          "nome": "Pudim de leite",
+          "opcao": null,
+          "quantidade": 2,
+          "preco_centavos": 1290
+        },
+        "pedido": [
+          {
+            "item_id": 6,
+            "nome": "Frango grelhado",
+            "opcao": "Arroz branco",
+            "quantidade": 1,
+            "preco_centavos": 3290
+          },
+          {
+            "item_id": 18,
+            "nome": "Suco de laranja",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 990
+          },
+          {
+            "item_id": 20,
+            "nome": "Água sem gás",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 490
+          },
+          {
+            "item_id": 24,
+            "nome": "Pudim de leite",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 1290
+          }
+        ],
+        "estado_posterior": [
+          {
+            "item_id": 6,
+            "nome": "Frango grelhado",
+            "opcao": "Arroz branco",
+            "quantidade": 1,
+            "preco_centavos": 3290
+          },
+          {
+            "item_id": 18,
+            "nome": "Suco de laranja",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 990
+          },
+          {
+            "item_id": 20,
+            "nome": "Água sem gás",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 490
+          },
+          {
+            "item_id": 24,
+            "nome": "Pudim de leite",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 1290
+          }
+        ]
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/60",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "observacao",
+      "dados": {
+        "observacao": {
+          "vista": [
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                12,
+                224,
+                44
+              ],
+              "texto": "Mesa de Minas"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                256,
+                12,
+                88,
+                44
+              ],
+              "texto": "Ajuda",
+              "gesto": "TOCAR(2)"
+            },
+            {
+              "tipo": "título",
+              "caixa": [
+                16,
+                76,
+                328,
+                44
+              ],
+              "texto": "Revisão do pedido"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                128,
+                154,
+                44
+              ],
+              "texto": "Voltar",
+              "gesto": "TOCAR(4)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                184,
+                128,
+                160,
+                44
+              ],
+              "texto": "Início",
+              "gesto": "TOCAR(5)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                188,
+                328,
+                38
+              ],
+              "texto": "Frango grelhado"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                226,
+                328,
+                32
+              ],
+              "texto": "Arroz branco · 1 un. · R$ 32,90"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                262,
+                44,
+                44
+              ],
+              "texto": "−"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                262,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(9)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                262,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(10)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                262,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(11)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                315,
+                328,
+                38
+              ],
+              "texto": "Suco de laranja"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                353,
+                328,
+                32
+              ],
+              "texto": "2 un. · R$ 19,80"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                389,
+                44,
+                44
+              ],
+              "texto": "−",
+              "gesto": "TOCAR(14)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                389,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(15)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                389,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(16)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                389,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(17)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                442,
+                328,
+                38
+              ],
+              "texto": "Água sem gás"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                480,
+                328,
+                32
+              ],
+              "texto": "1 un. · R$ 4,90"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                516,
+                44,
+                44
+              ],
+              "texto": "−"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                516,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(21)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                516,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(22)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                516,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(23)"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                569,
+                328,
+                38
+              ],
+              "texto": "Pudim de leite"
+            },
+            {
+              "tipo": "texto",
+              "caixa": [
+                16,
+                607,
+                328,
+                32
+              ],
+              "texto": "2 un. · R$ 25,80"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                643,
+                44,
+                44
+              ],
+              "texto": "−",
+              "gesto": "TOCAR(26)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                66,
+                643,
+                44,
+                44
+              ],
+              "texto": "+",
+              "gesto": "TOCAR(27)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                116,
+                643,
+                100,
+                44
+              ],
+              "texto": "Alterar",
+              "gesto": "TOCAR(28)"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                222,
+                643,
+                122,
+                44
+              ],
+              "texto": "Remover",
+              "gesto": "TOCAR(29)"
+            },
+            {
+              "tipo": "mensagem",
+              "caixa": [
+                16,
+                696,
+                328,
+                42
+              ],
+              "texto": "Total: R$ 83,40"
+            },
+            {
+              "tipo": "botão",
+              "caixa": [
+                16,
+                744,
+                328,
+                44
+              ],
+              "texto": "Confirmar pedido",
+              "gesto": "TOCAR(31)"
+            }
+          ],
+          "memoria": [],
+          "acoes": [
+            "TOCAR(2)",
+            "TOCAR(4)",
+            "TOCAR(5)",
+            "TOCAR(9)",
+            "TOCAR(10)",
+            "TOCAR(11)",
+            "TOCAR(14)",
+            "TOCAR(15)",
+            "TOCAR(16)",
+            "TOCAR(17)",
+            "TOCAR(21)",
+            "TOCAR(22)",
+            "TOCAR(23)",
+            "TOCAR(26)",
+            "TOCAR(27)",
+            "TOCAR(28)",
+            "TOCAR(29)",
+            "TOCAR(31)",
+            "TOCAR(Ajuda)",
+            "VOLTAR",
+            "DESISTIR",
+            "AMPLIAR"
+          ]
+        },
+        "elementos": [
+          "brand",
+          "help",
+          "heading",
+          "back",
+          "home",
+          "line:0",
+          "line-qty:0",
+          "dec:0",
+          "inc:0",
+          "edit:0",
+          "remove:0",
+          "line:1",
+          "line-qty:1",
+          "dec:1",
+          "inc:1",
+          "edit:1",
+          "remove:1",
+          "line:2",
+          "line-qty:2",
+          "dec:2",
+          "inc:2",
+          "edit:2",
+          "remove:2",
+          "line:3",
+          "line-qty:3",
+          "dec:3",
+          "inc:3",
+          "edit:3",
+          "remove:3",
+          "total",
+          "confirm"
+        ],
+        "memoria": [],
+        "estado_interface": {
+          "tela": "S3",
+          "pedido": [
+            {
+              "item_id": 6,
+              "nome": "Frango grelhado",
+              "opcao": "Arroz branco",
+              "quantidade": 1,
+              "preco_centavos": 3290
+            },
+            {
+              "item_id": 18,
+              "nome": "Suco de laranja",
+              "opcao": null,
+              "quantidade": 2,
+              "preco_centavos": 990
+            },
+            {
+              "item_id": 20,
+              "nome": "Água sem gás",
+              "opcao": null,
+              "quantidade": 1,
+              "preco_centavos": 490
+            },
+            {
+              "item_id": 24,
+              "nome": "Pudim de leite",
+              "opcao": null,
+              "quantidade": 2,
+              "preco_centavos": 1290
+            }
+          ],
+          "confirmado": false,
+          "categoria": 0,
+          "item_ativo": null,
+          "opcao": null,
+          "quantidade": 1,
+          "total_centavos": 8340,
+          "origem_ajuda": null,
+          "camada": "dica"
+        },
+        "rolagem": 0
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/61",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "line-qty:3",
+        "item_id": 24,
+        "campo": "quantidade",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": false,
+        "entrada": false,
+        "reentrada": false,
+        "texto": "2 un. · R$ 25,80"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/62",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S3",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "elemento_visto",
+      "dados": {
+        "elemento": "total",
+        "item_id": null,
+        "campo": "outro",
+        "legivel": true,
+        "fragmentado": false,
+        "fracao_visivel": 1.0,
+        "novo": false,
+        "entrada": false,
+        "reentrada": false,
+        "texto": "Total: R$ 83,40"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/63",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S4",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "acao_executada",
+      "dados": {
+        "acao": "TOCAR",
+        "alvo": "confirm",
+        "origem": "R",
+        "gesto": "TOCAR(31)"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/64",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S4",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "pedido_confirmado",
+      "dados": {
+        "pedido": [
+          {
+            "item_id": 6,
+            "nome": "Frango grelhado",
+            "opcao": "Arroz branco",
+            "quantidade": 1,
+            "preco_centavos": 3290
+          },
+          {
+            "item_id": 18,
+            "nome": "Suco de laranja",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 990
+          },
+          {
+            "item_id": 20,
+            "nome": "Água sem gás",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 490
+          },
+          {
+            "item_id": 24,
+            "nome": "Pudim de leite",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 1290
+          }
+        ],
+        "estado_final": [
+          {
+            "item_id": 6,
+            "nome": "Frango grelhado",
+            "opcao": "Arroz branco",
+            "quantidade": 1,
+            "preco_centavos": 3290
+          },
+          {
+            "item_id": 18,
+            "nome": "Suco de laranja",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 990
+          },
+          {
+            "item_id": 20,
+            "nome": "Água sem gás",
+            "opcao": null,
+            "quantidade": 1,
+            "preco_centavos": 490
+          },
+          {
+            "item_id": 24,
+            "nome": "Pudim de leite",
+            "opcao": null,
+            "quantidade": 2,
+            "preco_centavos": 1290
+          }
+        ]
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/65",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S4",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "tela_alterada",
+      "dados": {
+        "anterior": "S3",
+        "nova": "S4"
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/66",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S4",
+      "regiao_visivel": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "tarefa_encerrada",
+      "dados": {
+        "resultado": "sucesso",
+        "categorias": [],
+        "metricas": {
+          "resultado": "sucesso",
+          "S": 1,
+          "A": 3,
+          "N_ref": 3,
+          "R_A": 1.0,
+          "erros": {
+            "E1": 0,
+            "E2": 0,
+            "E3": 0,
+            "E4": 0,
+            "E5": 0,
+            "E6": 0
+          },
+          "oportunidades": {
+            "E1": 0,
+            "E2": 0,
+            "E3": 1,
+            "E4": 0,
+            "E5": 1,
+            "E6": 0
+          },
+          "Re": {
+            "E1": null,
+            "E2": null,
+            "E3": 0.0,
+            "E4": null,
+            "E5": 0.0,
+            "E6": null
+          },
+          "D": 0.0,
+          "V": 0.0,
+          "O": 0.0,
+          "U": 0,
+          "U_por_camada": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+          },
+          "U_primeira_posicao": null,
+          "MAC": {
+            "Socorro!": 0,
+            "Desisto": 0,
+            "Pra mim está bom": 0,
+            "Epa!": 0,
+            "Cadê?": 0,
+            "O que é isso?": 0
+          },
+          "interrupcao": null,
+          "propostas_rejeitadas": 0
+        }
+      }
+    },
+    {
+      "id_evento": "C2-A-R-42-e53c277b4424/67",
+      "id_sessao": "C2-A-R-42-e53c277b4424",
+      "id_configuracao": "R",
+      "id_tarefa": "C2",
+      "versao_interface": "A",
+      "versao_mecanismos": "1.0.0",
+      "hash_configuracao": "35bc3e7027980703ed3317c04136e2cb0d348ca509769994ba833d912ce3402f",
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": 42,
+      "passo": 3,
+      "carimbo_tempo": "2026-11-21T18:46:02.507361+00:00",
+      "tela": "S4",
+      "regiao_visivel": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0,
+        "largura": 360.0,
+        "altura": 800.0
+      },
+      "synthetic": true,
+      "temperatura": null,
+      "tipo": "sessao_encerrada",
+      "dados": {}
+    }
+  ],
+  "final_state": {
+    "tela": "S4",
+    "pedido": [
+      {
+        "item_id": 6,
+        "nome": "Frango grelhado",
+        "opcao": "Arroz branco",
+        "quantidade": 1,
+        "preco_centavos": 3290
+      },
+      {
+        "item_id": 18,
+        "nome": "Suco de laranja",
+        "opcao": null,
+        "quantidade": 2,
+        "preco_centavos": 990
+      },
+      {
+        "item_id": 20,
+        "nome": "Água sem gás",
+        "opcao": null,
+        "quantidade": 1,
+        "preco_centavos": 490
+      },
+      {
+        "item_id": 24,
+        "nome": "Pudim de leite",
+        "opcao": null,
+        "quantidade": 2,
+        "preco_centavos": 1290
+      }
+    ],
+    "confirmado": true,
+    "categoria": 0,
+    "item_ativo": null,
+    "opcao": null,
+    "quantidade": 1,
+    "total_centavos": 8340,
+    "origem_ajuda": null,
+    "camada": "dica"
+  }
+}

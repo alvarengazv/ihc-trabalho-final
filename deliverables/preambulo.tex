@@ -1,0 +1,31 @@
+\ifdefined\XeTeXversion
+  % IEEEtran selects ptm before loading the user preamble. Map its Unicode
+  % NFSS families explicitly so XeTeX retains serifs, italics and bold.
+  \newcommand{\UXfont}[5]{\DeclareFontShape{TU}{#1}{#2}{#3}{<->"[#4]:mapping=tex-text"}{}}
+  \newcommand{\UXfamily}[5]{%
+    \DeclareFontFamily{TU}{#1}{}%
+    \UXfont{#1}{m}{n}{#2}{}\UXfont{#1}{m}{it}{#3}{}%
+    \UXfont{#1}{b}{n}{#4}{}\UXfont{#1}{bx}{n}{#4}{}%
+    \UXfont{#1}{b}{it}{#5}{}\UXfont{#1}{bx}{it}{#5}{}%
+    \DeclareFontShape{TU}{#1}{m}{sl}{<->ssub*#1/m/it}{}%
+    \DeclareFontShape{TU}{#1}{m}{sc}{<->ssub*#1/m/n}{}}
+  \IfFileExists{times.ttf}{%
+    \UXfamily{ptm}{times.ttf}{timesi.ttf}{timesbd.ttf}{timesbi.ttf}
+    \UXfamily{phv}{arial.ttf}{ariali.ttf}{arialbd.ttf}{arialbi.ttf}
+    \UXfamily{pcr}{cour.ttf}{couri.ttf}{courbd.ttf}{courbi.ttf}
+  }{%
+    \UXfamily{ptm}{texgyretermes-regular.otf}{texgyretermes-italic.otf}{texgyretermes-bold.otf}{texgyretermes-bolditalic.otf}
+    \UXfamily{phv}{texgyreheros-regular.otf}{texgyreheros-italic.otf}{texgyreheros-bold.otf}{texgyreheros-bolditalic.otf}
+    \UXfamily{pcr}{texgyrecursor-regular.otf}{texgyrecursor-italic.otf}{texgyrecursor-bold.otf}{texgyrecursor-bolditalic.otf}
+  }
+\fi
+\documentclass[conference]{IEEEtran}
+\usepackage[brazilian]{babel}
+\usepackage{array,tabularx,amsmath,graphicx}
+\newcommand{\institution}{CEFET-MG, Campus Divinópolis, Engenharia de Computação}
+\newcommand{\groupauthors}{\IEEEauthorblockN{Élcio Costa Amorim Neto, Guilherme Alvarenga de Azevedo e Joaquim Cézar Santana da Cruz}\IEEEauthorblockA{\institution}}
+\addto\captionsbrazilian{\renewcommand{\abstractname}{Resumo}\renewcommand{\refname}{Referências}}
+\renewcommand{\IEEEkeywordsname}{Palavras-chave}
+\input{../design/macros.tex}
+\AtBeginDocument{\raggedbottom}
+

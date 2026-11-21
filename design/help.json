@@ -1,0 +1,27 @@
+{
+  "S0": {
+    "dica": "Consulte o cardápio para começar. Se houver um último pedido, você pode consultá-lo aqui.",
+    "contexto": "O último pedido mostra a composição registrada anteriormente. Repetir pedido acrescenta esses itens ao pedido em andamento. Confira também os itens que já estavam nele.",
+    "guia": "Para começar de novo pelo cardápio, escolha Ver cardápio. Para usar uma composição anterior, escolha Repetir pedido, se disponível. Na revisão, confira as opções e as quantidades. O pedido é registrado quando você o confirma."
+  },
+  "S1": {
+    "dica": "Cada item tem nome, descrição e preço. Consulte o item para conhecer as opções disponíveis.",
+    "contexto": "Na lista contínua, os itens aparecem por categoria. Na versão com categorias, escolha o nome da categoria para ver seus itens. Ver pedido abre a revisão. O resumo no rodapé, quando presente, acompanha o pedido em andamento.",
+    "guia": "As etiquetas pertencem ao item junto do qual aparecem. (V) significa vegetariano, (SL) significa sem lactose e (SA) significa sem açúcar ou sem açúcar adicionado. Consulte os detalhes, escolha as opções desejadas e acrescente o item. Você pode rever o pedido antes de confirmar."
+  },
+  "S2": {
+    "dica": "Confira o nome e o preço do item. Quando houver uma opção obrigatória, escolha-a antes de acrescentar ou salvar.",
+    "contexto": "O acompanhamento compõe o prato principal. O tamanho define a porção de massa. A quantidade indica quantas unidades da combinação serão pedidas. Aumente ou diminua a quantidade pelos controles junto ao número.",
+    "guia": "Ao incluir um item, escolha a opção, ajuste a quantidade e use Adicionar. Ao modificar uma linha existente, use Salvar alteração. Para sair dos detalhes antes de aplicar a escolha, use Voltar."
+  },
+  "S3": {
+    "dica": "Confira cada linha, suas opções e quantidades. O total reúne todas as linhas do pedido.",
+    "contexto": "Use os controles junto à quantidade para ajustá-la. Alterar permite rever as opções da linha. Remover retira a linha do pedido. Confira o nome junto dos controles antes de fazer uma alteração.",
+    "guia": "Percorra o pedido e confira as linhas com o que deseja receber. Para recuperar uma linha, use Desfazer remoção enquanto essa opção estiver disponível. Você também pode voltar ao cardápio e acrescentar o item novamente. Ao terminar a conferência, use Confirmar pedido."
+  },
+  "S4": {
+    "dica": "A confirmação indica que o pedido foi registrado.",
+    "contexto": "O registro conclui a composição do pedido neste restaurante fictício. A confirmação informa que a operação terminou.",
+    "guia": "Consulte a mensagem de confirmação para reconhecer o fim do pedido. Esta demonstração não processa pagamentos nem envia pedidos a restaurantes."
+  }
+}

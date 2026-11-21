@@ -1,0 +1,435 @@
+{
+  "C1": {
+    "goal": "Pedir a lasanha individual de menor preço",
+    "plan": "1 ≫ 2 ≫ 3 ≫ 4",
+    "groups": [
+      [
+        "1 Localizar as lasanhas",
+        "1.1 ≫ (1.2)* até as três lasanhas",
+        [
+          [
+            "I",
+            "1.1",
+            "Chegar às massas: deslocar (A) [] escolher categoria (B)"
+          ],
+          [
+            "S",
+            "1.1",
+            "Apresentar a região ou a categoria solicitada"
+          ],
+          [
+            "I",
+            "1.2",
+            "Percorrer os cartões ou consultar seus detalhes"
+          ],
+          [
+            "U",
+            "1.2",
+            "Ler cada par nome e preço"
+          ]
+        ]
+      ],
+      [
+        "2 Escolher o alimento",
+        "depois da leitura dos três pares",
+        [
+          [
+            "U",
+            "2",
+            "Comparar os preços e decidir"
+          ]
+        ]
+      ],
+      [
+        "3 Colocar no pedido",
+        "3.1 ≫ 3.2 ≫ 3.3",
+        [
+          [
+            "I",
+            "3.1",
+            "Abrir o item escolhido"
+          ],
+          [
+            "I",
+            "3.2",
+            "Escolher a porção individual"
+          ],
+          [
+            "I",
+            "3.3",
+            "Adicionar a composição"
+          ],
+          [
+            "S",
+            "3.3",
+            "Atualizar a comanda e o total"
+          ]
+        ]
+      ],
+      [
+        "4 Conferir e registrar",
+        "4.1 ≫ 4.2 ≫ 4.3; 4.2 facultativa em B se já conferiu",
+        [
+          [
+            "I",
+            "4.1",
+            "Abrir a revisão"
+          ],
+          [
+            "U",
+            "4.2",
+            "Conferir a linha com a intenção"
+          ],
+          [
+            "I",
+            "4.3",
+            "Confirmar o pedido"
+          ],
+          [
+            "S",
+            "4.3",
+            "Registrar o pedido e apresentar a confirmação"
+          ]
+        ]
+      ]
+    ]
+  },
+  "C2": {
+    "goal": "Deixar o pedido igual ao combinado",
+    "plan": "1 ≫ 2* ≫ [3] ≫ 4",
+    "groups": [
+      [
+        "1 Acessar a comanda",
+        "pedido da irmã já carregado",
+        [
+          [
+            "I",
+            "1",
+            "Abrir a revisão"
+          ],
+          [
+            "S",
+            "1",
+            "Apresentar as linhas atuais"
+          ]
+        ]
+      ],
+      [
+        "2 Conferir as quatro linhas",
+        "(2.1 ≫ 2.2)* pela ordem da revisão",
+        [
+          [
+            "I",
+            "2.1",
+            "Deslocar a vista até a próxima linha"
+          ],
+          [
+            "U",
+            "2.2",
+            "Comparar item, opção e quantidade com o combinado"
+          ]
+        ]
+      ],
+      [
+        "3 Corrigir a divergência",
+        "ajuste direto [] reposição pelo cardápio",
+        [
+          [
+            "I",
+            "3",
+            "Aumentar a quantidade na linha divergente"
+          ],
+          [
+            "I",
+            "3 alt.",
+            "Remover a linha, localizar e adicionar novamente"
+          ],
+          [
+            "S",
+            "3",
+            "Atualizar linha e total"
+          ]
+        ]
+      ],
+      [
+        "4 Registrar a refeição",
+        "após a conferência e a correção necessária",
+        [
+          [
+            "I",
+            "4",
+            "Confirmar o pedido"
+          ],
+          [
+            "S",
+            "4",
+            "Registrar a composição final"
+          ]
+        ]
+      ]
+    ]
+  },
+  "V1": {
+    "goal": "Montar o jantar para dois dentro das regras",
+    "plan": "(1 ||| 2 ||| 3) ≫ 4 ≫ 5; se falhar em 4, retomar 1, 2 ou 3",
+    "groups": [
+      [
+        "1 Escolher os pratos principais",
+        "1.1 ≫ 1.2* ≫ 1.3 ≫ (1.4 ≫ 1.5 ≫ 1.6 ≫ 1.7)*",
+        [
+          [
+            "I",
+            "1.1",
+            "Chegar aos pratos: deslocar (A) [] escolher categoria (B)"
+          ],
+          [
+            "U",
+            "1.2",
+            "Ler etiquetas e preços expostos"
+          ],
+          [
+            "U",
+            "1.3",
+            "Escolher entre as alternativas compatíveis"
+          ],
+          [
+            "I",
+            "1.4",
+            "Abrir os detalhes do prato"
+          ],
+          [
+            "I",
+            "1.5",
+            "Escolher acompanhamento"
+          ],
+          [
+            "I",
+            "1.6",
+            "Ajustar quantidade"
+          ],
+          [
+            "I",
+            "1.7",
+            "Adicionar o prato; repetir para outro prato, se preciso"
+          ]
+        ]
+      ],
+      [
+        "2 Escolher as bebidas",
+        "2.1 ≫ 2.2* ≫ 2.3 ≫ (2.4 ≫ 2.5 ≫ 2.6)*",
+        [
+          [
+            "I",
+            "2.1",
+            "Chegar às bebidas: deslocar (A) [] escolher categoria (B)"
+          ],
+          [
+            "U",
+            "2.2",
+            "Ler as etiquetas"
+          ],
+          [
+            "U",
+            "2.3",
+            "Escolher a bebida"
+          ],
+          [
+            "I",
+            "2.4",
+            "Abrir os detalhes"
+          ],
+          [
+            "I",
+            "2.5",
+            "Ajustar quantidade"
+          ],
+          [
+            "I",
+            "2.6",
+            "Adicionar a bebida"
+          ]
+        ]
+      ],
+      [
+        "3 Escolher a sobremesa",
+        "3.1 ≫ 3.2* ≫ 3.3 ≫ 3.4",
+        [
+          [
+            "I",
+            "3.1",
+            "Chegar às sobremesas"
+          ],
+          [
+            "U",
+            "3.2",
+            "Ler os preços"
+          ],
+          [
+            "U",
+            "3.3",
+            "Escolher uma sobremesa para dividir"
+          ],
+          [
+            "I",
+            "3.4",
+            "Abrir e acrescentar a sobremesa"
+          ]
+        ]
+      ],
+      [
+        "4 Conferir as regras e o total",
+        "4.1 ≫ 4.2 ≫ 4.3; repetir a escolha se necessário",
+        [
+          [
+            "I",
+            "4.1",
+            "Abrir revisão [] procurar resumo em B"
+          ],
+          [
+            "U",
+            "4.2",
+            "Ler o total apresentado"
+          ],
+          [
+            "U",
+            "4.3",
+            "Comparar com R$ 110,00 e com as regras do jantar"
+          ]
+        ]
+      ],
+      [
+        "5 Registrar a refeição",
+        "depois de conferir a composição",
+        [
+          [
+            "I",
+            "5",
+            "Confirmar o pedido"
+          ],
+          [
+            "S",
+            "5",
+            "Registrar a composição final"
+          ]
+        ]
+      ]
+    ]
+  },
+  "V2": {
+    "goal": "Repetir o jantar, alterando o tamanho da massa",
+    "plan": "[1] ≫ 2 []≫ 3 ≫ (4 ≫ [5])* ≫ 6",
+    "groups": [
+      [
+        "1 Conhecer o último pedido",
+        "opcional",
+        [
+          [
+            "I",
+            "1",
+            "Percorrer a composição anterior no início"
+          ],
+          [
+            "U",
+            "1",
+            "Ler as linhas da refeição anterior"
+          ]
+        ]
+      ],
+      [
+        "2 Copiar o último pedido",
+        "transmitir o resultado à revisão",
+        [
+          [
+            "I",
+            "2",
+            "Solicitar a cópia"
+          ],
+          [
+            "S",
+            "2",
+            "Adicionar as linhas e carregar a revisão"
+          ]
+        ]
+      ],
+      [
+        "3 Alterar o macarrão",
+        "3.1 ≫ 3.2 ≫ 3.3",
+        [
+          [
+            "I",
+            "3.1",
+            "Abrir a edição na linha do macarrão"
+          ],
+          [
+            "I",
+            "3.2",
+            "Escolher a porção para dois"
+          ],
+          [
+            "I",
+            "3.3",
+            "Salvar a alteração"
+          ],
+          [
+            "S",
+            "3.3",
+            "Atualizar a linha e a revisão"
+          ]
+        ]
+      ],
+      [
+        "4 Comparar a comanda com a anterior",
+        "(4.1 ≫ 4.2 ≫ [4.3])*",
+        [
+          [
+            "I",
+            "4.1",
+            "Deslocar pela revisão"
+          ],
+          [
+            "U",
+            "4.2",
+            "Comparar cada linha com o jantar anterior"
+          ],
+          [
+            "I",
+            "4.3",
+            "Voltar ao início e reconsultar, se necessário"
+          ]
+        ]
+      ],
+      [
+        "5 Eliminar a divergência",
+        "voltar à conferência se restar divergência",
+        [
+          [
+            "I",
+            "5",
+            "Remover o item que não pertence ao jantar"
+          ],
+          [
+            "S",
+            "5",
+            "Atualizar linhas e total"
+          ]
+        ]
+      ],
+      [
+        "6 Registrar a refeição",
+        "depois de conferir a composição",
+        [
+          [
+            "I",
+            "6",
+            "Confirmar o pedido"
+          ],
+          [
+            "S",
+            "6",
+            "Registrar a composição final"
+          ]
+        ]
+      ]
+    ]
+  }
+}

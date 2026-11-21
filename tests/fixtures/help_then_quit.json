@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "executor": "hand-authored unit fixture",
+    "reference_actions": 8
+  },
+  "events": [
+    {
+      "tipo": "sessao_iniciada",
+      "dados": {},
+      "id_evento": "fixture/0",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 0,
+      "carimbo_tempo": "2026-01-01T00:00:00+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "tarefa_iniciada",
+      "dados": {
+        "pedido": []
+      },
+      "id_evento": "fixture/1",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 0,
+      "carimbo_tempo": "2026-01-01T00:00:01+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "acao_executada",
+      "dados": {
+        "acao": "TOCAR",
+        "alvo": "help",
+        "origem": "pessoa"
+      },
+      "id_evento": "fixture/2",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 1,
+      "carimbo_tempo": "2026-01-01T00:00:02+00:00",
+      "tela": "S1",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "ajuda_aberta",
+      "dados": {
+        "topico": "Cardápio",
+        "camada": "dica",
+        "tela_origem": "S1",
+        "origem": "pessoa"
+      },
+      "id_evento": "fixture/3",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 1,
+      "carimbo_tempo": "2026-01-01T00:00:03+00:00",
+      "tela": "S5",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "acao_executada",
+      "dados": {
+        "acao": "DESISTIR",
+        "origem": "pessoa"
+      },
+      "id_evento": "fixture/4",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 2,
+      "carimbo_tempo": "2026-01-01T00:00:04+00:00",
+      "tela": "S5",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "desistencia",
+      "dados": {},
+      "id_evento": "fixture/5",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 2,
+      "carimbo_tempo": "2026-01-01T00:00:05+00:00",
+      "tela": "S5",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "tarefa_encerrada",
+      "dados": {
+        "resultado": "interrupcao"
+      },
+      "id_evento": "fixture/6",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 2,
+      "carimbo_tempo": "2026-01-01T00:00:06+00:00",
+      "tela": "S5",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    },
+    {
+      "tipo": "sessao_encerrada",
+      "dados": {},
+      "id_evento": "fixture/7",
+      "id_sessao": "fixture-help-quit",
+      "id_configuracao": "P",
+      "id_tarefa": "C1",
+      "versao_interface": "A",
+      "versao_mecanismos": "fixture",
+      "hash_configuracao": null,
+      "modelo_llm": null,
+      "versao_llm": null,
+      "semente": null,
+      "passo": 2,
+      "carimbo_tempo": "2026-01-01T00:00:07+00:00",
+      "tela": "S5",
+      "regiao_visivel": {
+        "x": 0,
+        "y": 0,
+        "z": 3,
+        "largura": 120,
+        "altura": 266.6666666666667
+      },
+      "synthetic": true
+    }
+  ],
+  "final_state": {
+    "confirmado": false,
+    "pedido": []
+  },
+  "expected": {
+    "resultado": "interrupcao",
+    "S": 0,
+    "A": 2,
+    "R_A": 0.25,
+    "U": 1,
+    "U_primeira_posicao": 0.5,
+    "MAC": {
+      "Socorro!": 1,
+      "Desisto": 1,
+      "Pra mim está bom": 0,
+      "Epa!": 0,
+      "Cadê?": 0,
+      "O que é isso?": 1
+    }
+  }
+}

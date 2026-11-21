@@ -1,0 +1,3 @@
+\newcommand{\UXev}[1]{\textsf{\detokenize{#1}}}
+\newcommand{\UXrow}[2]{\noindent\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{.30\columnwidth}>{\raggedright\arraybackslash}X@{}}\textbf{#1} & #2\end{tabularx}\par}
+\newenvironment{uxtable}[2]{\par\smallskip\begingroup\footnotesize\setlength{\parskip}{1pt}\setlength{\tabcolsep}{3pt}\hrule\nobreak\UXrow{#1}{\textbf{#2}}\nobreak\hrule\nobreak}{\nobreak\hrule\endgroup\par\smallskip}

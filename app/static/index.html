@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UX-Agent · Observatório de interação</title><link rel="stylesheet" href="/style.css">
+<script defer src="/console.js"></script>
+</head>
+<body>
+<header class="mast"><div class="mast-inner"><div class="wordmark">UX-Agent</div><span>Laboratório de interação</span></div></header>
+<main>
+<h1>Observatório de interação</h1>
+<form id="settings">
+<label>Modo<select id="mode"><option value="manual">Interface manual</option><option value="R">Executor de referência R</option><option value="lens">Inspeção manual dos mecanismos P</option></select></label>
+<label>Tarefa<select id="task"><option value="C1">C1 · Almoço no escritório</option><option value="C2">C2 · Pedido da irmã</option><option value="Treino">Treino · Lanchonete</option></select></label>
+<label>Interface<select id="version"><option>A</option><option>B</option></select></label>
+<label id="seed-label">Semente<input id="seed" type="number" step="1" value="42" required></label>
+<label id="zoom-label" hidden>Ampliação de R<select id="zoom"><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option><option value="4">4×</option><option value="6">6×</option></select></label>
+<button type="submit">Iniciar sessão</button>
+</form>
+<div id="error" role="alert"></div>
+<section class="columns">
+<div class="handset">
+<div class="panel-head"><h2>Interface do restaurante</h2><span id="version-info"></span></div>
+<div id="phone" tabindex="0" aria-label="Tela do restaurante"><div id="surface"></div><div id="footer"></div><div id="outline" hidden></div></div>
+</div>
+<aside>
+<section class="instrument">
+<div class="panel-head"><h2>Instrução da tarefa</h2><span id="task-info"></span></div>
+<p id="instruction"></p>
+<button type="button" id="quit" class="secondary">Desistir da tarefa</button>
+</section>
+<section class="instrument" id="controls" hidden>
+<div class="panel-head"><h2>Execução</h2><span aria-live="polite" id="status"></span></div>
+<div id="r-controls"><button type="button" id="step">Avançar um passo</button> <button type="button" id="play" class="secondary">Reproduzir</button></div>
+<div id="p-controls"><label>Gesto disponível<select id="gesture"></select></label> <button id="apply" type="button">Executar gesto</button></div>
+<p id="mechanism-note"></p>
+</section>
+<section class="instrument" id="lens-panel" hidden>
+<div class="panel-head"><h2>Lente de ampliação</h2><span id="factor"></span></div>
+<div id="lens" aria-label="Recorte do campo visual"><div id="lens-inner"></div></div>
+<details><summary>Observação filtrada</summary><pre id="projection"></pre></details>
+</section>
+<section class="instrument">
+<div class="panel-head"><h2>Registro de eventos</h2><span id="count"></span></div>
+<ol id="recent"></ol>
+<details><summary>Eventos em JSON</summary><pre id="trace"></pre></details>
+</section>
+<section class="instrument" id="results" hidden><h2>Verificação externa</h2><pre id="metrics"></pre></section>
+</aside>
+</section>
+</main>
+<dialog id="receipt-help" aria-labelledby="receipt-title">
+<h2 id="receipt-title">Ajuda do comprovante</h2>
+<div id="receipt-layers" aria-label="Camadas de ajuda"></div>
+<p id="receipt-content" aria-live="polite"></p>
+<details><summary>Registro da consulta após a tarefa</summary><pre id="receipt-log"></pre></details>
+<button type="button" id="receipt-close">Fechar ajuda</button>
+</dialog>
+</body></html>

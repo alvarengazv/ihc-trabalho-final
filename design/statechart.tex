@@ -1,0 +1,26 @@
+\begin{figure}[ht]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(238,112)
+\put(0,87){\framebox(50,18){S0 · Início}}
+\put(94,87){\framebox(58,18){S1 · Cardápio}}
+\put(188,87){\framebox(48,18){S2 · Item}}
+\put(50,98){\vector(1,0){44}}\put(59,101){\scriptsize abrir}
+\put(94,91){\vector(-1,0){44}}\put(57,80){\scriptsize início}
+\put(152,98){\vector(1,0){36}}\put(154,101){\scriptsize escolher}
+\put(188,91){\vector(-1,0){36}}\put(157,80){\scriptsize incluir}
+\put(94,40){\framebox(58,18){S3 · Revisão}}
+\put(188,40){\framebox(48,18){S4 · Fim}}
+\put(123,87){\vector(0,-1){29}}\put(127,69){\scriptsize rever}
+\put(113,58){\vector(0,1){29}}\put(64,68){\scriptsize continuar}
+\put(152,48){\vector(1,0){36}}\put(151,53){\scriptsize confirmar}
+\put(212,87){\line(0,-1){24}}\put(212,63){\line(-1,0){73}}\put(139,63){\vector(0,-1){5}}\put(172,66){\scriptsize salvar}
+\put(25,87){\line(0,-1){39}}\put(25,48){\vector(1,0){69}}\put(30,51){\scriptsize repetir ou rever}
+\put(0,4){\framebox(101,18){Origem · S0 a S4}}
+\put(158,4){\framebox(78,18){S5 · Ajuda}}
+\put(101,17){\vector(1,0){57}}\put(110,21){\scriptsize consultar}
+\put(158,9){\vector(-1,0){57}}\put(116,0){\scriptsize fechar}
+\end{picture}
+\caption{Transições principais da implementação. Editar uma linha em S3 reabre S2. Voltar preserva a origem da revisão ou da edição. Confirmar exige comanda não vazia. Uma fala inválida mantém a cena; o suporte restaura a origem.}
+\label{fig:estados}
+\end{figure}

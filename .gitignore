@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.work/
+.env
+.env.*
+runs/
+# Local course materials, including third-party PDFs in the historical ZIP.
+/Arquivos base/
+/entregas/
+/deliverables/E2_Repositorio_Git.bundle
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
