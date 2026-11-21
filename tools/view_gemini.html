@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ações do Gemini · UX-Agent</title>
+<style>
+:root{font:16px/1.5 "Segoe UI",sans-serif;color:#19372f;background:#eef2ee}
+*{box-sizing:border-box}
+body{margin:0}main{max-width:1040px;margin:auto;padding:24px 18px}
+h1,h2{line-height:1.2}h1{font-size:clamp(2rem,5vw,3.25rem);margin:0 0 22px;letter-spacing:-.035em}
+h2{font-size:1.2rem;margin:0 0 12px}p{margin:0 0 10px}
+header,.panel{background:#fff;border:1px solid #becdc4;border-radius:10px;padding:16px}
+header{display:flex;flex-wrap:wrap;align-items:end;gap:12px}
+label{display:grid;gap:4px;font-weight:600;min-width:0}
+select,button{font:inherit;min-height:42px;max-width:100%;padding:6px 10px;border:1px solid #648075;border-radius:5px;background:white;color:inherit}
+button{cursor:pointer}button:disabled{opacity:.5;cursor:default}
+:focus-visible{outline:3px solid #a64913;outline-offset:2px}
+.following{display:flex;align-items:center;align-self:center;gap:6px}
+.following input{accent-color:#19634a;width:18px;height:18px}
+#status{margin:12px 0;min-height:24px}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.panel{min-width:0;margin-bottom:14px}
+#answer{font-size:1.15rem;font-weight:700;color:#154e36;overflow-wrap:anywhere;white-space:pre-wrap}
+ol{margin:0;padding-left:34px}li{margin-block:4px;overflow-wrap:anywhere}
+.gesture{margin-left:6px;font-size:.85rem;color:#3c6155}
+details{margin-top:14px}summary{cursor:pointer;font-weight:600}
+pre{padding:10px;background:#edf3ef;white-space:pre-wrap;overflow-wrap:anywhere;max-height:430px;overflow:auto}
+@media(max-width:640px){.columns{grid-template-columns:1fr}header{align-items:start}}
+</style>
+<main>
+<h1>Ações do Gemini</h1>
+<header>
+  <label>Sessão<select id="session" aria-label="Sessão de calibração"></select></label>
+  <label>Passo e tentativa<select id="step" aria-label="Passo e tentativa"></select></label>
+  <button type="button" id="prev">Anterior</button>
+  <button type="button" id="next">Próximo</button>
+  <label class="following"><input type="checkbox" checked id="follow"> Acompanhar último passo</label>
+</header>
+<p id="status" role="status"></p>
+<div id="content" hidden>
+  <div class="columns">
+    <section class="panel">
+      <h2>O que o Gemini recebeu</h2>
+      <ol id="view"></ol>
+      <details><summary>Memória e ações disponíveis</summary><pre id="memory"></pre></details>
+    </section>
+    <section class="panel">
+      <h2>Resposta do Gemini</h2>
+      <p id="answer"></p>
+      <p id="execution"></p>
+      <p id="timing"></p>
+      <details><summary>Requisição completa</summary><pre id="request"></pre></details>
+      <details><summary>Resposta completa</summary><pre id="response"></pre></details>
+    </section>
+  </div>
+</div>
+</main>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const session = $("session"), step = $("step"), follow = $("follow");
+let loading = false, selection = 0;
+const formatted = value => JSON.stringify(value, null, 2);
+function updateOptions(select, items, chosen, label = value => value) {
+  if (items.join("|") !== [...select.options].map(o => o.value).join("|"))
+    select.replaceChildren(...items.map(value => new Option(label(value), value)));
+  if (chosen) select.value = chosen;
+}
+async function refresh() {
+  if (loading) return;
+  loading = true;
+  const revision = selection;
+  const query = new URLSearchParams();
+  if (session.value) query.set("sessao", session.value);
+  if (!follow.checked && step.value) query.set("passo", step.value);
+  try {
+    const reply = await fetch("/api/registro?" + query.toString(), {cache:"no-store"});
+    if (!reply.ok) throw new Error("Não foi possível carregar os registros.");
+    const data = await reply.json();
+    if (revision !== selection) return;
+    updateOptions(session, data.sessoes, data.sessao);
+    updateOptions(step, data.passos, data.passo, key => key.split("-").map(Number).join(" · "));
+    $("prev").disabled = !step.value || step.selectedIndex <= 0;
+    $("next").disabled = !step.value || step.selectedIndex >= step.options.length - 1;
+    const record = data.registro;
+    $("content").hidden = !record;
+    if (!record) {
+      $("status").textContent = "Aguardando registros do piloto.";
+      return;
+    }
+    const [number, attempt] = data.passo.split("-").map(Number);
+    $("status").textContent = "Passo " + number + " · tentativa " + attempt +
+      (data.desfecho ? " · " + data.desfecho.replaceAll("_", " ") : " · sem encerramento registrado");
+    const observation = record.observacao;
+    $("view").replaceChildren(...observation.vista.map(sign => {
+      const row = document.createElement("li");
+      row.append(document.createTextNode(sign.texto || "(" + sign.tipo + ")"));
+      if (sign.gesto) {
+        const tag = document.createElement("span");
+        tag.className = "gesture"; tag.textContent = sign.gesto; row.append(tag);
+      }
+      return row;
+    }));
+    $("memory").textContent = formatted({memoria:observation.memoria, acoes:observation.acoes});
+    $("answer").textContent = data.resposta || (record.falha
+      ? "Falha de comunicação" + (record.status_http ? " · HTTP " + record.status_http : "")
+      : "Resposta ainda não registrada.");
+    const action = data.executada;
+    $("execution").textContent = action ? "Executada: " + (action.gesto || action.acao) +
+      " · origem " + action.origem : record.nova_tentativa_em_s != null
+      ? "Nova tentativa no mesmo passo, após " + record.nova_tentativa_em_s.toLocaleString("pt-BR") + " s."
+      : record.rejeicao ? "Ação rejeitada pelo controlador."
+      : record.modelo_retornado ? "Proposta aceita pelo controlador." : "";
+    $("timing").textContent = [record.modelo_retornado || record.modelo_solicitado,
+      record.latencia_ms == null ? "" : record.latencia_ms + " ms"].filter(Boolean).join(" · ");
+    $("request").textContent = formatted(record.requisicao);
+    $("response").textContent = record.resposta ? formatted(record.resposta) : "Sem resposta registrada.";
+  } catch (error) {
+    $("status").textContent = error.message;
+  } finally {
+    loading = false;
+    if (revision !== selection) refresh();
+  }
+}
+function select() { selection++; refresh(); }
+session.onchange = () => { step.value = ""; select(); };
+step.onchange = () => { follow.checked = false; select(); };
+follow.onchange = select;
+for (const [id, offset] of [["prev",-1],["next",1]]) {
+  $(id).onclick = () => { step.selectedIndex += offset; step.onchange(); };
+}
+refresh();
+setInterval(refresh, 1800);
+</script>
+</html>

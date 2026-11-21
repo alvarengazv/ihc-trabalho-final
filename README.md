@@ -25,6 +25,28 @@ The last command recomputes task scores from the order and recorded facts. R has
 
 ## Model-backed pilot
 
+For the full paired Gemini calibration, set `GEMINI_API_KEY` or save the key alone on one line in the Git-ignored `.env.gemini-key` file at the project root. The following commands show the planned conditions without a request and then run them.
+
+```powershell
+python -m tools.run_gemini_pilot --plan
+python -m tools.run_gemini_pilot --check-key
+python -m tools.run_gemini_pilot
+```
+
+The runner pairs C, P, P2 and P6 across C1/C2 and A/B using seed 42 and one model. Its default is `gemini-3.5-flash-lite`. Set `GEMINI_MODEL` or `--model` to select another model before the protocol is created. The key check queries model metadata without generation and prints only the provider's error codes. The runner spaces requests by at least six seconds at its default of ten requests per minute. Set `--rpm` to match the project's available throughput.
+
+A transient network failure or HTTP 408, 429, 500, 502, 503, or 504 can trigger up to four retries of the same step. The runner applies exponential backoff, honors a feasible provider retry delay and logs each attempt separately. Set `--retries` and `--retry-base` to adjust the retry budget and initial backoff. Daily quotas, authentication errors and delays longer than the runner's two-minute wait limit end the session as technical failures. The existing per-action JSON rejection budget applies independently.
+
+Outputs and per-request audit records go to `runs/E3_Gemini`. If all attempts fail, correct the underlying cause and run the same command again. Completed conditions are skipped, and the condition that ended in a technical failure starts from its original state with a new session ID. Earlier attempts remain archived.
+
+After the runner stops, combine its actual sessions with the four reference runs. The supplemental ZIP records how many planned conditions ended without a technical failure.
+
+```powershell
+python tools/package_pilot.py --gemini-run runs/E3_Gemini
+```
+
+To follow the observed Gemini actions while the batch runs or inspect earlier steps, start `python -m tools.view_gemini` in a second terminal and open [the local Gemini record viewer](http://127.0.0.1:8766/). The viewer reads the audit files from disk. Use `--run` to inspect an alternative output folder. Executed events become available when a session writes its final log.
+
 Set `GEMINI_API_KEY` and `GEMINI_MODEL` to a credential and the exact Gemini API model ID enabled on the account. Alternatively set `ANTHROPIC_API_KEY` and `ANTHROPIC_MODEL`. Set these in the environment of the shell that starts the process. The provider account must permit the selected model and structured JSON output. Each command can make a paid request per action and retry malformed choices twice. `--temperature` sets a provider-supported value. An omitted value uses the provider default. The local seed is always recorded. Gemini also receives a provider seed. Claude receives no seed parameter.
 
 ```powershell

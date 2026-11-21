@@ -1,7 +1,10 @@
 """Verify all E3 logs, write the measured summary, then build its ZIP."""
+import argparse
 from pathlib import Path
 import json
+import shutil
 import sys
+from tempfile import TemporaryDirectory
 import zipfile
 from collections import Counter
 from statistics import mean, median
@@ -12,7 +15,31 @@ from verifier import evaluate
 from agent.run import EVENTS
 from freeze import freeze_manifest
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--gemini-run", type=Path, help="Include a measured Gemini run alongside the R reference")
+args = parser.parse_args()
 folder = ROOT / "deliverables" / "E3_Pacote_Piloto"
+archive = folder.with_suffix(".zip")
+protocol = None
+recorded_conditions = set()
+audit_records = Counter()
+versions = set()
+if args.gemini_run:
+    protocol_path = args.gemini_run / "protocolo_gemini.json"
+    protocol = json.loads(protocol_path.read_text(encoding="utf8"))
+    assert protocol["hash_instrumento"] == freeze_manifest()["hash_instrumento"], protocol_path
+    assert protocol["provedor"] == "gemini"
+    assert any((args.gemini_run / "logs").glob("*.json")), "No persisted Gemini runs"
+    staging = TemporaryDirectory(prefix="ux-agent-e3-")
+    staging_path = Path(staging.name) / "E3_Piloto_Gemini"
+    shutil.copytree(folder, staging_path)
+    folder = staging_path
+    archive = ROOT / "deliverables" / "E3_Piloto_Gemini.zip"
+    shutil.copytree(args.gemini_run / "logs", folder / "logs", dirs_exist_ok=True)
+    shutil.copytree(args.gemini_run / "auditoria_prompts_contextos",
+                    folder / "auditoria_prompts_contextos", dirs_exist_ok=True)
+    shutil.copyfile(protocol_path, folder / protocol_path.name)
+
 summary = []
 groups = {}
 for path in sorted((folder / "logs").glob("*.json")):
@@ -33,6 +60,28 @@ for path in sorted((folder / "logs").glob("*.json")):
     assert result == stored, f"Recorded and recomputed metrics differ: {path.name}"
     if key[2] == "R":
         assert result["S"] == 1 and result["R_A"] == 1 and not any(result["erros"].values()), path
+    if protocol and log["meta"]["executor"] == "gemini":
+        condition = (key[2], key[0], key[1])
+        assert list(condition) in protocol["condicoes"], path
+        assert (head["modelo_llm"], head["semente"], head["temperatura"]) == (
+            protocol["modelo"], protocol["semente"], protocol["temperatura"]), path
+        public = {e["passo"]: e["dados"]["observacao"] for e in events if e["tipo"] == "observacao"}
+        audit_path = folder / "auditoria_prompts_contextos" / head["id_sessao"]
+        accepted = 0
+        for attempt in sorted(audit_path.glob("*.json")):
+            request = json.loads(attempt.read_text(encoding="utf8"))
+            step, _ = attempt.stem.split("-")
+            prompt = json.loads(request["requisicao"]["contents"][0]["parts"][0]["text"])
+            assert (request["observacao"] == prompt["observacao"] == public[int(step)]), attempt
+            audit_records["tentativas"] += 1
+            if "resposta" in request:
+                audit_records["respostas"] += 1
+            if request.get("modelo_retornado"):
+                accepted += 1
+                versions.add(request["modelo_retornado"])
+        assert accepted == sum(e["tipo"] == "acao_proposta" for e in events), path
+        if result["resultado"] != "falha_tecnica":
+            recorded_conditions.add(condition)
     groups.setdefault(key, []).append(result)
     ops = Counter(e["dados"]["acao"] for e in events if e["tipo"] == "acao_executada")
     summary.append((key, path.name, result, ops))
@@ -70,13 +119,31 @@ lines.extend(["", "## Comparação com o método especialista", "",
               "## Proveniência", ""])
 for key, name, m, ops in summary:
     lines.append(f"- [{name}](logs/{name})")
-if all(key[2] == "R" for key in groups):
+if protocol:
+    planned = len(protocol["condicoes"])
+    completed = len(recorded_conditions)
+    lines.extend(["", "## Chamadas ao Gemini", "",
+                  f"Foram concluídas {completed} de {planned} condições planejadas. "
+                  f"O diretório de auditoria contém {audit_records['tentativas']} tentativas de requisição, "
+                  f"com {audit_records['respostas']} respostas registradas. "
+                  "Falhas técnicas aparecem como registros distintos, com S indefinido.", "",
+                  f"Modelo solicitado: {protocol['modelo']}. "
+                  f"Versões retornadas: {', '.join(sorted(versions)) or 'nenhuma'}. "
+                  f"Semente local e da API: {protocol['semente']}. "
+                  "Uma execução por condição serve à calibração e não estima uma distribuição de desempenho."])
+    (folder / "auditoria_prompts_contextos" / "LEIA-ME.md").write_text(
+        "# Auditoria do contexto enviado\n\n"
+        "Cada diretório de sessão contém os arquivos de tentativa com o corpo da requisição, "
+        "a observação, a resposta do provedor quando recebida, a latência e a identificação do modelo. "
+        "As quatro sessões R não geraram chamadas. "
+        "Consulte protocolo_gemini.json para a matriz prevista e resumo_piloto.md para o que foi observado.\n",
+        encoding="utf8")
+elif all(key[2] == "R" for key in groups):
     lines.extend(["", "Todas as sessões deste pacote usaram R. O ambiente não dispunha de credenciais dos provedores. Nenhuma requisição foi enviada a um LLM. Não há observações de desempenho de P, P2, P6, C ou G."])
 (folder / "resumo_piloto.md").write_text("\n".join(lines) + "\n", encoding="utf8")
 assert {("C1", "A", "R"), ("C1", "B", "R"), ("C2", "A", "R"), ("C2", "B", "R")} <= groups.keys()
 (folder / "manifesto_instrumento.json").write_text(
     json.dumps(freeze_manifest(), ensure_ascii=False, indent=2) + "\n", encoding="utf8")
-archive = folder.with_suffix(".zip")
 with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as zipped:
     for path in sorted(folder.rglob("*")):
         if path.is_file():
