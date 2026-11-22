@@ -8,7 +8,7 @@ The hosted repository for evaluators is <https://github.com/alvarengazv/ihc-trab
 
 Os PDFs de envio estão em `entregas/SIGAA_A3/` e `entregas/SIGAA_P3/` na cópia do grupo. Para recompilar os documentos, use as fontes de `deliverables/`. O PDF combinado `P3_E4_com_Apendice_E1.pdf` contém E4 seguido de E1. O vídeo `E5_Demonstracao_UXAgent.mp4` reproduz a observação arquivada e as escolhas executadas, com legendas em português.
 
-O instrumento da coleta está em [0f54a89](https://github.com/alvarengazv/ihc-trabalho-final/tree/0f54a89). O acabamento visual da branch principal é posterior. O E3 consolidado é `deliverables/E3_Piloto_Gemini.zip`. Extraia-o em uma pasta e execute `python -m tools.view_gemini --run CAMINHO_DA_PASTA` para abrir a sessão C2-A-C-42-840b102d725e. O artigo E4 e o apêndice E1 descrevem as condições do piloto. Para verificar o manifesto extraído, execute `python tools/freeze.py` na revisão da coleta passando o caminho de manifesto_instrumento.json como argumento.
+O instrumento da coleta está em [fc0ba7a](https://github.com/alvarengazv/ihc-trabalho-final/tree/fc0ba7a). O acabamento visual da branch principal é posterior. O E3 consolidado é `deliverables/E3_Piloto_Gemini.zip`. Extraia-o em uma pasta e execute `python -m tools.view_gemini --run CAMINHO_DA_PASTA` para abrir a sessão C2-A-C-42-840b102d725e. O artigo E4 e o apêndice E1 descrevem as condições do piloto. Para verificar o manifesto extraído, execute `python tools/freeze.py` na revisão da coleta passando o caminho de manifesto_instrumento.json como argumento.
 
 ## Run locally
 

@@ -2,7 +2,7 @@
 
 Texto exibido no vídeo `E5_Demonstracao_UXAgent.mp4` (04:47.7, 1920 × 1080, 30 fps). As legendas estão gravadas na imagem; o mesmo texto está em `E5_Demonstracao_UXAgent.srt`. A trilha de áudio é silenciosa; para narrar, leia cada bloco no intervalo indicado.
 
-A gravação segue `E5_Roteiro_Demonstracao.md`. O visor e o terminal leem o pacote E3 entregue, extraído em `runs/E3_entregue`; nenhuma chamada à API é feita durante a demonstração. As saídas do terminal são as dos comandos do roteiro executados nesse pacote. A interface gravada tem o acabamento visual posterior a `0f54a89`; cenas, geometria, mecanismos e verificador são os da coleta.
+A gravação segue `E5_Roteiro_Demonstracao.md`. O visor e o terminal leem o pacote E3 entregue, extraído em `runs/E3_entregue`; nenhuma chamada à API é feita durante a demonstração. As saídas do terminal são as dos comandos do roteiro executados nesse pacote. A interface gravada tem o acabamento visual posterior a `fc0ba7a`; cenas, geometria, mecanismos e verificador são os da coleta.
 
 ## 00:00.0–00:06.0 · Abertura
 
