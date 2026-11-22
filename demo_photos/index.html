@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mesa de Minas · Demonstração com fotos</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/demo.js"></script>
+  <style>
+    .photo-demo { max-width: 580px; }
+    .photo-demo h1 { margin-bottom: .5rem; }
+    .photo-demo form { display: flex; gap: .75rem; flex-wrap: wrap; align-items: end; margin: 1rem 0; }
+    .photo-demo .device { margin-inline: auto; }
+    .dish-preview { position: absolute; inset-inline: 16px; margin: 0; }
+    .dish-preview img { display: block; width: 100%; height: 156px; object-fit: cover; border-radius: 10px; }
+    .dish-preview figcaption { padding-top: 5px; font-size: .875rem; line-height: 1.3; }
+  </style>
+</head>
+<body>
+<main class="photo-demo">
+  <h1>Mesa de Minas</h1>
+  <p>Demonstração com fotos. Esta experiência está fora do piloto.</p>
+  <form id="demo-settings">
+    <label>Organização do cardápio
+      <select id="demo-version">
+        <option value="A">Lista contínua</option>
+        <option value="B">Categorias e resumo</option>
+      </select>
+    </label>
+    <button type="submit">Reiniciar demonstração</button>
+  </form>
+  <p id="demo-error" role="alert"></p>
+  <div class="device">
+    <div id="phone" tabindex="0" aria-label="Tela do restaurante">
+      <div id="surface"></div><div id="footer"></div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

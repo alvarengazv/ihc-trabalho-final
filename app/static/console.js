@@ -2,7 +2,6 @@
 const $ = (id) => document.getElementById(id);
 const sceneNames = {S0:"Início", S1:"Cardápio", S2:"Detalhes", S3:"Revisão", S4:"Confirmação", S5:"Ajuda"};
 let current, timer, busy=false, events=[];
-const reserved = new URLSearchParams(location.search).get("reservado")==="1";
 const phone=$("phone"), surface=$("surface"), footer=$("footer"), lens=$("lens"), inner=$("lens-inner");
 const modeNames={manual:"Interface manual", R:"Executor de referência R", lens:"Mecanismos P"};
 const modeHints={
@@ -80,8 +79,6 @@ function selectMode() {
   }
   if($("task").selectedOptions[0].disabled) $("task").value="C1";
 }
-if(reserved) for(const [code,title] of [["V1","Jantar para dois"],["V2","Último pedido"]])
-  $("task").add(new Option(code+" · "+title,code));
 $("mode").onchange=selectMode;
 selectMode();
 async function request(path, payload){
@@ -197,7 +194,7 @@ async function start(){
   stop();busy=true;$("error").textContent="";
   try {
     render(await request("/api/start",{task:$("task").value,mode:$("mode").value,version:$("version").value,
-      zoom:Number($("zoom").value),seed:Number($("seed").value),reserved}),true);
+      zoom:Number($("zoom").value),seed:Number($("seed").value)}),true);
   }catch(e){$("error").textContent=e.message;}finally{busy=false;}
 }
 async function act(action){

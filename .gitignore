@@ -15,3 +15,11 @@ runs/
 *.out
 *.synctex.gz
 
+
+# Arquivos locais fora da entrega
+/.claude/
+/deliverables/E5_Demonstracao_UXAgent.mp4
+/deliverables/UXAgent_P3_Anexo_E1_Atualizado.pdf
+/deliverables/EVALUATION_AUDIT_LOG.md
+/demo_photos/fotos/README.md
+*.mp4

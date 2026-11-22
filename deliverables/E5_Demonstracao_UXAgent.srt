@@ -1,0 +1,167 @@
+1
+00:00:06,000 --> 00:00:13,300
+Preparação: observatório e visor de registros do Gemini rodam localmente, um em cada terminal.
+
+2
+00:00:13,300 --> 00:00:20,100
+O visor lê o pacote E3 entregue; nenhuma chamada à API acontece durante a demonstração.
+
+3
+00:00:20,100 --> 00:00:26,133
+Lívia usa ampliação de tela cheia para conferir o almoço que a irmã começou.
+
+4
+00:00:26,133 --> 00:00:33,800
+Em C2, ela precisa comparar o pedido com o combinado, corrigir o que estiver diferente e confirmar.
+
+5
+00:00:33,800 --> 00:00:40,133
+Queremos saber o que o agente realmente observou, fez e registrou.
+
+6
+00:00:40,133 --> 00:00:48,600
+A versão A usa uma lista contínua. A versão B reúne os mesmos itens em categorias e exibe um resumo no rodapé.
+
+7
+00:00:48,600 --> 00:00:55,500
+Para C2, os estados principais são o cardápio (S1), a revisão (S3) e a confirmação (S4).
+
+8
+00:00:55,500 --> 00:01:01,033
+A ajuda (S5) suspende a conversa e devolve a pessoa à cena de origem.
+
+9
+00:01:01,033 --> 00:01:07,633
+Visor do E3: cada sessão do Gemini pode ser revista passo a passo, sem acesso à API.
+
+10
+00:01:07,633 --> 00:01:13,367
+Sessão C2-A-C-42-840b102d725e: o Gemini no perfil comparador C, passo 1.
+
+11
+00:01:13,367 --> 00:01:19,967
+O Gemini recebeu o enunciado e uma projeção da interface, com os gestos admissíveis.
+
+12
+00:01:19,967 --> 00:01:29,633
+A requisição arquivada traz orientação, um exemplo de treino, a tarefa literal e a observação — sem HTA, CTT, GOMS ou gabarito.
+
+13
+00:01:29,633 --> 00:01:35,533
+Primeiro, abriu a revisão: TOCAR(5) corresponde ao signo “Ver pedido (5)”.
+
+14
+00:01:35,533 --> 00:01:41,500
+Na interface, essa fala abre a revisão (S3) com as quatro linhas do pedido.
+
+15
+00:01:41,500 --> 00:01:47,300
+Depois, aumentou uma unidade do pudim: TOCAR(27) é o “+” da quarta linha.
+
+16
+00:01:47,300 --> 00:01:55,900
+O “−” de quantidade 1 vem sem gesto, como o botão esmaecido que a pessoa vê: o estado não é escrito por extenso.
+
+17
+00:01:55,900 --> 00:02:00,867
+No percurso, o pudim passa a 2 unidades e o total a R$ 83,40.
+
+18
+00:02:00,867 --> 00:02:07,767
+Por fim, confirmou: TOCAR(31) é “Confirmar pedido”. Cada passo teve uma única tentativa.
+
+19
+00:02:07,767 --> 00:02:12,233
+A cena de confirmação (S4) mostra a comanda corrigida.
+
+20
+00:02:12,233 --> 00:02:20,533
+O controlador aceita uma única fala válida por passo; o código de cada gesto só vale para aquela observação.
+
+21
+00:02:20,533 --> 00:02:24,933
+Aqui está o log da própria sessão, lido do pacote E3.
+
+22
+00:02:24,933 --> 00:02:33,300
+Cada passo registra a fala proposta, a ação executada e a mudança de estado; o resultado vem por último.
+
+23
+00:02:33,300 --> 00:02:40,467
+A comanda final: um frango com arroz, dois sucos de laranja, uma água sem gás e dois pudins.
+
+24
+00:02:40,467 --> 00:02:45,700
+O verificador externo leu esse estado e confirmou sucesso: S = 1.
+
+25
+00:02:45,700 --> 00:02:51,000
+Foram três ações; a referência também tem três, e a razão R_A é 1.
+
+26
+00:02:51,000 --> 00:02:56,600
+A confirmação na tela e o julgamento de sucesso são etapas diferentes.
+
+27
+00:02:56,600 --> 00:03:04,500
+Inspeção manual de P: o operador escolhe o gesto; recorte, memória e deslizes seguem a configuração P.
+
+28
+00:03:04,500 --> 00:03:10,233
+O controlador sorteou cerca de 3,92 vezes de ampliação para esta sessão.
+
+29
+00:03:10,233 --> 00:03:16,133
+A política recebe só o trecho exposto e a memória de fragmentos já vistos.
+
+30
+00:03:16,133 --> 00:03:24,167
+TOCAR(4) é o trecho “Ver pe” do botão: a revisão abre, mas a quarta linha está fora do primeiro recorte.
+
+31
+00:03:24,167 --> 00:03:30,633
+Após mais um deslocamento, a memória guarda 4 trechos; os gestos mudam com a cena.
+
+32
+00:03:30,633 --> 00:03:36,733
+Recorte, varredura e memória são código parametrizado, fora do prompt do LLM.
+
+33
+00:03:36,733 --> 00:03:42,633
+A sessão Gemini que vimos usou C, o comparador em ampliação unitária (1×).
+
+34
+00:03:42,633 --> 00:03:48,867
+Em S3, a ajuda abre por uma ação registrada: F1 equivale ao gesto TOCAR(Ajuda).
+
+35
+00:03:48,867 --> 00:03:55,467
+A mesma fonte de conteúdo atende à pessoa e ao agente; só chega quando é solicitada.
+
+36
+00:03:55,467 --> 00:04:01,667
+O evento registra abertura, cena e camada: é a assinatura MAC “Socorro!”.
+
+37
+00:04:01,667 --> 00:04:08,467
+Esc fecha a ajuda: o registro mostra ajuda_fechada e o retorno de Ajuda para a Revisão.
+
+38
+00:04:08,467 --> 00:04:13,567
+C2/A confirmou a correção em três ações: S = 1, A = 3, R_A = 1.
+
+39
+00:04:13,567 --> 00:04:21,100
+Em C1, duas condições atingiram o limite de 150 ações; C2/B teve falha técnica da API (HTTP 429).
+
+40
+00:04:21,100 --> 00:04:29,000
+O KLM prevê 7,95 s de operadores — 3 × (M + P + K) — para um especialista com os alvos já localizados.
+
+41
+00:04:29,000 --> 00:04:33,767
+Esse valor e a latência do modelo são medidas distintas.
+
+42
+00:04:33,767 --> 00:04:41,667
+O pacote inclui as requisições, as ações e os resultados recalculáveis. V1 e V2 permanecem reservadas.

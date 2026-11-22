@@ -1,10 +1,18 @@
 # UX-Agent · menu inspection and order review
 
-A local, instrumented mobile menu for the CEFET-MG HCI project. The application, experimental instructions, academic deliverables, and public help use Brazilian Portuguese. This repository contains synthetic calibration evidence for the deterministic policy R. The model adapters use real provider APIs.
+A local, instrumented mobile menu for the CEFET-MG HCI project. The application, experimental instructions, academic deliverables, and public help use Brazilian Portuguese. The consolidated pilot contains four deterministic R sessions and nine Gemini comparator sessions. The model adapters use real provider APIs.
 
 The hosted repository for evaluators is <https://github.com/alvarengazv/ihc-trabalho-final>. Clone it with `git clone https://github.com/alvarengazv/ihc-trabalho-final.git`. The portable E2 Git bundle (`deliverables/E2_Repositorio_Git.bundle`) is kept out of the hosted repository; where it is available, `git clone deliverables/E2_Repositorio_Git.bundle ux-agent` restores the same local history.
 
+## Entrega P3
+
+Os PDFs de envio estão em `entregas/SIGAA_A3/` e `entregas/SIGAA_P3/` na cópia do grupo. Para recompilar os documentos, use as fontes de `deliverables/`. O PDF combinado `P3_E4_com_Apendice_E1.pdf` contém E4 seguido de E1. O vídeo `E5_Demonstracao_UXAgent.mp4` reproduz a observação arquivada e as escolhas executadas, com legendas em português.
+
+O instrumento da coleta está em [0f54a89](https://github.com/alvarengazv/ihc-trabalho-final/tree/0f54a89). O acabamento visual da branch principal é posterior. O E3 consolidado é `deliverables/E3_Piloto_Gemini.zip`. Extraia-o em uma pasta e execute `python -m tools.view_gemini --run CAMINHO_DA_PASTA` para abrir a sessão C2-A-C-42-840b102d725e. O artigo E4 e o apêndice E1 descrevem as condições do piloto. Para verificar o manifesto extraído, execute `python tools/freeze.py` na revisão da coleta passando o caminho de manifesto_instrumento.json como argumento.
+
 ## Run locally
+
+To try the manual demonstration with illustrative photos of the 30 restaurant items, run `python -m demo_photos` and open [the photo demonstration](http://127.0.0.1:8768/). Choose the continuous list or category layout and open an item. Photos appear after the composition controls in the detail scene. The demo uses the same menu and ordering rules, without study tasks, agent policies or pilot logs.
 
 Use Python 3.10 or newer. The menu, runner, verifier and unit tests use the Python standard library. From the project root:
 
@@ -85,9 +93,11 @@ The CLI rejects V1 and V2 before creating the application or contacting a provid
 | `agent/run.py` | Calibration guard, orchestration, closed event vocabulary, audit capture, archival and final call to the verifier. |
 | `verifier/` | Order predicates and event analysis. Takes a completed log and imports no model adapter. |
 | `tests/` | Synthetic unit fixtures, deterministic reference runs, and boundary checks. |
-| `deliverables/` | IEEE papers, E1, E3, E5, citation checklist and independent audit. |
+| `deliverables/` | IEEE papers, E1, E3, E5 script and captions, and citation checklist. |
 
 The model prompt consists of the visible projection, permitted actions, eligible FIFO fragments, the functional instruction, literal task wording and one training example. FIFO fragments can come from previously visited scenes if they entered the visible region earlier and remain in the buffer. G deliberately uses the entire rendered current scene as a generic baseline. The audit log also preserves the complete application state for the researcher. After each accepted action the interface emits its domain events. The verifier compares the order with the analyst's criteria independently of the policy.
+
+A extensão posterior ao piloto aceita `--hesitation-max-ms 500` em `agent.run` com perfil remoto. O valor é um teto experimental em milissegundos, sem calibração humana. A política de execução sorteia uma duração uniforme discreta antes de aplicar cada escolha aceita do LLM. O campo `dados.hesitacao_simulada_ms` no evento `acao_proposta` mede o atraso sorteado. A extensão possui versão própria e a sequência de sorteios é independente do gerador de deslizes. Os perfis da coleta arquivada usam os parâmetros originais.
 
 ## Profiles
 

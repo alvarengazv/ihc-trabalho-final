@@ -3,6 +3,8 @@ import argparse
 from datetime import datetime, timezone
 import json
 import os
+import random
+import time
 from pathlib import Path
 from uuid import uuid4
 
@@ -64,6 +66,7 @@ class Trial:
         self.events = []
         self.step = 0
         self.hash = digest(params)
+        self.hesitation_rng = random.Random(f"{params['seed']}/hesitation")
         self.model_version = None
         self.rule = Reference(task, version) if params["profile"] == "R" else None
         self.progress = False
@@ -115,7 +118,12 @@ class Trial:
                 self.task, public, chan, self.audit, self.rejected)
             move = chan.resolve(label)
             origin = "LLM"
-            self.emit("acao_proposta", acao=label, alvo=move[1], latencia_ms=latency)
+            timing = {}
+            if "hesitation_max_ms" in self.params:
+                delay = self.hesitation_rng.randint(0, self.params["hesitation_max_ms"])
+                time.sleep(delay / 1000)
+                timing["hesitacao_simulada_ms"] = delay
+            self.emit("acao_proposta", acao=label, alvo=move[1], latencia_ms=latency, **timing)
         slip = chan.slip(move)
         if slip:
             move, point = slip
@@ -198,8 +206,14 @@ def main():
     parser.add_argument("--disable", action="append", choices=[f"M{i}" for i in range(1, 8)], default=[])
     parser.add_argument("--reference-zoom", type=float, help="Initial aperture for an expert R run")
     parser.add_argument("--out", type=Path, default=Path("deliverables/E3_Pacote_Piloto"))
+    parser.add_argument("--hesitation-max-ms", type=int,
+                        help="Sample a synthetic uniform delay before executing each LLM choice (milliseconds)")
     args = parser.parse_args()
+    if args.hesitation_max_ms is not None and (args.config == "R" or args.hesitation_max_ms < 0):
+        parser.error("--hesitation-max-ms requires a model-backed profile and a nonnegative duration.")
     params = sample(args.config, args.seed, args.disable, args.reference_zoom)
+    if args.hesitation_max_ms is not None:
+        params.update(hesitation_max_ms=args.hesitation_max_ms, version="1.1.0-hesitation")
     policy = None
     if args.config != "R":
         key = "GEMINI_MODEL" if args.provider == "gemini" else "ANTHROPIC_MODEL"

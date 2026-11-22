@@ -25,10 +25,10 @@ LOCK = Lock()
 
 
 class Console:
-    def __init__(self, task, version, mode, seed, zoom, reserved=False):
+    def __init__(self, task, version, mode, seed, zoom):
         if mode not in ("manual", "R", "lens"):
             raise ValueError("Modo desconhecido.")
-        if task in ("V1", "V2") and not (mode == "manual" and reserved):
+        if task in ("V1", "V2"):
             raise ValueError("A validação está reservada para o protocolo futuro.")
         if mode != "manual" and task not in ("C1", "C2"):
             raise ValueError("O ensaio instrumentado utiliza C1 ou C2.")
@@ -215,7 +215,7 @@ class Handler(BaseHTTPRequestHandler):
             with LOCK:
                 if self.path == "/api/start":
                     c = Console(args["task"], args["version"], args["mode"], int(args["seed"]),
-                                float(args.get("zoom", 1)), args.get("reserved") is True)
+                                float(args.get("zoom", 1)))
                     SESSIONS[c.session] = c
                     if len(SESSIONS) > 40:
                         SESSIONS.popitem(last=False)
