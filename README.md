@@ -1,26 +1,26 @@
-# UX-Agent · menu inspection and order review
+# UX-Agent · inspeção do cardápio e conferência do pedido
 
-A local, instrumented mobile menu for the CEFET-MG HCI project. The application, experimental instructions, academic deliverables, and public help use Brazilian Portuguese. The consolidated pilot contains four deterministic R sessions and nine Gemini comparator sessions. The model adapters use real provider APIs.
+Cardápio móvel local e instrumentado do projeto de Interação Humano-Computador do CEFET-MG. A aplicação, as instruções experimentais, os documentos acadêmicos e a ajuda pública estão em português do Brasil. O piloto consolidado contém quatro sessões determinísticas de R e nove sessões do comparador com Gemini. Os adaptadores de modelo usam as APIs reais dos provedores.
 
-The hosted repository for evaluators is <https://github.com/alvarengazv/ihc-trabalho-final>. Clone it with `git clone https://github.com/alvarengazv/ihc-trabalho-final.git`. The portable E2 Git bundle (`deliverables/E2_Repositorio_Git.bundle`) is kept out of the hosted repository; where it is available, `git clone deliverables/E2_Repositorio_Git.bundle ux-agent` restores the same local history.
+O repositório hospedado para avaliação é <https://github.com/alvarengazv/ihc-trabalho-final>. Clone-o com `git clone https://github.com/alvarengazv/ihc-trabalho-final.git`. O pacote Git portátil do E2 (`deliverables/E2_Repositorio_Git.bundle`) fica fora do repositório hospedado; quando estiver disponível, `git clone deliverables/E2_Repositorio_Git.bundle ux-agent` restaura o mesmo histórico localmente.
 
 ## Entrega P3
 
-Os PDFs de envio estão em `entregas/SIGAA_A3/` e `entregas/SIGAA_P3/` na cópia do grupo. Para recompilar os documentos, use as fontes de `deliverables/`. O PDF combinado `P3_E4_com_Apendice_E1.pdf` contém E4 seguido de E1. O vídeo `E5_Demonstracao_UXAgent.mp4` reproduz a observação arquivada e as escolhas executadas, com legendas em português.
+Os PDFs de envio estão em `entregas/SIGAA_A3/` e `entregas/SIGAA_P3/` na cópia do grupo. Para recompilar os documentos, use as fontes de `deliverables/`. O PDF combinado `P3_E4_com_Apendice_E1.pdf` contém o E4 seguido do apêndice E1. O vídeo `E5_Demonstracao_UXAgent.mp4` reproduz a observação arquivada e as escolhas executadas, com legendas em português.
 
-O instrumento da coleta está em [fc0ba7a](https://github.com/alvarengazv/ihc-trabalho-final/tree/fc0ba7a). O acabamento visual da branch principal é posterior. O E3 consolidado é `deliverables/E3_Piloto_Gemini.zip`. Extraia-o em uma pasta e execute `python -m tools.view_gemini --run CAMINHO_DA_PASTA` para abrir a sessão C2-A-C-42-840b102d725e. O artigo E4 e o apêndice E1 descrevem as condições do piloto. Para verificar o manifesto extraído, execute `python tools/freeze.py` na revisão da coleta passando o caminho de manifesto_instrumento.json como argumento.
+O instrumento da coleta corresponde à revisão `fc0ba7a`. O acabamento visual da branch principal é posterior. O E3 consolidado é `deliverables/E3_Piloto_Gemini.zip`. Extraia-o em uma pasta e execute `python -m tools.view_gemini --run CAMINHO_DA_PASTA` para abrir a sessão C2-A-C-42-840b102d725e. O artigo E4 e o apêndice E1 descrevem as condições do piloto. Para conferir o manifesto extraído, execute `python tools/freeze.py` na revisão da coleta, passando o caminho de `manifesto_instrumento.json` como argumento.
 
-## Run locally
+## Execução local
 
-To try the manual demonstration with illustrative photos of the 30 restaurant items, run `python -m demo_photos` and open [the photo demonstration](http://127.0.0.1:8768/). Choose the continuous list or category layout and open an item. Photos appear after the composition controls in the detail scene. The demo uses the same menu and ordering rules, without study tasks, agent policies or pilot logs.
+Para experimentar a demonstração manual com fotos ilustrativas dos 30 itens do restaurante, execute `python -m demo_photos` e abra [a demonstração com fotos](http://127.0.0.1:8768/). Escolha a lista contínua ou o leiaute por categorias e abra um item. As fotos aparecem depois dos controles de composição, na cena de detalhes. A demonstração usa o mesmo cardápio e as mesmas regras de pedido, sem tarefas do estudo, políticas do agente ou registros do piloto.
 
-Use Python 3.10 or newer. The menu, runner, verifier and unit tests use the Python standard library. From the project root:
+Use Python 3.10 ou superior. O cardápio, o executor, o verificador e os testes unitários usam apenas a biblioteca padrão do Python. A partir da raiz do projeto:
 
 ```powershell
 python -m app.server --port 8765
 ```
 
-Open [the local menu](http://127.0.0.1:8765/). The researcher console loads the Inter and JetBrains Mono typefaces from Google Fonts and falls back to the system fonts offline. The simulated phone keeps its own fonts, because its sign geometry mirrors `app/geometry.py`. Use a 360 × 800 CSS pixel viewport for the instrumented phone. The experimenter can inspect a magnified view, the permitted observation, actions and the event stream. C1 starts with an empty order. C2 starts with the sister's order already loaded. The review itself is opened by the first action of the reference method. The training menu has five items and separate instructions.
+Abra [o cardápio local](http://127.0.0.1:8765/). O console do pesquisador carrega as fontes Inter e JetBrains Mono do Google Fonts e, sem conexão, usa as fontes do sistema. O telefone simulado mantém fontes próprias, porque a geometria dos signos espelha `app/geometry.py`. Use uma janela de 360 × 800 pixels CSS para o telefone instrumentado. O experimentador pode inspecionar a vista ampliada, a observação permitida, as ações e o fluxo de eventos. C1 começa com o pedido vazio. C2 começa com o pedido da irmã já carregado; a revisão é aberta pela primeira ação do método de referência. O cardápio de treino tem cinco itens e instruções próprias.
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -29,11 +29,11 @@ python -m agent.run --config R --task C2 --version B --seed 42 --out runs
 Get-ChildItem runs/logs/*.json | ForEach-Object { python -m verifier $_.FullName }
 ```
 
-The last command recomputes task scores from the order and recorded facts. R has no language model. Its reference action count comes from a separate traversal at the measured starting zoom. Time stamps and unique session identifiers vary between replays. With the same local configuration and seed, the rule path and state metrics are reproducible.
+O último comando recalcula os resultados das tarefas a partir do pedido e dos fatos registrados. R não usa modelo de linguagem. Sua contagem de ações de referência vem de um percurso separado na ampliação inicial medida. Carimbos de tempo e identificadores de sessão variam entre repetições. Com a mesma configuração local e a mesma semente, o caminho das regras e as métricas de estado são reproduzíveis.
 
-## Model-backed pilot
+## Piloto com modelo de linguagem
 
-For the full paired Gemini calibration, set `GEMINI_API_KEY` or save the key alone on one line in the Git-ignored `.env.gemini-key` file at the project root. The following commands show the planned conditions without a request and then run them.
+Para a calibração pareada completa com Gemini, defina `GEMINI_API_KEY` ou salve apenas a chave, em uma linha, no arquivo `.env.gemini-key` da raiz do projeto (ignorado pelo Git). Os comandos abaixo mostram as condições planejadas sem fazer requisições, conferem a chave e executam o piloto.
 
 ```powershell
 python -m tools.run_gemini_pilot --plan
@@ -41,21 +41,21 @@ python -m tools.run_gemini_pilot --check-key
 python -m tools.run_gemini_pilot
 ```
 
-The runner pairs C, P, P2 and P6 across C1/C2 and A/B using seed 42 and one model. Its default is `gemini-3.5-flash-lite`. Set `GEMINI_MODEL` or `--model` to select another model before the protocol is created. The key check queries model metadata without generation and prints only the provider's error codes. The runner spaces requests by at least six seconds at its default of ten requests per minute. Set `--rpm` to match the project's available throughput.
+O executor pareia C, P, P2 e P6 em C1/C2 e A/B, com a semente 42 e um único modelo. O padrão é `gemini-3.5-flash-lite`. Defina `GEMINI_MODEL` ou `--model` para escolher outro modelo antes de criar o protocolo. A conferência da chave consulta os metadados do modelo sem gerar texto e imprime apenas os códigos de erro do provedor. O executor espaça as requisições em pelo menos seis segundos, no padrão de dez requisições por minuto. Ajuste `--rpm` à vazão disponível no projeto.
 
-A transient network failure or HTTP 408, 429, 500, 502, 503, or 504 can trigger up to four retries of the same step. The runner applies exponential backoff, honors a feasible provider retry delay and logs each attempt separately. Set `--retries` and `--retry-base` to adjust the retry budget and initial backoff. Daily quotas, authentication errors and delays longer than the runner's two-minute wait limit end the session as technical failures. The existing per-action JSON rejection budget applies independently.
+Uma falha transitória de rede ou um HTTP 408, 429, 500, 502, 503 ou 504 pode provocar até quatro novas tentativas do mesmo passo. O executor aplica espera exponencial, respeita o atraso sugerido pelo provedor quando ele é viável e registra cada tentativa separadamente. Use `--retries` e `--retry-base` para ajustar o número de tentativas e a espera inicial. Cotas diárias, erros de autenticação e atrasos maiores que o limite de dois minutos encerram a sessão como falha técnica. O limite de respostas JSON rejeitadas por ação é aplicado de forma independente.
 
-Outputs and per-request audit records go to `runs/E3_Gemini`. If all attempts fail, correct the underlying cause and run the same command again. Completed conditions are skipped, and the condition that ended in a technical failure starts from its original state with a new session ID. Earlier attempts remain archived.
+As saídas e os registros de auditoria de cada requisição vão para `runs/E3_Gemini`. Se todas as tentativas falharem, corrija a causa e execute o mesmo comando novamente. As condições concluídas são puladas, e a condição que terminou em falha técnica recomeça do estado original com um novo identificador de sessão. As tentativas anteriores continuam arquivadas.
 
-After the runner stops, combine its actual sessions with the four reference runs. The supplemental ZIP records how many planned conditions ended without a technical failure.
+Quando o executor terminar, combine as sessões obtidas com as quatro execuções de referência. O ZIP gerado registra quantas condições planejadas terminaram sem falha técnica.
 
 ```powershell
 python tools/package_pilot.py --gemini-run runs/E3_Gemini
 ```
 
-To follow the observed Gemini actions while the batch runs or inspect earlier steps, start `python -m tools.view_gemini` in a second terminal and open [the local Gemini record viewer](http://127.0.0.1:8766/). The viewer reads the audit files from disk. Use `--run` to inspect an alternative output folder. Executed events become available when a session writes its final log.
+Para acompanhar as ações do Gemini durante o lote ou inspecionar passos anteriores, execute `python -m tools.view_gemini` em um segundo terminal e abra [o visor local dos registros do Gemini](http://127.0.0.1:8766/). O visor lê os arquivos de auditoria do disco. Use `--run` para inspecionar outra pasta de saída. Os eventos executados ficam disponíveis quando a sessão grava seu registro final.
 
-Set `GEMINI_API_KEY` and `GEMINI_MODEL` to a credential and the exact Gemini API model ID enabled on the account. Alternatively set `ANTHROPIC_API_KEY` and `ANTHROPIC_MODEL`. Set these in the environment of the shell that starts the process. The provider account must permit the selected model and structured JSON output. Each command can make a paid request per action and retry malformed choices twice. `--temperature` sets a provider-supported value. An omitted value uses the provider default. The local seed is always recorded. Gemini also receives a provider seed. Claude receives no seed parameter.
+Defina `GEMINI_API_KEY` e `GEMINI_MODEL` com uma credencial e o identificador exato de um modelo da API Gemini habilitado na conta. Como alternativa, defina `ANTHROPIC_API_KEY` e `ANTHROPIC_MODEL`. Essas variáveis devem estar no ambiente do terminal que inicia o processo. A conta do provedor precisa permitir o modelo escolhido e a saída JSON estruturada. Cada comando pode fazer uma requisição paga por ação e repetir duas vezes uma escolha malformada. `--temperature` define um valor aceito pelo provedor; sem ele, vale o padrão do provedor. A semente local é sempre registrada. O Gemini também recebe uma semente do provedor; o Claude não recebe parâmetro de semente.
 
 ```powershell
 python -m agent.run --config P --task C1 --version A --provider gemini --seed 42 --out runs
@@ -65,7 +65,7 @@ python -m agent.run --config P6 --task C2 --version B --provider gemini --seed 4
 python -m agent.run --config G --task C1 --version A --provider claude --seed 42 --out runs
 ```
 
-For the complete calibration matrix with a single model and seed:
+Para a matriz completa de calibração com um único modelo e uma única semente:
 
 ```powershell
 foreach ($profile in 'P','P2','P6','C','G') {
@@ -77,52 +77,52 @@ foreach ($profile in 'P','P2','P6','C','G') {
 }
 ```
 
-The CLI rejects V1 and V2 before creating the application or contacting a provider. The application includes their initial states and operations. A future validation study requires a separately frozen protocol. There are no validation executions in the pilot. A provider failure is a technical interruption. Invalid proposals never mutate the order. The results for other profiles cannot be inferred from R.
+A linha de comando rejeita V1 e V2 antes de criar a aplicação ou contatar um provedor. A aplicação contém os estados iniciais e as operações dessas tarefas, mas um estudo de validação futuro exige um protocolo congelado à parte. O piloto não tem execuções de validação. Uma falha do provedor é uma interrupção técnica. Propostas inválidas nunca alteram o pedido. Os resultados dos demais perfis não podem ser inferidos a partir de R.
 
-## Components and data flow
+## Componentes e fluxo de dados
 
-| Location | Responsibility |
+| Local | Responsabilidade |
 |---|---|
-| `app/catalog.py` | Canonical domain content and literal task instructions from the previous submissions. Monetary values are integer cents. |
-| `app/model.py`, `app/geometry.py` | MoLIC scene transitions, allowed state changes and positioned signs used by the browser and the runner. |
-| `app/server.py` | Local browser interface for a participant and the researcher's demonstration. |
-| `design/` | Help text, CTT, MoLIC, diagrams, sign parity and rationale. |
-| `agent/configs/v1.json` | Versioned defaults and per-profile sampling distributions. |
-| `agent/mechanisms/` | View clipping, FIFO memory, fragmentation, slip, review, scan strategy and impasse handling. |
-| `agent/policies/` | R method and independent JSON-only policies for Gemini and Claude. |
-| `agent/run.py` | Calibration guard, orchestration, closed event vocabulary, audit capture, archival and final call to the verifier. |
-| `verifier/` | Order predicates and event analysis. Takes a completed log and imports no model adapter. |
-| `tests/` | Synthetic unit fixtures, deterministic reference runs, and boundary checks. |
-| `deliverables/` | IEEE papers, E1, E3, E5 script and captions, and citation checklist. |
+| `app/catalog.py` | Conteúdo canônico do domínio e enunciados literais das tarefas, herdados das entregas anteriores. Valores monetários em centavos inteiros. |
+| `app/model.py`, `app/geometry.py` | Transições entre cenas MoLIC, mudanças de estado permitidas e signos posicionados, usados pelo navegador e pelo executor. |
+| `app/server.py` | Interface local no navegador para o participante e para a demonstração do pesquisador. |
+| `design/` | Texto da ajuda, CTT, MoLIC, diagramas, paridade de signos e justificativas. |
+| `agent/configs/v1.json` | Valores padrão versionados e distribuições de amostragem por perfil. |
+| `agent/mechanisms/` | Recorte da vista, memória FIFO, fragmentação, deslize, revisão, estratégia de varredura e tratamento de impasse. |
+| `agent/policies/` | Método R e políticas independentes, apenas com JSON, para Gemini e Claude. |
+| `agent/run.py` | Bloqueio das tarefas de validação, orquestração, vocabulário fechado de eventos, captura de auditoria, arquivamento e chamada final ao verificador. |
+| `verifier/` | Predicados sobre o pedido e análise de eventos. Recebe um registro concluído e não importa nenhum adaptador de modelo. |
+| `tests/` | Dados sintéticos de teste, execuções de referência determinísticas e verificações de fronteira. |
+| `deliverables/` | Artigos IEEE, E1, E3, roteiro e legendas do E5 e conferência das citações. |
 
-The model prompt consists of the visible projection, permitted actions, eligible FIFO fragments, the functional instruction, literal task wording and one training example. FIFO fragments can come from previously visited scenes if they entered the visible region earlier and remain in the buffer. G deliberately uses the entire rendered current scene as a generic baseline. The audit log also preserves the complete application state for the researcher. After each accepted action the interface emits its domain events. The verifier compares the order with the analyst's criteria independently of the policy.
+O prompt do modelo é composto pela projeção visível, pelas ações permitidas, pelos fragmentos FIFO elegíveis, pela instrução funcional, pelo enunciado literal da tarefa e por um exemplo de treino. Fragmentos FIFO podem vir de cenas visitadas antes, se entraram na região visível e continuam na memória. G usa de propósito toda a cena renderizada como linha de base genérica. O registro de auditoria também guarda o estado completo da aplicação para o pesquisador. Depois de cada ação aceita, a interface emite seus eventos de domínio. O verificador compara o pedido com os critérios do analista, independentemente da política.
 
 A extensão posterior ao piloto aceita `--hesitation-max-ms 500` em `agent.run` com perfil remoto. O valor é um teto experimental em milissegundos, sem calibração humana. A política de execução sorteia uma duração uniforme discreta antes de aplicar cada escolha aceita do LLM. O campo `dados.hesitacao_simulada_ms` no evento `acao_proposta` mede o atraso sorteado. A extensão possui versão própria e a sequência de sorteios é independente do gerador de deslizes. Os perfis da coleta arquivada usam os parâmetros originais.
 
-## Profiles
+## Perfis
 
-| Profile | Initial zoom | Readability threshold | Scan strategy | Slip probability | Memory |
+| Perfil | Ampliação inicial | Limiar de legibilidade | Estratégia de varredura | Probabilidade de deslize | Memória |
 |---|---|---:|---|---:|---|
-| P | Uniform [3, 5] | 3 | Linear | 0.05 | Uniform in {3, 4, 5} |
-| P2 | Uniform [1.5, 2.5] | 1.5 | Linear 9/11, skipping 2/11 | 0.05 | Same |
-| P6 | Uniform [5.5, 7] | 3 | Linear 9/11, skipping 2/11 | 0.05 | Same |
-| C | 1 | 1 | Free | 0 | Same |
-| G | 1 | 1 | Entire current page | 0 | Unlimited |
-| R | 1 (or `--reference-zoom`) | 1 | Reference method | 0 | Rule-based |
+| P | Uniforme [3, 5] | 3 | Linear | 0,05 | Uniforme em {3, 4, 5} |
+| P2 | Uniforme [1,5; 2,5] | 1,5 | Linear 9/11, salto 2/11 | 0,05 | Igual |
+| P6 | Uniforme [5,5; 7] | 3 | Linear 9/11, salto 2/11 | 0,05 | Igual |
+| C | 1 | 1 | Livre | 0 | Igual |
+| G | 1 | 1 | Página atual inteira | 0 | Ilimitada |
+| R | 1 (ou `--reference-zoom`) | 1 | Método de referência | 0 | Por regras |
 
-P, P2, P6 and C share the same help threshold (five stagnant actions) and help probability (0.5). Capacity is paired by seed independently of the zoom draw. The scene's eligible signs and morphology control which actions are available. Each execution has a limit of 150 actions. Profiles can switch individual mechanisms off with repeatable `--disable M1` through `--disable M7`. Ablations belong to calibration. The configuration hash covers the sampled parameters, version, toggles and seed. Example:
+P, P2, P6 e C compartilham o mesmo limiar de ajuda (cinco ações sem progresso) e a mesma probabilidade de ajuda (0,5). A capacidade da memória é pareada pela semente, independentemente do sorteio da ampliação. Os signos elegíveis da cena e sua morfologia determinam as ações disponíveis. Cada execução tem limite de 150 ações. Os perfis podem desligar mecanismos individuais com `--disable M1` a `--disable M7`, repetível. Ablações pertencem à calibração. O hash da configuração cobre os parâmetros sorteados, a versão, os mecanismos ligados e a semente. Exemplo:
 
 ```powershell
 python -m agent.run --config P --task C2 --version A --seed 42 --disable M7 --out runs
 ```
 
-## Measurements and interpretation
+## Medidas e interpretação
 
-S requires both confirmation and a correct final order. A repaired error can coexist with success. Technical failures are reported separately. Give-up and limit events count as failures. E1–E6 distinguish selection, association, option/quantity, motor slip, review discrepancy and rule violations. A counts executed actions. R_A divides A by the independently measured reference length. D counts pan and zoom per located target. V measures revisits. O counts required signs missing before decision. U records help openings, access by layer and first access within the action sequence. An unobserved opportunity yields JSON null. The six MAC signatures are operational hypotheses. The pilot has no behavioral response times or human outcomes.
+S exige confirmação e pedido final correto. Um erro corrigido pode coexistir com sucesso. Falhas técnicas são relatadas à parte. Desistência e limite de ações contam como fracasso. E1–E6 distinguem seleção, associação, opção/quantidade, deslize motor, divergência na revisão e violação de regras. A conta as ações executadas. R_A divide A pelo comprimento de referência medido de forma independente. D conta deslocamentos e mudanças de ampliação por alvo localizado. V mede revisitas. O conta os signos obrigatórios ausentes antes da decisão. U registra aberturas de ajuda, acessos por camada e o primeiro acesso na sequência de ações. Uma oportunidade não observada resulta em `null` no JSON. As seis assinaturas MAC são hipóteses operacionais. O piloto não tem tempos de resposta comportamentais nem resultados com pessoas.
 
-## Rebuild the academic package
+## Recompilar o pacote acadêmico
 
-The three IEEE documents share `deliverables/preambulo.tex`, `deliverables/referencias.bib` and vector material under `design/`. Edit the `institution` macro in the preamble to change the institutional line. Install Tectonic with access to its default TeX bundle, or an IEEEtran-capable TeX distribution. Run from the indicated directory so the relative inputs resolve.
+Os três documentos IEEE compartilham `deliverables/preambulo.tex`, `deliverables/referencias.bib` e o material vetorial de `design/`. Edite a macro `institution` no preâmbulo para mudar a linha institucional. Instale o Tectonic com acesso ao pacote TeX padrão, ou uma distribuição TeX com IEEEtran. Execute a partir do diretório indicado para que as entradas relativas sejam encontradas.
 
 ```powershell
 Push-Location deliverables
@@ -136,7 +136,6 @@ python tools/package_pilot.py
 python tools/freeze.py
 ```
 
-The package builder recomputes the score of every included log, checks that all runs use C1/C2, regenerates the measured summary and verifies the ZIP CRC. The archive records when no requests were sent to a provider. See `deliverables/REFERENCIAS_PDF_CHECKLIST.md` for source files and `deliverables/E5_Roteiro_Demonstracao.md` for the live demonstration.
+O montador do pacote recalcula o resultado de cada registro incluído, confere se todas as execuções usam C1/C2, regenera o resumo medido e verifica o CRC do ZIP. O arquivo registra quando nenhuma requisição foi enviada a um provedor. Consulte `deliverables/REFERENCIAS_PDF_CHECKLIST.md` para os arquivos das referências e `deliverables/E5_Roteiro_Demonstracao.md` para a demonstração.
 
-The instrument manifest hashes the exact application, policy, verifier, help and design files at packaging time. Run the final command to check a checkout against that snapshot. The manifest identifies the calibration instrument independently of each session's configuration hash. The researcher's visual console and synthetic unit fixtures can be demonstrated offline with `python -m agent.demo`. The human-facing F1 shortcut opens help and Escape returns when the scene supports it.
-
+O manifesto do instrumento registra o hash dos arquivos exatos da aplicação, das políticas, do verificador, da ajuda e do design no momento do empacotamento. Execute o último comando para conferir uma cópia do repositório contra esse retrato. O manifesto identifica o instrumento de calibração independentemente do hash de configuração de cada sessão. O console visual do pesquisador e os dados sintéticos de teste podem ser demonstrados sem conexão com `python -m agent.demo`. O atalho F1 da interface abre a ajuda, e Esc retorna à cena anterior quando ela permite.
