@@ -1,53 +1,52 @@
-Cada entrada dá origem, conteúdo (restrição ou valor inicial), expressão, tipo semiótico, projeção e evento. D indica domínio, T transformado, A aplicação, C convencional. E significa estático, Dn dinâmico, M metalinguístico. Na projeção, \emph{trecho} é texto geométrica e tipograficamente legível; abaixo do limiar restam tipo e posição. Uma ação só é oferecida nas condições do executor. Os nomes de evento abaixo pertencem ao pesquisador.
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Restaurante.nome}{D, denominação ou lanchonete de treino, cabeçalho E / trecho / \UXev{elemento_visto}.}
-\UXrow{Tela.assunto}{A, assunto corrente S0--S5, título E / trecho do título / \UXev{tela_alterada}.}
-\UXrow{Início.histórico}{D, linhas do último pedido quando previsto, relação de itens E / trechos de linhas / \UXev{elemento_visto}.}
-\UXrow{Pedido.repetição}{A, acrescenta as linhas históricas às atuais, Repetir pedido E / alvo visível / \UXev{item_adicionado}.}
-\UXrow{Navegação.destino}{C, início, cardápio ou revisão, controles de navegação E / alvo visível / \UXev{tela_alterada}.}
-\UXrow{Categoria.nome}{D, cinco categorias na ordem herdada, seção A ou aba B E / trecho / \UXev{elemento_visto}.}
-\end{uxtable}\end{minipage}\par
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Categoria.ativa}{A, categoria mostrada em B (inicial: entradas), realce Dn / pistas visíveis e itens expostos / \UXev{tela_alterada}.}
-\UXrow{Item.nome}{D, alimento do catálogo, cabeçalho do cartão E / trecho sem completar vizinhos / \UXev{elemento_visto}.}
-\UXrow{Item.descrição}{D, ingredientes ou preparo, texto do cartão E / trecho / \UXev{elemento_visto}.}
-\UXrow{Item.etiquetas}{T, zero ou mais V, SL, SA, marcas junto ao item M / somente seu trecho / \UXev{elemento_visto}.}
-\UXrow{Item.preço}{D, centavos inteiros positivos, moeda em reais e dois preços para massas E / trecho monetário / \UXev{elemento_visto}.}
-\UXrow{Item.detalhes}{A, abrir a composição do alimento tocado, cartão E / alvo visível sem ID interno / \UXev{tela_alterada}.}
-\end{uxtable}\end{minipage}\par
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Resumo.página}{A, em B cada página reúne até quatro linhas; com mais de quatro, Anterior/Próxima existem quando há página naquela direção. Dn / alvos e linhas expostos / \UXev{acao_executada}.}
-\UXrow{Pedido.resumo}{T, composição e total em B, rodapé Dn / apenas interseção efetiva / \UXev{elemento_visto}.}
-\UXrow{Item.opção}{D, tamanho ou acompanhamento obrigatório, opções inicialmente sem escolha Dn / textos expostos / \UXev{opcao_selecionada}.}
-\UXrow{Opção.exigência}{A, condição de inclusão, orientação explícita M / trecho do aviso, sem marca lógica de desabilitação / \UXev{elemento_visto}.}
-\UXrow{Item.quantidade}{D, inteiro a partir de 1, número e controles $+/-$ Dn / número ou sinal visível / \UXev{acao_executada}.}
-\UXrow{Item.inclusão}{A, efetivar composição de uma nova linha, Adicionar Dn / alvo visível admissível / \UXev{item_adicionado}.}
-\end{uxtable}\end{minipage}\par
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Linha.edição}{A, abrir detalhes da linha e aplicar mudança, Alterar e Salvar alteração Dn / alvo do recorte / \UXev{item_alterado}.}
-\UXrow{Linha.composição}{T, nome, opção, unidades e subtotal, linha Dn / fragmentos expostos / \UXev{elemento_visto}.}
-\UXrow{Linha.unidades}{T, inteiro positivo da linha existente, $+/-$ Dn / controle visível / \UXev{item_alterado}.}
-\UXrow{Linha.remoção}{A, excluir a linha escolhida, Remover Dn / alvo visível / \UXev{item_removido}.}
-\UXrow{Linha.reposição}{A, recuperar última remoção disponível, Desfazer remoção Dn / alvo visível / \UXev{item_adicionado}.}
-\UXrow{Pedido.total}{T, soma de subtotais, moeda Dn / trecho / \UXev{elemento_visto}.}
-\end{uxtable}\end{minipage}\par
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Pedido.vazio}{A, ausência de linhas, mensagem Dn / trecho / \UXev{elemento_visto}.}
-\UXrow{Pedido.registro}{A, efetivar comanda não vazia, Confirmar pedido, depois mensagem e linhas Dn / alvo e resposta no recorte / \UXev{pedido_confirmado}.}
-\UXrow{Ajuda.acesso}{A, solicitar explicação da cena, Ajuda E / alvo visível ou acesso explícito previsto / \UXev{ajuda_aberta}.}
-\UXrow{Ajuda.tópico}{A, assunto da origem e camada escolhida, título e texto M / trecho após abertura / \UXev{observacao}.}
-\UXrow{Ajuda.camada}{A, dica, contexto ou guia, três escolhas Dn / opções da ajuda aberta / \UXev{ajuda_aberta}.}
-\UXrow{Ajuda.retorno}{C, retomar a origem, Fechar ajuda E / alvo / \UXev{ajuda_fechada}.}
-\end{uxtable}\end{minipage}\par
-\par\noindent\begin{minipage}{\columnwidth}
-\begin{uxtable}{Entidade.atributo}{Origem, conteúdo, expressão, tipo / projeção / evento}
-\UXrow{Navegação.retorno}{C, abandonar edição pendente, Voltar E / gesto ou alvo corrente / \UXev{tela_alterada}.}
-\UXrow{Vista.escala e posição}{C, janela $360/z$ por $800/z$ e posição, gesto de ampliar, reduzir ou deslocar Dn / recorte e gestos permitidos / \UXev{zoom_alterado}, \UXev{vista_deslocada}.}
-\UXrow{Protocolo.instrução}{A, enunciado estável da tarefa, texto do protocolo M / texto literal / \UXev{tarefa_iniciada}.}
-\UXrow{Protocolo.saída}{C, interromper por iniciativa própria, desistir Dn / gesto de protocolo / \UXev{desistencia}.}
-\end{uxtable}\end{minipage}\par
+\noindent O esquema descreve cada signo usado nas tarefas pelo conteúdo e pela expressão. Não é o modelo de dados. A coluna \emph{Na observação do agente} aplica a equivalência de canal: \emph{trecho} é o texto geométrica e tipograficamente legível no recorte; abaixo do limiar de legibilidade restam o tipo do elemento e sua posição. Nenhum identificador interno, estado lógico de desabilitação ou elemento fora do recorte entra na observação. A coluna \emph{Evento} liga o signo ao registro do pesquisador. Os signos de aplicação recebem explicação completa nas três camadas da ajuda.
+\newcommand{\SGhead}{\hline \textbf{Signo (entidade.atributo)} & \textbf{Origem} & \textbf{Conteúdo (tipo, restrições, default)} & \textbf{Expressão (widget)} & \textbf{Tipo} & \textbf{Na observação do agente} & \textbf{Evento}\\ \hline}
+\begin{table*}[!t]
+\caption{Esquema conceitual de signos estendido (parte 1: cardápio, item e navegação)}
+\label{tab:signos1}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.135\textwidth}>{\raggedright\arraybackslash}p{.085\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}p{.085\textwidth}>{\raggedright\arraybackslash}p{.165\textwidth}>{\raggedright\arraybackslash}p{.13\textwidth}@{}}
+\SGhead
+Restaurante.nome & domínio & texto; denominação do restaurante ou da lanchonete de treino & cabeçalho & estático & trecho legível & \UXev{elemento_visto}\\
+Tela.assunto & aplicação & enumerado S0--S5; cena corrente & título da tela & estático & trecho do título & \UXev{tela_alterada}\\
+Início.histórico & domínio & lista das linhas do último pedido, quando prevista na tarefa & relação de itens & estático & trechos de linhas & \UXev{elemento_visto}\\
+Pedido.repetição & aplicação & ação; acrescenta as linhas históricas às atuais & botão Repetir pedido & estático & alvo visível & \UXev{item_adicionado}\\
+Navegação.destino & convencional & enumerado: início, cardápio ou revisão & controles de navegação & estático & alvo visível & \UXev{tela_alterada}\\
+Navegação.retorno & convencional & ação; abandona edição pendente & botão Voltar & estático & gesto ou alvo corrente & \UXev{tela_alterada}\\
+Categoria.nome & domínio & texto; cinco categorias na ordem herdada & seção (A) ou aba (B) & estático & trecho & \UXev{elemento_visto}\\
+Categoria.ativa & aplicação & enumerado; default: entradas (somente B) & realce da aba & dinâmico & pistas visíveis e itens expostos & \UXev{tela_alterada}\\
+Item.nome & domínio & texto do catálogo; 30 itens & cabeçalho do cartão & estático & trecho, sem completar vizinhos & \UXev{elemento_visto}\\
+Item.descrição & domínio & texto; ingredientes ou preparo & texto do cartão & estático & trecho & \UXev{elemento_visto}\\
+Item.etiquetas & transformado & conjunto de \{V, SL, SA\}, possivelmente vazio & marcas junto ao item & metalinguístico & somente o próprio trecho & \UXev{elemento_visto}\\
+Item.preço & domínio & centavos inteiros positivos; dois preços para massas & valor em reais & estático & trecho monetário & \UXev{elemento_visto}\\
+Item.detalhes & aplicação & ação; abre a composição do item tocado & cartão tocável & estático & alvo visível, sem identificador interno & \UXev{tela_alterada}\\
+Item.opção & domínio & tamanho ou acompanhamento obrigatório; default: nenhuma escolha & grupo de opções & dinâmico & textos expostos & \UXev{opcao_selecionada}\\
+Opção.exigência & aplicação & condição para incluir o item & aviso escrito & metalinguístico & trecho do aviso, sem marca lógica de desabilitação & \UXev{elemento_visto}\\
+Item.quantidade & domínio & inteiro $\geq 1$ & número e controles $+/-$ & dinâmico & número ou sinal visível & \UXev{acao_executada}\\
+Item.inclusão & aplicação & ação; efetiva uma nova linha & botão Adicionar & dinâmico & alvo visível admissível & \UXev{item_adicionado}\\ \hline
+\end{tabularx}
+\end{table*}
+\begin{table*}[!t]
+\caption{Esquema conceitual de signos estendido (parte 2: pedido, ajuda, vista e protocolo)}
+\label{tab:signos2}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.135\textwidth}>{\raggedright\arraybackslash}p{.085\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}p{.085\textwidth}>{\raggedright\arraybackslash}p{.165\textwidth}>{\raggedright\arraybackslash}p{.13\textwidth}@{}}
+\SGhead
+Pedido.resumo & transformado & composição e total; somente em B & rodapé fixo & dinâmico & apenas a interseção efetiva com o recorte & \UXev{elemento_visto}\\
+Resumo.página & aplicação & até quatro linhas por página; Anterior/Próxima quando há página nessa direção & paginação do rodapé (B) & dinâmico & alvos e linhas expostos & \UXev{acao_executada}\\
+Linha.composição & transformado & nome, opção, unidades e subtotal & linha da revisão & dinâmico & fragmentos expostos & \UXev{elemento_visto}\\
+Linha.unidades & transformado & inteiro positivo da linha existente & controles $+/-$ & dinâmico & controle visível & \UXev{item_alterado}\\
+Linha.edição & aplicação & ação; reabre os detalhes da linha e aplica a mudança & botões Alterar e Salvar alteração & dinâmico & alvo do recorte & \UXev{item_alterado}\\
+Linha.remoção & aplicação & ação; exclui a linha escolhida & botão Remover & dinâmico & alvo visível & \UXev{item_removido}\\
+Linha.reposição & aplicação & ação; recupera a última remoção disponível & botão Desfazer remoção & dinâmico & alvo visível & \UXev{item_adicionado}\\
+Pedido.total & transformado & soma dos subtotais, em reais & valor total & dinâmico & trecho & \UXev{elemento_visto}\\
+Pedido.vazio & aplicação & ausência de linhas & mensagem & dinâmico & trecho & \UXev{elemento_visto}\\
+Pedido.registro & aplicação & ação; exige comanda não vazia & botão Confirmar pedido, depois mensagem e linhas & dinâmico & alvo e resposta no recorte & \UXev{pedido_confirmado}\\
+Ajuda.acesso & aplicação & ação; solicita explicação da cena & botão Ajuda ou F1 & estático & alvo visível ou acesso ubíquo previsto & \UXev{ajuda_aberta}\\
+Ajuda.camada & aplicação & enumerado: dica local, sobre esta tela, guia de uso & três escolhas & dinâmico & opções da ajuda aberta & \UXev{ajuda_aberta}\\
+Ajuda.tópico & aplicação & texto do assunto da cena de origem na camada escolhida & título e texto & metalinguístico & trecho, somente após a abertura & \UXev{observacao}\\
+Ajuda.retorno & convencional & ação; retoma a cena de origem & botão Fechar ajuda ou Esc & estático & alvo visível & \UXev{ajuda_fechada}\\
+Vista.escala e posição & convencional & janela de $360/z$ por $800/z$ px CSS e posição & gestos de ampliar, reduzir e deslocar & dinâmico & recorte e gestos permitidos & \UXev{zoom_alterado}, \UXev{vista_deslocada}\\
+Protocolo.instrução & aplicação & enunciado literal e estável da tarefa & texto do protocolo & metalinguístico & texto literal & \UXev{tarefa_iniciada}\\
+Protocolo.saída & convencional & ação; interromper por iniciativa própria & gesto Desistir & dinâmico & gesto de protocolo & \UXev{desistencia}\\ \hline
+\end{tabularx}
+\end{table*}

@@ -122,14 +122,15 @@ S exige confirmação e pedido final correto. Um erro corrigido pode coexistir c
 
 ## Recompilar o pacote acadêmico
 
-Os três documentos IEEE compartilham `deliverables/preambulo.tex`, `deliverables/referencias.bib` e o material vetorial de `design/`. Edite a macro `institution` no preâmbulo para mudar a linha institucional. Instale o Tectonic com acesso ao pacote TeX padrão, ou uma distribuição TeX com IEEEtran. Execute a partir do diretório indicado para que as entradas relativas sejam encontradas.
+O artigo do A3 e o E4 compartilham `deliverables/preambulo.tex`, `deliverables/referencias.bib` e o material vetorial de `design/`. Edite a macro `institution` no preâmbulo para mudar a linha institucional. Instale o Tectonic com acesso ao pacote TeX padrão, ou uma distribuição TeX com IEEEtran. Execute a partir do diretório indicado para que as entradas relativas sejam encontradas. O E4 compila o artigo seguido do Apêndice E1 (`deliverables/E1_apendice.tex`), que usa a mesma lista de referências; `tools/split_p3.py` separa o resultado em `UXAgent_P3_Artigo_E4.pdf`, `UXAgent_P3_Anexo_E1.pdf` e `P3_E4_com_Apendice_E1.pdf`.
 
 ```powershell
 Push-Location deliverables
 tectonic DesignUXAgent_IHC_Grupo_Amorim_Alvarenga_Cruz.tex
 tectonic UXAgent_P3_Artigo_E4.tex
-tectonic UXAgent_P3_Anexo_E1.tex
 Pop-Location
+python -m pip install pypdf
+python tools/split_p3.py
 python -m pip install reportlab
 python tools/build_dictionary.py
 python tools/package_pilot.py

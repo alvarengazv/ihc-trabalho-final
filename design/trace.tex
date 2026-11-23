@@ -1,18 +1,30 @@
-\begin{uxtable}{Perfil e tarefa}{Mecanismo, signo, registro e estatuto}
-\UXrow{M1, C1\,1 e 4}{Ampliação $\rightarrow$ recorte e legibilidade $\rightarrow$ nome/preço $\rightarrow$ deslocamentos por item ($D$). E para amplitude observada, HO para limiar e geometria.}
-\UXrow{M2, C1\,2}{Contexto ausente $\rightarrow$ memória FIFO de fragmentos $\rightarrow$ comparação de preços $\rightarrow$ revisita ($V$). E indireta para perda do contexto, HO para $k$.}
-\UXrow{M3, C1\,1.2}{Nome fora da vista $\rightarrow$ atributo sem herdar rótulo $\rightarrow$ item vizinho $\rightarrow Re_{E2}$. HO para a associação operacional.}
-\UXrow{M4, deslocar}{Gestos não intencionais $\rightarrow$ toque no início do deslocamento $\rightarrow$ abertura e retorno $\rightarrow Re_{E4},A$. E para o fenômeno, HO para $p=0{,}05$.}
-\UXrow{M5, C2\,2}{Linha de revisão fora da vista $\rightarrow$ somente trechos vistos e memória $\rightarrow$ divergência final $\rightarrow Re_{E5}$. HO para posição e efeito.}
-\UXrow{M6, C1\,1.2}{Varredura $\rightarrow$ restrição de deslocamentos $\rightarrow$ sequência de itens expostos $\rightarrow O,D$. E para estratégias em outra tarefa, HO para transferência.}
-\UXrow{M7, impasse}{Busca de suporte $\rightarrow$ estagnação e acionamento $\rightarrow$ ajuda por camada $\rightarrow U$. HO para $n,q$ e igualdade P/C.}
-\end{uxtable}
-\begin{uxtable}{Questão e opções}{Critério, decisão e estatuto}
-\UXrow{Conferência separada ou persistente?}{Consultar a comanda durante a escolha. Preservar as duas versões herdadas. Composição persistente pode poupar navegação ou cobrir alimentos. HO; aferir no estudo futuro.}
-\UXrow{Bloquear ou avisar?}{Opção obrigatória define uma composição válida. Usar PP, PA e RA para essa operação. Para etiquetas e orçamento, manter edição sem bloqueio específico. PD; comparar somente oportunidades equivalentes.}
-\UXrow{Associação implícita ou nome sugerido?}{Se o nome não cabe no recorte, a observação conserva somente a parte visível. PD para paridade, HO para truncamento.}
-\UXrow{Ajuda espontânea ou solicitada?}{Preservar iniciativa e medir suporte. Texto comum em três camadas, acessado por ação registrada. PD. O acionador da política tem parâmetros independentes, HO.}
-\UXrow{Contar exposição ou inferir leitura?}{A caixa pode interceptar a vista antes de um termo inteiro ser legível. Registrar fração e distinguir exposição de decisão interna. HO.}
-\UXrow{Último pedido substitui ou soma?}{V2 exige identificar residual já presente. Repetir conserva as linhas existentes; oferecer conferência e recuperação. PD diretamente herdado da operação congelada.}
-\UXrow{Concluir por fala ou composição?}{Registrar confirmação; o verificador examina o estado final segundo as regras herdadas. PD. Uma correção anterior não apaga o erro registrado.}
-\end{uxtable}
+\begin{table*}[!t]
+\caption{Matriz de rastreabilidade do design: mecanismo, tarefa, signo, registro e status}
+\label{tab:trace}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.06\textwidth}>{\raggedright\arraybackslash}p{.09\textwidth}>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.12\textwidth}>{\raggedright\arraybackslash}p{.08\textwidth}>{\raggedright\arraybackslash}p{.17\textwidth}@{}}
+\hline \textbf{Mec.} & \textbf{Operação} & \textbf{Fenômeno} & \textbf{Implementação} & \textbf{Signo afetado} & \textbf{Métrica} & \textbf{Status}\\ \hline
+M1 & C1\,1 e 4 & ampliação & recorte e limiar de legibilidade & nome e preço & $D$ & E para a amplitude observada; HO para limiar e geometria\\
+M2 & C1\,2 & perda de contexto & memória FIFO de fragmentos vistos & preços comparados & $V$ & E indireta; HO para $k$\\
+M3 & C1\,1.2 & nome fora da vista & atributo sem herdar o rótulo do item & item vizinho & $Re_{E2}$ & HO para a associação operacional\\
+M4 & deslocar & gesto não intencional & toque no início do deslocamento, $p=0{,}05$ & abertura e retorno & $Re_{E4}$, $A$ & E para o fenômeno; HO para $p$\\
+M5 & C2\,2 & linha fora da vista & revisão também recortada; só trechos vistos e memória & linhas da revisão & $Re_{E5}$ & HO para posição e efeito\\
+M6 & C1\,1.2 & estratégia de varredura & restrição dos deslocamentos & sequência de itens expostos & $O$, $D$ & E em outra tarefa; HO para a transferência\\
+M7 & impasse & busca de suporte & $n$ ações sem progresso, acionamento com probabilidade $q$ & ajuda por camada & $U$ & HO para $n$, $q$ e igualdade P/C\\ \hline
+\end{tabularx}
+\end{table*}
+\begin{table*}[!t]
+\caption{Registro de rationale do design}
+\label{tab:rationale}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.14\textwidth}>{\raggedright\arraybackslash}p{.17\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.22\textwidth}>{\raggedright\arraybackslash}p{.1\textwidth}@{}}
+\hline \textbf{Questão} & \textbf{Opções} & \textbf{Critérios} & \textbf{Decisão} & \textbf{Status}\\ \hline
+Conferência separada ou persistente? & revisão em outra tela; resumo fixo no rodapé & consultar a comanda durante a escolha; o resumo pode poupar navegação ou cobrir alimentos & manter as duas versões herdadas (A e B) & HO; aferir no estudo futuro\\
+Bloquear ou avisar? & bloquear a inclusão; apenas avisar & opção obrigatória define composição válida; comparar só oportunidades equivalentes & PP, PA e RA para a opção; etiquetas e orçamento sem bloqueio & PD\\
+Associação implícita ou nome sugerido? & completar o nome; manter só o trecho visível & equivalência de canal & a observação conserva somente a parte visível & PD; HO para truncamento\\
+Ajuda espontânea ou solicitada? & assistente proativo; acesso por ação & preservar a iniciativa e medir o suporte & texto comum em três camadas, por ação registrada & PD; acionador M7: HO\\
+Contar exposição ou inferir leitura? & registrar exposição; supor leitura & a vista pode cortar um termo antes de ele ser legível & registrar fração e separar exposição de decisão interna & HO\\
+Último pedido substitui ou soma? & substituir; acrescentar & V2 exige identificar o residual já presente & repetir conserva as linhas existentes, com conferência e recuperação & PD herdado\\
+Concluir por fala ou por composição? & declaração do agente; estado final & sucesso verificável fora do agente & o verificador examina o estado final; correção não apaga erro registrado & PD\\ \hline
+\end{tabularx}
+\end{table*}

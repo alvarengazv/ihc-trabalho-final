@@ -1,19 +1,18 @@
 \clearpage\appendices
-\section{Árvores temporais completas}
-\noindent\textbf{Leitura.} A identifica tarefa abstrata, U interna do usuário, I interativa e S do sistema. $\gg$ impõe sequência; $[\,]\gg$ transmite o resultado ao sucessor; $[\,]$ entre tarefas oferece escolha; $|||$ permite intercalação; $|=|$ permite qualquer ordem sem intercalação. Colchetes em torno de uma tarefa indicam opcionalidade e o asterisco indica repetição. Os números recuperam as operações da HTA. Ao ler um cartão de V1, etiquetas $|=|$ preços permite conferir integralmente um ou outro primeiro. O rótulo da apresentação não presume leitura mental.
-\par\smallskip Para cada raiz $T$, aplica-se $(T\,|>\,\text{consultar ajuda})\,[>\,(\text{desistir}\,[\,]\,\text{atingir limite}\,[\,]\,\text{falhar})$. A consulta suspende e retoma: solicitar ajuda (I) $\gg$ apresentar dica (S) $\gg$ [escolher camada (I) $\gg$ apresentar conteúdo (S)]* $\gg$ fechar (I) $\gg$ restaurar origem (S). A desativação termina por desistência (I), limite (S) ou falha técnica (S). O suporte fica fora dos métodos especialistas.
+\section{Árvores CTT completas}
+\noindent Notação conforme a Seção~\ref{sec:tarefas}. O suporte fica fora dos métodos especialistas.
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-C1.pdf}
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-C2.pdf}
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-V1.pdf}
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-V2.pdf}
-\section{Diálogo e esboços do protótipo}
+\section{Diagrama MoLIC e telas do protótipo}
 \noindent\textbf{MoLIC.} As cenas delimitam assuntos, P identifica processos e as guardas limitam atos de fala. O subdiálogo S5 preserva a cena de origem. Ajustar a vista conserva o assunto corrente. A desistência encerra a sessão em curso.
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/MoLIC.pdf}
-\par\smallskip\noindent\textbf{Esboços.} Cada quadro mostra a hierarquia dos signos e o ponto de acesso ao suporte. A linha de um pedido concreto inclui opção, quantidade e valor. O painel de pesquisa fica fora da projeção do agente.
+\par\smallskip\noindent\textbf{Telas.} Cada quadro mostra a hierarquia dos signos e o ponto de acesso à ajuda. A linha de um pedido concreto inclui opção, quantidade e valor. O painel de pesquisa fica fora da projeção do agente.
 \par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/Wireframes.pdf}
-\section{Esquema conceitual de signos}
+\section{Esquema conceitual de signos completo}
 \input{../design/signs.tex}
-\section{Texto das três camadas de ajuda}
+\section{Conteúdo da ajuda}
 \input{../design/help-content.tex}
-\section{Rastreabilidade e registro de decisões}
+\section{Rastreabilidade e registro de rationale}
 \input{../design/trace.tex}

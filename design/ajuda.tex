@@ -1,0 +1,22 @@
+A ajuda é a metacomunicação explícita do designer e também variável de protocolo. Seu conteúdo procede dos conceitos, das tarefas e da conversa \cite[pp.~39--55]{silveira} (Tabela~\ref{tab:duvidas}). S5 é contextual, em três camadas e sob demanda: \emph{dica local}, \emph{sobre esta tela} e \emph{guia de uso}. O acesso fica no botão Ajuda de cada cena e no atalho F1; a pessoa escolhe a camada e fecha para voltar à origem.
+\begin{table*}[!t]
+\caption{Conteúdo da ajuda a partir dos tipos de dúvida}
+\label{tab:duvidas}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.11\textwidth}>{\raggedright\arraybackslash}p{.2\textwidth}>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}X@{}}
+\hline \textbf{Dúvida} & \textbf{Pergunta} & \textbf{Modelo de origem} & \textbf{Conteúdo}\\ \hline
+Informativa & O que o restaurante oferece? & domínio, S1 & Cada item tem nome, descrição e preço.\\
+Descritiva & O que é tamanho? & signos, S2 & Tamanho é a porção da massa, distinto da quantidade.\\
+Procedimental & Como editar uma linha? & GOMS, S2/S3 & Alterar a linha, escolher a opção e salvar.\\
+De escolha & Alterar ou remover? & MoLIC, S3 & Alterar edita as opções; remover retira a linha.\\
+Sugestiva & O que conferir? & cenário, S3 & Conferir nomes, opções e quantidades.\\
+Investigativa & Onde vejo o efeito? & processo, S3 & A quantidade e o total expressam a mudança.\\
+Interpretativa & O que é SA? & domínio, S1 & Sem açúcar ou sem açúcar adicionado.\\
+Navegacional & Onde rever o pedido? & MoLIC, S1 & A revisão reúne as linhas em andamento.\\
+Histórica & O que foi repetido? & comanda, S0 & Reconsultar a composição anterior e conferir a cópia.\\
+De motivação & Por que confirmar? & metamensagem, S4 & Confirmar registra e encerra o pedido.\\ \hline
+\end{tabularx}
+\end{table*}
+\par\textit{Requisitos de Dix} \cite[pp.~397--399]{dix}. Disponibilidade: acesso em todas as cenas da interação. Precisão e completude: cada tópico descreve operações existentes e as camadas cobrem as dez dúvidas. Consistência: títulos e orientações usam o vocabulário das ações. Robustez: ler não altera o pedido e fechar retorna à origem. Flexibilidade: a pessoa escolhe a profundidade. Discrição: o conteúdo só aparece após a abertura.
+\par\textit{Registro e uso de suporte.} Cada acesso gera \UXev{ajuda_aberta} com camada, tópico, cena de origem e origem da solicitação; fechar gera \UXev{ajuda_fechada} com o retorno. Para cada camada, $U$ conta acessos por execução e a fração das execuções elegíveis com acesso (denominador: execuções iniciadas sem falha técnica). A posição do primeiro acesso é o índice da ação dividido pelo número de ações executadas.
+\par\textit{Igualdade e congelamento.} Uma única fonte textual atende a interface humana e a projeção do agente, que só recebe o conteúdo depois da abertura. A ajuda não é adaptativa. Na calibração (C1/C2) é permitido inspecionar entradas e saídas e comparar o acionador M7 ligado e desligado; na validação (V1/V2) conteúdo, camadas e parâmetros ficam congelados. A interface não tem agente de ajuda: M7 pertence ao controlador que representa a persona, do outro lado da interface, e sua solicitação é registrada com origem \texttt{acionador}.

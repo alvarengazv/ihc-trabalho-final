@@ -1,0 +1,43 @@
+% Apêndice E1 do artigo E4: caderno de especificação de design.
+% Entra depois das referências do E4 e usa a mesma lista de referências.
+\clearpage
+\twocolumn[{\centering
+{\Large\bfseries Apêndice E1 --- Caderno de especificação de design}\\[4pt]
+{\small Anexo ao artigo E4, fora do limite de oito páginas. As citações remetem às referências do artigo.}\\[6pt]
+\hrule\vspace{10pt}}]
+\renewcommand{\thetable}{E\arabic{table}}\setcounter{table}{0}
+\renewcommand{\thefigure}{E\arabic{figure}}\setcounter{figure}{0}
+\newcommand{\Etitle}[1]{\par\medskip\noindent{\normalsize\bfseries #1}\par\smallskip}
+
+\Etitle{Metamensagem e espaço de design com dois receptores}
+\input{../design/metamensagem.tex}
+
+\Etitle{Tabela de paridade de signos}
+\input{../design/signs.tex}
+
+\Etitle{Modelos CTT}
+\input{../design/ctt.tex}
+\par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-C1.pdf}
+\par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-C2.pdf}
+\par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-V1.pdf}
+\par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/CTT-V2.pdf}
+
+\Etitle{Modelos GOMS e KLM}
+\input{../design/goms.tex}
+
+\Etitle{Diagrama MoLIC}
+As cenas delimitam assuntos, P identifica processos e as guardas limitam atos de fala. O subdiálogo S5 preserva a cena de origem; ajustar a vista conserva o assunto corrente; a desistência encerra a sessão.
+\par\smallskip\noindent\includegraphics[width=\columnwidth]{../design/figures/MoLIC.pdf}
+\par\smallskip
+\input{../design/molic-texto.tex}
+
+\Etitle{Matriz de prevenção e recuperação de erros (PP, PA, AL, RA, CE)}
+\input{../design/rupturas-texto.tex}
+
+\Etitle{Identificação de rupturas comunicativas (MAC)}
+\input{../design/mac-texto.tex}
+
+\Etitle{Mecanismos de ajuda}
+\input{../design/ajuda.tex}
+\par\smallskip\noindent\textit{Texto das três camadas, por cena.}
+\input{../design/help-content.tex}

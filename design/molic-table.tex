@@ -1,0 +1,14 @@
+\begin{table*}[!t]
+\caption{Leituras de cada elemento da MoLIC}
+\label{tab:molic}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.11\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.25\textwidth}@{}}
+\hline \textbf{Elemento MoLIC} & \textbf{Leitura da persona} & \textbf{Leitura do agente (observação ou ação)} & \textbf{Evento registrado}\\ \hline
+Cena & Reconhece o assunto (início, cardápio, item, revisão, fim, ajuda) pelos signos da tela. & Observação: título e signos da cena que cruzam o recorte. & \UXev{tela_alterada} com cena anterior e nova\\
+Fala u: & Solicita uma operação, como abrir um item, alterar a quantidade ou confirmar. & Ação: um gesto permitido sobre um alvo exposto, escolhido entre as alternativas do estado. & \UXev{acao_proposta}, \UXev{acao_executada}; proposta inválida: \UXev{acao_rejeitada}\\
+Fala d: & Vê a resposta do preposto, como a nova quantidade da linha e o novo total. & Observação seguinte: o fragmento exposto da resposta. & \UXev{elemento_visto} e o evento de mutação correspondente\\
+Processo do sistema & Percebe o efeito: comanda copiada, recalculada ou registrada. & Observação do efeito expresso; o estado integral fica com o verificador. & \UXev{item_adicionado}, \UXev{item_alterado}, \UXev{item_removido}, \UXev{pedido_confirmado}\\
+Fala de recuperação & Volta aos detalhes, recompõe a linha, remove ou desfaz a remoção. & As mesmas ações de recuperação, quando expostas. & \UXev{item_alterado}, \UXev{item_removido}, \UXev{item_adicionado}\\
+Acesso ubíquo à ajuda & Abre a ajuda em qualquer cena, escolhe a camada e fecha para voltar à origem. & Ação de protocolo sempre disponível; o conteúdo só chega após a abertura. & \UXev{ajuda_aberta} e \UXev{ajuda_fechada} com camada, tópico, origem e retorno\\ \hline
+\end{tabularx}
+\end{table*}

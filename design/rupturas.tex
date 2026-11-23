@@ -1,0 +1,14 @@
+\begin{table*}[!t]
+\caption{Matriz de prevenção e recuperação de rupturas por operação da HTA}
+\label{tab:rupturas}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.15\textwidth}>{\raggedright\arraybackslash}p{.12\textwidth}>{\raggedright\arraybackslash}p{.11\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{.17\textwidth}>{\raggedright\arraybackslash}p{.1\textwidth}@{}}
+\hline \textbf{Operação da HTA} & \textbf{Erro previsto} & \textbf{Mecanismo} & \textbf{Signo} & \textbf{Evento} & \textbf{Métrica}\\ \hline
+C1\,1; C2\,2.1; V1\,1--3; V2\,4.1 & deslize ou omissão de item & PP + RA & nome e preço agrupados (PP); reconsultar ou voltar (RA) & \UXev{vista_deslocada}, \UXev{elemento_visto}, \UXev{deslize_injetado} & $D$, $O$, $Re_{E4}$, $A$\\
+C1\,2--3.1; V1\,1--3; V2\,3.1 e 5 & seleção ou associação errada & PP + RA & nome junto do preço, etiquetas e controles (PP); rever, remover ou recompor (RA) & \UXev{item_adicionado}, \UXev{item_alterado}, \UXev{item_removido} & $Re_{E1}$, $Re_{E2}$, $V$\\
+C1\,3.2--3.3; C2\,3; V1\,1.5--1.7 e 2.5--2.6; V2\,3.2--3.3 & opção ausente ou quantidade errada & PP + PA + RA & opção exigida e número expostos (PP); inclusão bloqueada sem opção (PA); escolher e editar (RA) & \UXev{opcao_selecionada}, \UXev{item_alterado} & $Re_{E3}$\\
+C1\,4; C2\,2.2--4; V2\,4--6 & divergência confirmada & PP + RA & linhas e total antecipam a consequência (PP); alterar quantidade, reconsultar ou remover (RA) & \UXev{elemento_visto}, \UXev{pedido_confirmado} & $Re_{E5}$, $O$\\
+V1\,4--5 & regra ou orçamento violado & PP + RA & etiquetas e total (PP); substituir antes de confirmar (RA) & \UXev{pedido_confirmado} & $Re_{E6}$\\
+Todas & fala fora do conjunto permitido & CE + AL & a guarda captura a proposta (CE); o aviso de opção necessária alerta (AL) & \UXev{acao_rejeitada}, \UXev{elemento_visto} & rejeições, fora de $A$\\ \hline
+\end{tabularx}
+\end{table*}

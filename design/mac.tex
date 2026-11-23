@@ -1,0 +1,14 @@
+\begin{table}[!t]
+\caption{Etiquetas MAC operacionalizadas como padrões de eventos (HO)}
+\label{tab:mac}
+\centering\scriptsize\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{.27\columnwidth}>{\raggedright\arraybackslash}X@{}}
+\hline \textbf{Etiqueta} & \textbf{Padrão no registro}\\ \hline
+\emph{Socorro!} & \UXev{ajuda_aberta}, por ação da pessoa ou do acionador M7.\\
+\emph{O que é isso?} & \UXev{ajuda_aberta} na primeira camada (dica local) para um tópico.\\
+\emph{Desisto} & \UXev{desistencia} por ação explícita.\\
+\emph{Pra mim está bom} & \UXev{pedido_confirmado} seguido de resultado de fracasso no verificador.\\
+\emph{Epa!} & \UXev{deslize_injetado} seguido, em até duas ações executadas, de retorno ou correção aplicável.\\
+\emph{Cadê?} & $n=5$ ações executadas seguidas sem novo signo, nova cena ou mutação do pedido; uma ocorrência por sequência.\\ \hline
+\end{tabularx}
+\end{table}
